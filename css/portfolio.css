@@ -1,0 +1,202 @@
+#item1Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/digitalPortfolioThumbnail.png');
+}
+
+#item2Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/touchScreensThumbnail.png');
+}
+
+#item3Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/kerrytownBookFestThumbnail.png');
+}
+
+#item4Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/castingStereotypesAsideThumbnail.png');
+}
+
+#item5Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/squirrelSenseThumbnail.png');
+}
+
+#item6Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/graveatyThumbnail.png');
+}
+
+#item7Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/vocabulearnerThumbnail.png');
+}
+
+#item8Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/ultimateMachineThumbnail.png');
+}
+
+#item9Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/billManagerThumbnail.png');
+}
+
+#item10Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/sweetlandThumbnail.png');
+}
+
+#item11Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/superReadersThumbnail.png');
+}
+
+#item12Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/twitterThumbnail.png');
+}
+
+#item13Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/contactThumbnail.png');
+}
+
+#item14Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/gamePopularityThumbnail.png');
+}
+
+#item15Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/commuteThumbnail.png');
+}
+
+#item16Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/messageBoardThumbnail.png');
+}
+
+#item17Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/gooruThumbnail.png');
+}
+
+#item18Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/menloThumbnail.png');
+}
+
+#item19Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/myDeskThumbnail.png');
+}
+
+#item20Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/dmlCompetitionThumbnail.png');
+}
+
+.portfolioImage{
+ 	border: 2px solid #b3b3b3;
+	-moz-box-shadow: 0 5px 10px #000;
+	-webkit-box-shadow: 0 5px 10px #000;
+	box-shadow: 0 5px 10px #000;
+ }
+ 
+#portfolioWrapper{
+	display: none;
+ 	width: 1200px;
+ 	margin: 50px auto 0 auto;
+ }
+ 
+.itemContent{
+	float: left;
+	margin: 10px;
+	background-color: #f3f3f3;
+	border: 4px solid #f3f3f3;
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+}
+
+.itemDescription{
+	float: left;
+	margin: 0 0 0 20px; 
+	width: 600px;
+	display: none;
+}
+ 
+.itemIntro{
+	float: left;
+}
+.itemCategories{
+	float: left;
+	width: 40px;
+	margin: 0 5px 0 0;
+}
+.itemCategory{
+	float: left;
+	margin: 5px;
+	width: 30px;
+	background-color: #ffffff;
+}
+.itemInfo{
+	float: left;
+	width: 450px;
+}
+.itemTitle{
+	font-family: Novecentowide-DemiBold;
+	font-size: 18pt;
+	margin: 0 0 0 20px;
+}
+.itemPreview{
+	margin: 10px 0 0 20px;
+}
+
+.itemThumbnail{
+	float: left;
+	width: 160px;
+	height: 160px;
+	background-color: #f3f3f3;
+	border: 5px solid #ffffff;
+}
+
+.title{
+	margin: 0 0 10px 0;
+	font-family: Novecentowide-DemiBold;
+	font-weight: normal;
+	font-style: normal;
+	color: #515151;
+	font-size: 1.5em;
+}
+
+#itemTitle{
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	padding: 20px 20px 20px 200px;
+	background-color: #f3f3f3;
+	border: 1px solid #dddddd;
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+}
+
+#itemContentsContainer{
+	display: none;
+	position: absolute;
+	left: 220px;
+	top: 150px;
+	width: 700px;
+	padding: 10px;
+	background-color: #f3f3f3;
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+}
+
+#itemContentContainerCloseButton{
+	position: absolute;
+	right: 0;
+	bottom: -42px;
+	height: 20px;
+	padding: 10px 20px 10px 20px;
+	color: #ffffff;
+	cursor: pointer;
+
+	background-color: #292929;
+	border: 1px solid #1a1a1a;
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-moz-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
