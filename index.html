@@ -14,10 +14,33 @@
 	<link rel="stylesheet" type="text/css" href="css/tipped.css"/>
 	<link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css" />
 
-	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
-	<script type="text/javascript" src="js/page.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-embedagram.js"></script>
 	<script type="text/javascript" src="js/tipped.js"></script>
+	<script type="text/javascript" src="js/page.js"></script>
+	
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$('#instagramPhoto').embedagram({
+				instagram_id: 30671089,
+				thumb_width: 400,
+				wrap_tag: '',
+				limit: 1
+			});
+			
+			Tipped.create('.sideNavItem', {
+				skin: 'darkFlat',
+				hook: 'rightmiddle',
+				offset: { x: 15, y: 0 },
+			});
+		  
+			Tipped.create('.itemCategory', {
+				skin: 'darkFlat',
+				hook: 'leftmiddle',
+				offset: { x: -15, y: 0 },
+			});
+		});
+    </script>
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -33,24 +56,23 @@
 </head>
 <body>
 	
-	<div id="headTileContainer">
+<div id="pageWrapper">
+	
+	<div id="navTile">
 		<div id="headTile">
 			<div class="headFont">THOMAS PIGGOTT</div>
 			<div class="headSubFont">USER EXPERIENCE DESIGN</div>
 		</div>
-	</div>
-	
-	<div id="sideNavTile">
-		<div id="sideNavItemSelected"></div>
-		<div id="sideNavItemContainer">
-			<div class="sideNavItem" title="Social" ><a class="sideNavItemLink" href="javascript:showSocial();"><img src="images/socialIcon.png" /></a></div>
-			<div class="sideNavItem" title="Portfolio" ><a class="sideNavItemLink" href="javascript:showPortfolio();"><img src="images/portfolioIcon.png" /></a></div>
-			<div class="sideNavItem" title="Resum&eacute;"><a class="sideNavItemLink" href="portfolio/Resume_Piggott.pdf"><img src="images/resumeIcon.png" /></a></div>
+		<div id="navItemSelected"></div>
+		<div id="navItemContainer">
+			<div class="navItem" title="Social" ><a id="navItemSocial" class="navItemLink navItemLinkSelected" href="javascript:showSocial();">SOCIAL</a></div>
+			<div class="navItem" title="Portfolio" ><a id="navItemPortfolio" class="navItemLink" href="javascript:showPortfolio();">PORTFOLIO</a></div>
+			<div class="navItem" title="Resum&eacute;"><a id="navItemResume" class="navItemLink" href="portfolio/Resume_Piggott.pdf">RESUM&Eacute;</a></div>
 		</div>
 	</div>
 	
 	<div id="socialWrapper">
-		<div id="aboutTile">
+		<div id="aboutTile" class="tileLight">
 			<img id="aboutPicture" src="images/me.png" alt="Picture of Me!" />
 			<div id="aboutInfo">
 				<div id="aboutTitle">Hey there!</div>
@@ -58,23 +80,29 @@
 			</div>
 		</div>
 		
-		<div id="contactTile">
-			<div id="contactTitle">Get In Touch</div>
+		<div id="contactTile" class="tileLight">
+			<div class="tileTitle">Connect</div>
 			<div id="contactDescription">
-				Think I'm right for something? Want to chat? 
-				<a href="http://www.linkedin.com/profile/view?id=68654986&locale=en_US&trk=tab_pro" target="_blank">LinkedIn</a>, 
-				<a href="http://www.twitter.com/tjpiggott" target="_blank">Twitter</a>,
-				<a href="http://www.facebook.com/tjpiggott" target="_blank">Facebook</a>, and 
-				<a href="https://github.com/tjpiggott" target="_blank">Github</a> 
-				are just a few of the places you can find me.
-				<br/><br/>
-				You can also email me at <a href="mailto:thomas@thomaspiggott.com">thomas@thomaspiggott.com</a>!
+				<ul class="unadornedList" style="float: left; margin: 0 20px 0 10px;">
+					<li><a href="mailto:thomas@thomaspiggott.com"><img class="connectLogo" src="images/connect/emailLogo.png" alt="Email: thomas@thomaspiggott.com" /></a></li>
+					<li><a href="http://www.linkedin.com/profile/view?id=68654986&locale=en_US&trk=tab_pro" target="_blank"><img class="connectLogo" src="images/connect/linkedInLogo.png" alt="LinkedIn" /></a></li>
+					<li><a href="https://github.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/githubLogo.png" alt="Github" /></a></li>
+					<li><a href="http://www.facebook.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/facebookLogo.jpg" alt="Facebook" /></a></li> 
+					<li><a href="http://www.twitter.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/twitterLogo.png" alt="Twitter" /></a></li>
+				</ul>
+				<ul class="unadornedList" style="float: left;">
+					<li class="connectText"><a href="mailto:thomas@thomaspiggott.com">Email</a></li>
+					<li class="connectText"><a href="http://www.linkedin.com/profile/view?id=68654986&locale=en_US&trk=tab_pro" target="_blank">LinkedIn</a></li>
+					<li class="connectText"><a href="https://github.com/tjpiggott" target="_blank">Github</a></li>
+					<li class="connectText"><a href="http://www.facebook.com/tjpiggott" target="_blank">Facebook</a></li> 
+					<li class="connectText"><a href="http://www.twitter.com/tjpiggott" target="_blank">Twitter</a></li>
+				</ul>
 			</div>
 		</div>
 		
-		<div id="twitterTile">
+		<div id="twitterTile" class="tileDark">
 			<div id="twitterHandle">
-				<img src="images/twitter.png" style="height: 50px;" alt="Twitter" />
+				<img src="images/twitter.png" style="height: 46px;" alt="Twitter" />
 				<span style="vertical-align: top">TWITTER <a href="http://twitter.com/tjpiggott" style="vertical-align: top" target="_blank">@TJPIGGOTT</a></span>
 			</div>
 			<ul id="twitter_update_list" class="twitterList"> 
@@ -82,13 +110,43 @@
 		    </ul>
 		</div>
 		
-		<div id="instagramTile">
-			<img src="images/instagram.png" style="float: left; height: 40px; margin: 0 10px 0 0;" alt="Instagram" />
+		<div id="instagramTile" class="tileDark">
+			<img src="images/instagram.png" style="float: left; height: 40px; margin: 20px 10px 0 10px;" alt="Instagram" />
 			<div id="instagramInfo">
 				<div id="instagramTitle">INSTAGRAM</div>
 				<div id="instagramDescription">Pictures of life... which means lots of food.</div>
 			</div>
-			<iframe id="instagramPhoto" src="http://snapwidget.com/in/?u=dGpwaWdnb3R0fGlufDUwMHwxfDF8fG5vfDA=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:508px; height: 508px" ></iframe>
+			<div id="instagramPhoto"></div>
+		</div>
+		
+		<div id="readingTile" class="tileLight">
+			<div class="tileTitle">Reading...</div>
+			<div class="book">
+				<span class="bookTitle">The Penelopiad</span>
+				by Margaret Atwood
+			</div>
+			<div class="tileTitle">Read</div>
+			<div class="book">
+				<span class="bookTitle">Song of Achilles</span> by Madeleine Miller
+			</div>
+			<div class="book">
+				<span class="bookTitle">I Am Legend</span> by Richard Matheson
+			</div>
+			<div class="book">
+				<span class="bookTitle">Penpal</span> by Dathan Auerbach
+			</div>
+			<div class="book">
+				<span class="bookTitle">Blackout / All Clear</span> by Connie Willis
+			</div>
+			<div class="book">
+				<span class="bookTitle">Little Bee</span> by Chris Cleeve
+			</div>
+			<div class="book">
+				<span class="bookTitle">Hanging Out, Messing Around, and Geeking Out</span> by Mimi Ito
+			</div>
+			<div class="book">
+				<span class="bookTitle">Wool</span> by Hugh Howey
+			</div>
 		</div>
 	</div>
 	
@@ -100,6 +158,7 @@
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item16Thumbnail" class="itemThumbnail" title="messageBoard" onclick="showItem(16)"></div>
 				<div class="itemInfo">
@@ -122,6 +181,7 @@
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item19Thumbnail" class="itemThumbnail" title="myDesk" onclick="showItem(19)"></div>
 				<div class="itemInfo">
@@ -144,6 +204,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item20Thumbnail" class="itemThumbnail" title="Elementary STEM Teacher Mastery Badges" onclick="showItem(20)"></div>
 				<div class="itemInfo">
@@ -165,6 +226,7 @@
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item17Thumbnail" class="itemThumbnail" title="Gooru" onclick="showItem(17)"></div>
 				<div class="itemInfo">
@@ -189,6 +251,7 @@
 			<div class="itemIntro">
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item18Thumbnail" class="itemThumbnail" title="Menlo Innovations" onclick="showItem(18)"></div>
 				<div class="itemInfo">
@@ -222,6 +285,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item14Thumbnail" class="itemThumbnail" title="IGN Video Game Popularity Visualization" onclick="showItem(14);"></div>
 				<div class="itemInfo">
@@ -248,6 +312,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
 				<div id="item15Thumbnail" class="itemThumbnail" title="Commute Time Visualization" onclick="showItem(15)"></div>
 				<div class="itemInfo">
@@ -270,6 +335,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item11Thumbnail" class="itemThumbnail" title="Super Readers" onclick="showItem(11)"></div>
 				<div class="itemInfo">
@@ -295,6 +361,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item10Thumbnail" class="itemThumbnail" title="Sweetland Center for Writing Website Evaluation" onclick="showItem(10)"></div>
 				<div class="itemInfo">
@@ -322,6 +389,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item1Thumbnail" class="itemThumbnail" title="Summers-Knoll Digital Portfolio" onclick="showItem(1)"></div>
 				<div class="itemInfo">
@@ -349,6 +417,7 @@
 			<div class="itemIntro">
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
 				<div id="item2Thumbnail" class="itemThumbnail" title="Touch Screens in Education" onclick="showItem(2)"></div>
 				<div class="itemInfo">
@@ -377,6 +446,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
 				<div id="item3Thumbnail" class="itemThumbnail" title="Kerrytown BookFest" onclick="showItem(3)"></div>
 				<div class="itemInfo">
@@ -402,6 +472,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item4Thumbnail" class="itemThumbnail" title="Typography" onclick="showItem(4)"></div> 
 				<div class="itemInfo">
@@ -426,6 +497,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item5Thumbnail" class="itemThumbnail" title="Squirrel Sense" onclick="showItem(5)"></div>
 				<div class="itemInfo">
@@ -452,6 +524,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
 				<div id="item6Thumbnail" class="itemThumbnail" title="GravEATy" onclick="showItem(6)"></div>
 			 	<div class="itemInfo">
@@ -477,6 +550,7 @@
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item7Thumbnail" class="itemThumbnail" title="Vocabulearner" onclick="showItem(7)"></div>
 				<div class="itemInfo">
@@ -499,6 +573,7 @@
 				<div class="itemCategories">
 					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item8Thumbnail" class="itemThumbnail" title="The Ultimate Machine" onclick="showItem(8)"></div>
 				<div class="itemInfo">
@@ -521,13 +596,13 @@
 		<div id="item9" class="itemContent">
 			<div class="itemIntro">
 				<div class="itemCategories">
-					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
 				<div id="item9Thumbnail" class="itemThumbnail" title="Bill Manager" onclick="showItem(9)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Bill Manager</div>
-					<div class="itemPreview">One of my earliest group projects that taught me that group work is never easy. The program helps manage bills shared by multiple people.</div>
+					<div class="itemPreview">One of my earliest group projects as a Computer Science student that taught me how important the considering the UX is from the beginning. The program helps manage bills shared by multiple people but doesn't make it easy to do it. A success in that the product "works" and a failure in that no sane person would use it.</div>
 				</div> 
 			</div>
 			<div class="itemDescription">
@@ -543,24 +618,17 @@
 		</div>
 		
 	</div>
-		
 	
+</div>
+		
 <script type="text/javascript">
-  jQuery(document).ready(function() {
-	  Tipped.create('.sideNavItem', {
-		  skin: 'darkFlat',
-		  hook: 'rightmiddle',
-		  offset: { x: 15, y: 0 },
-	  });
-	  
-	  Tipped.create('.itemCategory', {
-		  skin: 'darkFlat',
-		  hook: 'leftmiddle',
-		  offset: { x: -15, y: 0 },
-	  });
-	  
-	  setupPortfolio();
-  });
+	var navTileLeftPosition = 25;
+	var windowWidth = $(window).width();
+	if(windowWidth >= 1100)
+		navTileLeftPosition = windowWidth/2-525;
+	$("#navTile").animate({
+		left: navTileLeftPosition
+	}, 500);
 </script>
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script> 
 <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/tjpiggott.json?callback=twitterCallback2&amp;count=6"></script> 

@@ -12,27 +12,36 @@ a:link, a:visited{
 	color: #43b6d7;
 }
 
-a.sideNavItemLink:link, a.sideNavItemLink:visited{
+a.navItemLink:link, a.navItemLink:visited{
+	text-decoration: none;
+	color: #6b6b6b;
+	font-size: 18px;
+}
+
+a.navItemLinkSelected:link, a.navItemLinkSelected:visited{
 	text-decoration: none;
 	color: #e3e3e3;
+	font-size: 18px;
 }
 
 body{
 	background-image: url('../images/background.png');
 }
 
+.book{
+	float: left;
+	padding: 10px;
+}
+
+.bookTitle{
+	font-weight: bold;
+}
+
 #aboutTile{
 	float: left;
-	margin: 50px 25px 0 25px;
-	z-index: 2;
-	
+	margin: 0 25px 0 25px;
+	width: 698px;
 	position: relative;
-	padding: 20px 20px 30px 20px;
-	background-color: #f3f3f3;
-	border: 1px solid #dddddd;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 }
 
 #aboutPicture{
@@ -44,8 +53,9 @@ body{
 
 #aboutInfo{
 	float: left;
-	width: 450px;
+	width: 400px;
 	margin: 0 0 0 250px;
+	padding: 10px;
 }
 
 #aboutTitle{
@@ -56,24 +66,29 @@ body{
 
 #aboutDescription{
 	float: left;
-	margin: 10px 0 0 0;
+	margin: 10px 0 10px 0;
+}
+
+.connectLogo{
+	width: 50px;
+	height: 50px;
+}
+
+.connectText{
+	width: 50px;
+	height: 54px;
+	line-height: 50px;
 }
 
 #contactTile{
 	float: left;
-	width: 300px;
-	margin: 50px 0 0 25px;
-	padding: 20px 20px 20px 20px;
-	background-color: #f3f3f3;
-	border: 1px solid #dddddd;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	width: 198px;
+	margin: 50px 25px 0 25px;
 }
 
-#contactTitle{
-	font-family: Novecentowide-DemiBold;
-	font-size: 24pt;
+#contactDescription{
+	float: left;
+	margin: 0 20px 20px 20px;
 }
 
 #centeredContainer{
@@ -82,45 +97,45 @@ body{
 }
 
 #headTile{
-	width: 671px;
-	margin: 50px auto 0 auto;
-	padding: 20px 50px 30px 60px;
-	background-color: #292929;
-	border: 1px solid #1a1a1a;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	
-	font-family: Novecentowide-DemiBold;
-	font-weight: normal;
-	font-style: normal;
+	width: 300px;
+	height: 75px;
+	margin: 25px 0 0 0;
+	text-align: center;
+	float: left;
 }
 
 .headFont{
 	position: relative;
 	font-family: Novecentowide-Light;
-	font-size: 56pt;
+	font-size: 30px;
 	color: #e3e3e3;
-	line-height: 56pt;
+	line-height: 30px;
 }
 
 .headSubFont{
 	position: relative;
 	font-family: Novecentowide-DemiBold;
-	font-size: 26pt;
-	letter-spacing: 0.265em;
+	font-size: 18px;
 	color: #8e32d5;
-	letter-spacing: 200;
+	letter-spacing: .11em;
 }
 
-#sideNavTile{
+#navTile{
 	position: fixed;
-	left: 0;
+	left: 25px;
 	top: 0;
-	height: 100%;
-	padding: 5px 10px 5px 5px;
-	background-color: #292929;
+	width: 298px;
+	height: 298px;
 	border: 1px solid #1a1a1a;
+	background: rgb(41,41,41); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,41,41,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
 	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
@@ -131,18 +146,27 @@ body{
 	z-index: 100;
 }
 
-.sideNavItem{
-	color: #e3e3e3;
+.navItem{
+	color: #6b6b6b;
 	cursor: pointer;
+	float: left;
+	width: 100%;
+	line-height: 50px;
 }
 
-#sideNavItemSelected{
-	position: fixed;
-	top: 7px;
-	left: 52px;
+#navItemContainer{
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+#navItemSelected{
+	position: absolute;
+	top: 112px;
+	right: -10px;
+	width: 50px;
+	height: 25px;
 	background-color: #8e32d5;
-	width: 7px;
-	height: 40px;
+	border: 1px solid #1a1a1a;
 	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
@@ -150,9 +174,9 @@ body{
 }
 
 #instagramTile{
-	float: right;
-	margin: 75px 25px 0 25px;
-	padding: 20px;
+	float: left;
+	width: 448px;
+	margin: 50px 25px 50px 25px;
 	background-color: #292929;
 	border: 1px solid #1a1a1a;
 	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
@@ -162,7 +186,7 @@ body{
 
 #instagramInfo{
 	float: left;
-	margin: -10px 0 0 0;
+	margin: 10px 0 0 0;
 }
 
 #instagramTitle{
@@ -179,29 +203,66 @@ body{
 #instagramPhoto{
 	clear: both;
 	float: left;
+	margin: 0 0 20px 20px;
 }
 
-#socialWrapper{
+#pageWrapper{
+	width: 1100px;
 	margin: 0 auto 0 auto;
-	width: 1200px;
 }
 
-#twitterHandle{
-	font-family: Novecentowide-DemiBold;
-	padding: 10px 0 0 10px;
-	font-size: 24pt;
-	color: #e3e3e3;
-	background-color: #292929;
-	border: 1px solid #1a1a1a;
+#readingTile{
+	float: left;
+	margin: 50px 25px 50px 25px;
+	width: 198px;
+	background-color: #f3f3f3;
+	border: 1px solid #dddddd;
 	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 }
 
+#socialWrapper{
+	float: left;
+	margin: 100px 0 0 375px;
+	width: 750px;
+}
+
+.tileTitle{
+	font-family: Novecentowide-DemiBold;
+	font-size: 24pt;
+	padding: 10px 5px 10px 5px;
+	text-align: center;
+}
+
+.tileLight{
+	color: #515151;
+	background-color: #f3f3f3;
+	border: 1px solid #dddddd;
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+}
+
+.tileDark{
+	color: #e3e3e3;
+	background-color: #292929;
+	border: 1px solid #1a1a1a;
+	padding: 10px 0 0 0;
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+}
+
+#twitterHandle{
+	font-family: Novecentowide-DemiBold;
+	font-size: 24pt;
+}
+
 #twitterTile{
 	float: left;
-	margin: 75px 25px 0 25px;
-	width: 550px;
+	margin: 50px 25px 0 25px;
+	width: 448px;
 }
 
 .twitterList li{
@@ -219,6 +280,16 @@ ul.twitterList{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+ul.unadornedList{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.unadornedList li{
+	margin: 0 0 10px 0;
 }
 
 .t_Content_darkFlat{
