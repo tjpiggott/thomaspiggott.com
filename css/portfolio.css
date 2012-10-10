@@ -78,6 +78,12 @@
 	background-image: url('../images/portfolioImages/thumbnails/dmlCompetitionThumbnail.png');
 }
 
+.portfolioFinalistRibbon{
+	position: absolute;
+	right: 0px;
+	top: 125px;
+}
+
 .portfolioImage{
  	border: 2px solid #b3b3b3;
 	-moz-box-shadow: 0 5px 10px #000;
@@ -142,16 +148,10 @@
 	height: 160px;
 	background-color: #f3f3f3;
 	border: 5px solid #ffffff;
+	position: relative;
 }
 
-.title{
-	margin: 0 0 10px 0;
-	font-family: Novecentowide-DemiBold;
-	font-weight: normal;
-	font-style: normal;
-	color: #515151;
-	font-size: 1.5em;
-}
+
 
 #itemTitle{
 	display: none;

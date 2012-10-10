@@ -30,7 +30,7 @@ body{
 
 .book{
 	float: left;
-	padding: 10px;
+	padding: 0 10px 15px 10px;
 }
 
 .bookTitle{
@@ -96,12 +96,29 @@ body{
 	margin: 0 auto 0 auto;
 }
 
+.title{
+	float: left;
+	width: 100%;
+	margin: 10px 0 10px 0;
+	font-family: Novecentowide-DemiBold;
+	font-weight: normal;
+	font-style: normal;
+	color: #515151;
+	font-size: 1.5em;
+}
+
+.description{
+	float: left;
+	margin: 0 0 10px 0;
+}
+
 #headTile{
 	width: 300px;
 	height: 75px;
 	margin: 25px 0 0 0;
 	text-align: center;
 	float: left;
+	cursor: pointer;
 }
 
 .headFont{
@@ -222,10 +239,66 @@ body{
 	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 }
 
-#socialWrapper{
+#resumeWrapper{
+	display:none;
+}
+
+#resumeTile{
 	float: left;
-	margin: 100px 0 0 375px;
-	width: 750px;
+	font-size: 14px;
+	margin: 0 0 50px 0;
+}
+
+#resumeLeftColumn{
+	float: left;
+	width: 230px;
+	margin: 0 10px 0 10px;
+}
+
+#resumeRightColumn{
+	float: left;
+	width: 430px;
+	margin: 0 10px 0 10px;
+}
+
+.resumeItem{
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.resumeHeadFont{
+	font-family: Novecentowide-DemiBold;
+	font-size: 30px;
+	color: #515151;
+	margin: 10px 0 0 10px;
+	line-height: 10px;
+}
+
+.resumeSubFont{
+	font-family: Novecentowide-Normal;
+	font-size: 18px;
+	color: #515151;
+	margin: 10px 0 0 10px;
+}
+
+.resumeItemInfo{
+	float: left;
+	font-weight: bold;
+	margin: 0 0 3px 0;
+}
+
+.resumeItemSubInfo{
+	float: left;
+	width: 100%;
+	font-style: italic;
+	margin: 0 0 5px 0;
+}
+
+ul.resumeList{
+	margin: 0;
+	padding: 0 0 0 20px;
+	font-size: 12px;
+	float: left;
 }
 
 .tileTitle{
@@ -290,6 +363,12 @@ ul.unadornedList{
 
 .unadornedList li{
 	margin: 0 0 10px 0;
+}
+
+.wrapper{
+	float: left;
+	margin: 100px 0 0 375px;
+	width: 750px;
 }
 
 .t_Content_darkFlat{

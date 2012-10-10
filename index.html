@@ -23,7 +23,7 @@
 		$(document).ready(function() {
 			$('#instagramPhoto').embedagram({
 				instagram_id: 30671089,
-				thumb_width: 400,
+				thumb_width: 405,
 				wrap_tag: '',
 				limit: 1
 			});
@@ -59,7 +59,7 @@
 <div id="pageWrapper">
 	
 	<div id="navTile">
-		<div id="headTile">
+		<div id="headTile" onclick="showSocial();">
 			<div class="headFont">THOMAS PIGGOTT</div>
 			<div class="headSubFont">USER EXPERIENCE DESIGN</div>
 		</div>
@@ -67,11 +67,11 @@
 		<div id="navItemContainer">
 			<div class="navItem" title="Social" ><a id="navItemSocial" class="navItemLink navItemLinkSelected" href="javascript:showSocial();">SOCIAL</a></div>
 			<div class="navItem" title="Portfolio" ><a id="navItemPortfolio" class="navItemLink" href="javascript:showPortfolio();">PORTFOLIO</a></div>
-			<div class="navItem" title="Resum&eacute;"><a id="navItemResume" class="navItemLink" href="portfolio/Resume_Piggott.pdf">RESUM&Eacute;</a></div>
+			<div class="navItem" title="Resum&eacute;"><a id="navItemResume" class="navItemLink" href="javascript:showResume();">RESUM&Eacute;</a></div>
 		</div>
 	</div>
 	
-	<div id="socialWrapper">
+	<div id="socialWrapper" class="wrapper">
 		<div id="aboutTile" class="tileLight">
 			<img id="aboutPicture" src="images/me.png" alt="Picture of Me!" />
 			<div id="aboutInfo">
@@ -111,7 +111,7 @@
 		</div>
 		
 		<div id="instagramTile" class="tileDark">
-			<img src="images/instagram.png" style="float: left; height: 40px; margin: 20px 10px 0 10px;" alt="Instagram" />
+			<img src="images/instagram.png" style="float: left; height: 40px; margin: 20px 10px 0 20px;" alt="Instagram" />
 			<div id="instagramInfo">
 				<div id="instagramTitle">INSTAGRAM</div>
 				<div id="instagramDescription">Pictures of life... which means lots of food.</div>
@@ -150,7 +150,7 @@
 		</div>
 	</div>
 	
-	<div id="portfolioWrapper">
+	<div id="portfolioWrapper" class="wrapper">
 	
 		<div id="item16" class="itemContent">
 			<div class="itemIntro">
@@ -206,7 +206,7 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item20Thumbnail" class="itemThumbnail" title="Elementary STEM Teacher Mastery Badges" onclick="showItem(20)"></div>
+				<div id="item20Thumbnail" class="itemThumbnail" title="Elementary STEM Teacher Mastery Badges" onclick="showItem(20)"><img class="portfolioFinalistRibbon" src="images/portfolioImages/finalistRibbon.png" alt="Finalist" /></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Elementary STEM Teacher Mastery Badges</div>
 					<div class="itemPreview">As part of a competition, I helped develop a bading system to help teachers learn new ways of teaching STEM topics.</div>
@@ -602,7 +602,7 @@
 				<div id="item9Thumbnail" class="itemThumbnail" title="Bill Manager" onclick="showItem(9)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Bill Manager</div>
-					<div class="itemPreview">One of my earliest group projects as a Computer Science student that taught me how important the considering the UX is from the beginning. The program helps manage bills shared by multiple people but doesn't make it easy to do it. A success in that the product "works" and a failure in that no sane person would use it.</div>
+					<div class="itemPreview">One of my earliest group projects as a Computer Science student that taught me about the importance of considering the UX from the beginning. The program helps manage bills shared by multiple people but doesn't make it easy to do it. A success in that the product "works" and a failure in that no sane person would use it.</div>
 				</div> 
 			</div>
 			<div class="itemDescription">
@@ -617,6 +617,133 @@
 			</div>
 		</div>
 		
+	</div>
+	
+	<div id="resumeWrapper" class="wrapper">
+		<div id="resumeTile" class="tileLight">
+			<div id="resumeHeader" >
+				<div class="resumeHeadFont">Thomas Piggott</div>
+				<div class="resumeSubFont">thomas@thomaspiggott.com</div>
+			</div>
+			<div id="resumeLeftColumn">
+				<div id="resumeProfile">
+					<div class="title">Profile</div>
+					<div class="description">
+						User Experience Designer with a strong technical background. Passionate about crafting great user experiences. Interested in the education industry and exploring how we can improve learning in schools through technology.
+					</div>
+				</div>
+				<div id="resumeSkills">
+					<div class="title">Skills</div>
+					<div class="description">
+						<ul class="resumeList">
+							<li>Project Management</li>
+							<li>Prototyping</li>
+							<li>Wireframing</li>
+							<li>Personas & Scenarios</li>
+							<li>Contextual Inquiry</li>
+							<li>Interviewing</li>
+							<li>Usability Testing</li>
+							<li>Heuristic Evaluation</li>
+						</ul>
+					</div>
+				</div>
+				<div id="resumeSoftware">
+					<div class="title">Software</div>
+					<div class="description">
+						<ul class="resumeList">
+							<li>Adobe Photoshop</li>
+							<li>Adobe Illustrator</li>
+							<li>Adobe Flash</li>
+							<li>Axure</li>
+							<li>Eclipse</li>
+							<li>Microsoft Visual Studio</li>
+						</ul>
+					</div>
+				</div>
+				<div id="resumeRelevantCourses">
+					<div class="title">Coursework</div>
+					<div class="description">
+						<ul class="resumeList">
+							<li>Interface & Interaction Design</li>
+							<li>Contextual Inquiry</li>
+							<li>Evaluation of Systems & Services</li>
+							<li>Data Visualization</li>
+							<li>Choice Architecture</li>
+							<li>Social Influence</li>
+							<li>Technology in the Classroom</li>
+							<li>Educational Software Design</li>
+							<li>Video Games & Learning</li>
+							<li>Video Game Development</li>
+							<li>Game Theory & Microeconomics</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="resumeRightColumn">
+				<div id="resumeItems">
+					<div class="title">Professional Experience</div>
+					<div class="resumeItem">
+						<div class="resumeItemInfo">COSMOS MOBILE LEARNING PLATFORM</div>
+						<div class="resumeItemSubInfo"><div style="float: left">User Experience Designer</div><div style="float: right">2012-Present</div></div>
+						<ul class="resumeList">
+							<li>Performed classroom observations around student use of our two apps, MyDesk and MessageBoard</li>
+							<li>Performed interviews with teachers and students to better understand their use of our apps</li>
+							<li>Oversaw the designed, development, and deployment of 2 apps to 350 students and 10 teachers for daily classroom use.</li>
+						</ul>
+					</div>
+					<div class="resumeItem">
+						<div class="resumeItemInfo">GOORU</div>
+						<div class="resumeItemSubInfo"><div style="float: left">User Experience Design Intern</div><div style="float: right">2011-2012</div></div>
+						<ul class="resumeList">
+							<li>Helped design educational resource sharing platform “Gooru”</li>
+							<li>Designed and implemented system for administrators to create and edit content</li>
+							<li>Designed and developed the Ednovo.org website</li>
+							<li>Designed interactive tutorials and help center to aid users with system</li>
+							<li>Designed and developed Insights visualizations to help users improve their learning and use of the system</li>
+						</ul>
+					</div>
+					<div class="resumeItem">
+						<div class="resumeItemInfo">MENLO INNOVATIONS</div>
+						<div class="resumeItemSubInfo"><div style="float: left">Software Developer</div><div style="float: right">2010-2011</div></div>
+						<div class="resumeItemSubInfo"><div style="float: left">Software Development Intern</div><div style="float: right">2008-2009</div></div>
+						<ul class="resumeList">
+							<li>Worked as part of an Agile software development team using extreme programming and test driven development practices</li>
+							<li>Assisted in implementation of a survey tracking system written in C#</li>
+							<li>Worked on industry-leading flow cytometry software written in Java</li>
+							<li>Developed internal iPhone project involving personal drug prescription tracking</li>
+							<li>Created company website using WordPress, PHP, SQL, Javascript, HTML/CSS</li>
+							<li>Performed Quality Assurance; devised functional, performance, load, and system integration tests</li>
+						</ul>
+					</div>
+					<div class="resumeItem">
+						<div class="resumeItemInfo">AMERICAN AXLE &AMP; MANUFACTURING</div>
+						<div class="resumeItemSubInfo"><div style="float: left">Quality Assurance Intern</div><div style="float: right">2006-2007</div></div>
+						<ul class="resumeList">
+							<li>Helped implement Oracle database system that identified rejected parts</li>
+							<li>Performed studies on manufacturing processes to improve productivity</li>
+							<li>Completed diagnostics on rejected parts to determine point of failure</li>
+						</ul>
+					</div>
+				</div>
+				<div id="resumeEducation">
+					<div class="title">Education</div>
+					<div class="resumeItem">
+						<div class="resumeItemInfo">UNIVERSITY OF MICHIGAN - SCHOOL OF INFORMATION</div>
+						<div class="resumeItemSubInfo"><div style="float: left">Master of Science in Information</div><div style="float: right">May 2012</div></div>
+						<div style="float: left;">Specialization in Human-Computer Interaction and Information Economics for Management</div>
+					</div>
+					<div class="resumeItem">
+						<div class="resumeItemInfo">UNIVERSITY OF MICHIGAN - COLLEGE OF ENGINEERING</div>
+						<div class="resumeItemSubInfo"><div style="float: left">Bachelor of Science in Engineering</div><div style="float: right">December 2009</div></div>
+						<div style="float: left;">Computer Science</div>
+					</div>
+				</div>
+				<div id="resumeProjects">
+					<div class="title">Projects</div>
+					<div class="resumeItem">See my <a href="javascript:showPortfolio();">portfolio</a></div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 </div>
