@@ -16,6 +16,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-embedagram.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script type="text/javascript" src="js/tipped.js"></script>
 	<script type="text/javascript" src="js/page.js"></script>
 	
@@ -150,6 +151,7 @@
 		</div>
 	</div>
 	
+	<div id="portfolioBackground"></div>
 	<div id="portfolioWrapper" class="wrapper">
 	
 		<div id="item16" class="itemContent">
@@ -160,13 +162,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item16Thumbnail" class="itemThumbnail" title="messageBoard" onclick="showItem(16)"></div>
+				<div id="item16Thumbnail" class="itemThumbnail" title="messageBoard" onclick="toggleItem(16)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">messageBoard</div>
 					<div class="itemPreview">A forum system developed for Windows Phone 7 to help students and teachers discuss relevant topics in and out of the classroom.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item16Description" class="itemDescription">
 				Winter '12 - Present
 				<br/><b>Roles:</b> User Experience Designer / Developer
 				<br/><br/>Part of the Cosmos Mobile Learning Platform, a learn everywhere and all-the-time collection of Windows Phone 7 applications, messageBoard allows students and teachers the opportunity to easily communicate even when they're not in class. I designed the application with our primary target of students and teachers in-mind. Teachers are able to setup classroom groups that then have their own boards. So, any student associated with a classroom is able to see and participate in any discussion. The platform was also built with a web-based backend so that we can eventually build clients that work on the Android and iOS platforms as well as Windows Phone 7.
@@ -183,13 +185,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item19Thumbnail" class="itemThumbnail" title="myDesk" onclick="showItem(19)"></div>
+				<div id="item19Thumbnail" class="itemThumbnail" title="myDesk" onclick="toggleItem(19)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">myDesk</div>
 					<div class="itemPreview">A class project developed for a school to encourage new forms of learning using mobile phones.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item19Description" class="itemDescription">
 				Winter 2012
 				<br/><b>Roles:</b> UX Designer / Developer
 				<br/><br/>The Cosmos Mobile Learning Platform is a learn everywhere and all-the-time collection of Windows Phone 7 applications that lets students engage in exploratory and multi-modal learning wherever they go. MyDesk is one of these applications that actually has 6 different mini-apps used to create and do assignments. It is currently in use by 3rd graders at Nan Chiau Primary School in Singapore and the initial results are promising. During my time working on myDesk, I assisted in the redesign of many of the apps. My goal was to create a more unified appearance and better work flows for the students and teachers that would be using the apps. I spent most of my time working on Sketchbook, an application used to draw and animate. I also designed an application, PictureBook, that could create slides of photos using either pictures already on the phone or added using the phone's camera. All of PictureBook was eventually rolled into SketchBook. I helped with the overall user experience by performing usability tests, a heuristic evaluation, and assisting other teams with the design of their apps for the platform.
@@ -206,13 +208,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item20Thumbnail" class="itemThumbnail" title="Elementary STEM Teacher Mastery Badges" onclick="showItem(20)"><img class="portfolioFinalistRibbon" src="images/portfolioImages/finalistRibbon.png" alt="Finalist" /></div>
+				<div id="item20Thumbnail" class="itemThumbnail" title="Elementary STEM Teacher Mastery Badges" onclick="toggleItem(20)"><img class="portfolioFinalistRibbon" src="images/portfolioImages/finalistRibbon.png" alt="Finalist" /></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Elementary STEM Teacher Mastery Badges</div>
 					<div class="itemPreview">As part of a competition, I helped develop a bading system to help teachers learn new ways of teaching STEM topics.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item20Description" class="itemDescription">
 				Winter 2012
 				<br/><b>Role:</b> Designer
 				<br/><br/>I competed in the <a href="http://dmlcompetition.net/">Badges for Lifelong Learning: Teacher Mastery</a> competition at the 2012 Digital Media &amp; Learning Conference in San Francisco, CA. As a finalist, my team was paired with a content expert and together we pitched a system to distribute badges to teachers in recognition of their mastery over particular skills.
@@ -226,13 +228,13 @@
 					<img class="itemCategory" src="images/categories/gfx.png" alt="Graphics Designer" title="Graphics Designer" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item21Thumbnail" class="itemThumbnail" title="Naim June Pak Life Timeline" onclick="showItem(21)"></div>
+				<div id="item21Thumbnail" class="itemThumbnail" title="Naim June Pak Life Timeline" onclick="toggleItem(21)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Naim June Pak Life Timeline</div>
 					<div class="itemPreview">As part of my Graphic Design class, we were asked to choose an artist and create a visual timeline of their work. I chose Naim June Pak and his exploration of digital technology. The timeline mimics his own work by taking the shape of a robot, comprised of his own pieces inside the televisions he so often used himself.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item21Description" class="itemDescription">
 				Winter 2012
 				<br/><b>Role:</b> Designer
 			</div>
@@ -244,13 +246,13 @@
 					<img class="itemCategory" src="images/categories/gfx.png" alt="Graphics Designer" title="Graphics Designer" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item22Thumbnail" class="itemThumbnail" title="Digital Signage" onclick="showItem(22)"></div>
+				<div id="item22Thumbnail" class="itemThumbnail" title="Digital Signage" onclick="toggleItem(22)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Digital Signage</div>
 					<div class="itemPreview">As a client project for the University of Michigan's Shaprio Undergraduate Library, students were asked to create a set of digital signs that advertised for library services.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item22Description" class="itemDescription">
 				Winter 2012
 				<br/><b>Role:</b> Designer
 				<br/><br/>
@@ -263,13 +265,13 @@
 					<img class="itemCategory" src="images/categories/gfx.png" alt="Graphics Designer" title="Graphics Designer" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item23Thumbnail" class="itemThumbnail" title="SI Website Redesign" onclick="showItem(23)"></div>
+				<div id="item23Thumbnail" class="itemThumbnail" title="SI Website Redesign" onclick="toggleItem(23)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">School of Information Website Redesign</div>
 					<div class="itemPreview">Unhappy with the look of their newly released website, the University of Michigan's School of Information came to our Graphic Design class for ideas on how to improve the look and rework the layout.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item23Description" class="itemDescription">
 				Winter 2012
 				<br/><b>Role:</b> Designer
 				<br/><br/>
@@ -283,13 +285,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Solo Project" />
 				</div>
-				<div id="item24Thumbnail" class="itemThumbnail" title="Digital Signage" onclick="showItem(24)"></div>
+				<div id="item24Thumbnail" class="itemThumbnail" title="Digital Signage" onclick="toggleItem(24)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Athenaeum</div>
 					<div class="itemPreview">As part of my Personal Informatics class, my team developed a prototype for a reading app that would help track how and when you read and offer analytics to increase awareness of reading habits and suggest ways of improving comprehension.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item24Description" class="itemDescription">
 				Winter 2012
 				<br/><b>Role:</b> Designer
 				<br/><br/>
@@ -304,13 +306,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item17Thumbnail" class="itemThumbnail" title="Gooru" onclick="showItem(17)"></div>
+				<div id="item17Thumbnail" class="itemThumbnail" title="Gooru" onclick="toggleItem(17)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Gooru</div>
 					<div class="itemPreview">As a User Experience Design Intern here, I helped develop Gooru's online presence, designed new features, and supported staff with internal tools.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item17Description" class="itemDescription">
 				Summer '11 - Present
 				<br/><b>Roles:</b> User Experience Designer / Developer
 				<br/><br/>Gooru is a startup company developing a web platform that allows teachers and students to share and learn from the best learning resources. In the summer of 2011, I interned at Gooru (formerly Ednovo) 
@@ -329,13 +331,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item18Thumbnail" class="itemThumbnail" title="Menlo Innovations" onclick="showItem(18)"></div>
+				<div id="item18Thumbnail" class="itemThumbnail" title="Menlo Innovations" onclick="toggleItem(18)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Menlo Innovations</div>
 					<div class="itemPreview">I've worked here as a Developer, Quality Advocate, and High-Tech Anthropologist, been an intern, and worked on projects in C#, Java, PHP, Objective-C, and developed my communication skills in an agile and extreme programming environment.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item18Description" class="itemDescription">
 				2008 - Present
 				<br/><b>Roles:</b> Developer / Quality Advocate / High-Tech Anthropologist
 				<br/><br/>Menlo Innovations is one of the coolest and most unique custom software development firms you're going to find. I've been working there since 
@@ -363,13 +365,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item14Thumbnail" class="itemThumbnail" title="IGN Video Game Popularity Visualization" onclick="showItem(14);"></div>
+				<div id="item14Thumbnail" class="itemThumbnail" title="IGN Video Game Popularity Visualization" onclick="toggleItem(14);"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">IGN Video Game Popularity Visualization</div>
 					<div class="itemPreview">A class project for a client that helps visualize the popularity of a selected set of video games based on genre and platform.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item14Description" class="itemDescription">
 				Fall '11
 				<br/><b>Roles:</b> Designer / Developer
 				<br/><b>Course:</b> Information Visualization
@@ -390,13 +392,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item15Thumbnail" class="itemThumbnail" title="Commute Time Visualization" onclick="showItem(15)"></div>
+				<div id="item15Thumbnail" class="itemThumbnail" title="Commute Time Visualization" onclick="toggleItem(15)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Commute Time Visualization</div>
 					<div class="itemPreview">A visualization to help explore when and what transportation to and from school and work take the least time.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item15Description" class="itemDescription">
 				Fall '11
 				<br/><b>Roles:</b> Designer / Developer
 				<br/><b>Course:</b> Information Visualization
@@ -413,13 +415,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item11Thumbnail" class="itemThumbnail" title="Super Readers" onclick="showItem(11)"></div>
+				<div id="item11Thumbnail" class="itemThumbnail" title="Super Readers" onclick="toggleItem(11)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Super Readers</div>
 					<div class="itemPreview">A design document for a game that teaches elementary school students how to read. The system continues to support learners from Kindergarten through 5th grade and grows with the student, always providing learning objectives that map to real world use. Set in the world of the user becoming a superhero, the player must help their city gain their words back after a nefarious villain steals them all!</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item11Description" class="itemDescription">
 				Winter '11
 				<br/><b>Role:</b> Designer
 				<br/><b>Course:</b> Principles of Software Design for Learning
@@ -439,13 +441,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item10Thumbnail" class="itemThumbnail" title="Sweetland Center for Writing Website Evaluation" onclick="showItem(10)"></div>
+				<div id="item10Thumbnail" class="itemThumbnail" title="Sweetland Center for Writing Website Evaluation" onclick="toggleItem(10)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Sweetland Center for Writing Website Evaluation</div>
 					<div class="itemPreview">A class project for a client that wanted their website evaluated. This project involved user surveys, interviews, </div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item10Description" class="itemDescription">
 				Winter '11
 				<br/><b>Roles:</b> Project Manager, Interviewer, Usability Tester
 				<br/><b>Course:</b> Evaluation of Systems &amp; Services
@@ -467,13 +469,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item1Thumbnail" class="itemThumbnail" title="Summers-Knoll Digital Portfolio" onclick="showItem(1)"></div>
+				<div id="item1Thumbnail" class="itemThumbnail" title="Summers-Knoll Digital Portfolio" onclick="toggleItem(1)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Summers-Knoll Digital Portfolio</div>
 					<div class="itemPreview">A class project for a client that desired a system for student portfolios. This project involved contextual inquiry, user interviews, sketched lo-fi prototypes, a working hi-fi prototype, and user testing.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item1Description" class="itemDescription">
 				Fall '10
 				<br/><b>Roles:</b> User Experience Designer, Interviewer, Usability Tester
 				<br/><b>Course:</b> Interaction and Interface Design
@@ -495,13 +497,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item2Thumbnail" class="itemThumbnail" title="Touch Screens in Education" onclick="showItem(2)"></div>
+				<div id="item2Thumbnail" class="itemThumbnail" title="Touch Screens in Education" onclick="toggleItem(2)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Touch Screens in Education</div>
 					<div class="itemPreview">This is an exploration of current use of touch screens in education. Not much research is available yet because its use in classrooms is relatively new but already there are encouraging uses.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item2Description" class="itemDescription">
 				Fall '10
 				<br/><b>Course:</b> Transformative Technology in the Classroom
 				<br/><br/>Throughout the semester, my class explored the use of technology in the classroom. What we found out is that 
@@ -524,13 +526,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item3Thumbnail" class="itemThumbnail" title="Kerrytown BookFest" onclick="showItem(3)"></div>
+				<div id="item3Thumbnail" class="itemThumbnail" title="Kerrytown BookFest" onclick="toggleItem(3)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Kerrytown BookFest</div>
 					<div class="itemPreview">As a volunteer, I helped design and develop the BookFest's web presence while providing admin features that helped the BookFest Council stay organized.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item3Description" class="itemDescription">
 				Fall '09 - Fall '10
 				<br/><b>Roles:</b> Web Designer/Developer
 				<br/><b>Client:</b> <a href="http://www.kerrytownbookfest.org/about/kerrytown-bookfest/">Kerrytown BookFest Board</a>
@@ -550,13 +552,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item4Thumbnail" class="itemThumbnail" title="Typography" onclick="showItem(4)"></div> 
+				<div id="item4Thumbnail" class="itemThumbnail" title="Typography" onclick="toggleItem(4)"></div> 
 				<div class="itemInfo">
 					<div class="itemTitle">Typography</div>
 					<div class="itemPreview">A class project about the use of Typography around Ann Arbor that explored how to use technology to present topics in an engaging manner.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item4Description" class="itemDescription">
 				Fall '08
 				<br/><b>Roles:</b> User Experience Designer, Lead Developer
 				<br/><b>Course:</b> Technology and the Humanities
@@ -575,13 +577,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item5Thumbnail" class="itemThumbnail" title="Squirrel Sense" onclick="showItem(5)"></div>
+				<div id="item5Thumbnail" class="itemThumbnail" title="Squirrel Sense" onclick="toggleItem(5)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Squirrel Sense</div>
 					<div class="itemPreview">A fast-paced multiplayer action game that has you defending your territory and stealing acorns from other squirrels.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item5Description" class="itemDescription">
 				Fall '09
 				<br/><b>Roles:</b> User Experience Designer, Developer, Art/Audio Designer
 				<br/><b>Course:</b> Computer Game Design and Development
@@ -602,13 +604,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/solo.png" alt="Solo Project" title="Solo Project" />
 				</div>
-				<div id="item6Thumbnail" class="itemThumbnail" title="GravEATy" onclick="showItem(6)"></div>
+				<div id="item6Thumbnail" class="itemThumbnail" title="GravEATy" onclick="toggleItem(6)"></div>
 			 	<div class="itemInfo">
 			 		<div class="itemTitle">GravEATy</div>
 					<div class="itemPreview">An arcade-style game I developed cenetered around eating as much food as possible so that gravity pulls you back to earth before you float away forever!</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item6Description" class="itemDescription">
 				Fall '09
 				<br/><b>Roles:</b> User Experience Designer, Developer
 				<br/><b>Course:</b> Computer Game Design and Development
@@ -628,13 +630,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item7Thumbnail" class="itemThumbnail" title="Vocabulearner" onclick="showItem(7)"></div>
+				<div id="item7Thumbnail" class="itemThumbnail" title="Vocabulearner" onclick="toggleItem(7)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Vocabulearner</div>
 					<div class="itemPreview">A Windows Desktop Widget intended to help users easily look up and remember definitions of words.</div>
 				</div> 
 			</div> 
-			<div class="itemDescription">
+			<div id="item7Description" class="itemDescription">
 				Winter '09
 				<br/><b>Roles:</b> User Experience Designer, Developer
 				<br/><b>Course:</b> Computer Science Major Design Project
@@ -651,13 +653,13 @@
 					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item8Thumbnail" class="itemThumbnail" title="The Ultimate Machine" onclick="showItem(8)"></div>
+				<div id="item8Thumbnail" class="itemThumbnail" title="The Ultimate Machine" onclick="toggleItem(8)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">The Ultimate Machine</div>
 					<div class="itemPreview">A design document describing a game aimed at developing student's sense of physics as they build machines, race, tweak their designs, and win.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item8Description" class="itemDescription">
 				Winter '09
 				<br/><b>Role:</b> User Experience Designer
 				<br/><b>Course:</b> Video Games &amp; Learning
@@ -675,13 +677,13 @@
 					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
 					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
 				</div>
-				<div id="item9Thumbnail" class="itemThumbnail" title="Bill Manager" onclick="showItem(9)"></div>
+				<div id="item9Thumbnail" class="itemThumbnail" title="Bill Manager" onclick="toggleItem(9)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle">Bill Manager</div>
 					<div class="itemPreview">One of my earliest group projects as a Computer Science student that taught me about the importance of considering the UX from the beginning. The program helps manage bills shared by multiple people but doesn't make it easy to do it. A success in that the product "works" and a failure in that no sane person would use it.</div>
 				</div> 
 			</div>
-			<div class="itemDescription">
+			<div id="item9Description" class="itemDescription">
 				Fall '08
 				<br/><b>Role:</b> Developer
 				<br/><b>Course:</b> Java Programming
