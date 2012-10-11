@@ -78,6 +78,22 @@
 	background-image: url('../images/portfolioImages/thumbnails/dmlCompetitionThumbnail.png');
 }
 
+#item21Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/timelinePosterThumbnail.png');
+}
+
+#item22Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/digitalSignageThumbnail.png');
+}
+
+#item23Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/siWebsiteThumbnail.png');
+}
+
+#item24Thumbnail{
+	background-image: url('../images/portfolioImages/thumbnails/readerThumbnail.png');
+}
+
 .portfolioFinalistRibbon{
 	position: absolute;
 	right: 0px;
