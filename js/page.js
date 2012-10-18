@@ -1,48 +1,63 @@
 var viewingItem = false;
+var lastViewedItem = 0;
 var animationDuration = 500;
 
 function showSocial(){
-	$(".navItemLink").removeClass("navItemLinkSelected");
-	$("#navItemSocial").addClass("navItemLinkSelected");
-	
-	$("#navItemSelected").animate({
-		top: '112'
-	}, animationDuration)
-	
-	$("#portfolioBackground").fadeOut(animationDuration);
-	$(".wrapper").fadeOut(animationDuration);
-	setTimeout(function(){$("#socialWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	if(!$("#socialWrapper").is(':visible')){
+		$(".navItemLink").removeClass("navItemLinkSelected");
+		$("#navItemSocial").addClass("navItemLinkSelected");
+		
+		$("#navItemSelected").animate({
+			top: '112'
+		}, animationDuration)
+		
+		if(viewingItem)
+			toggleItem(lastViewedItem);
+			
+		$(".wrapper").fadeOut(animationDuration);
+		$.scrollTo(0, animationDuration);
+		setTimeout(function(){$("#socialWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	}
 }
 
 function showPortfolio(){
-	$(".navItemLink").removeClass("navItemLinkSelected");
-	$("#navItemPortfolio").addClass("navItemLinkSelected");
-	
-	$("#navItemSelected").animate({
-		top: '162'
-	}, animationDuration)
-	
-	$("#portfolioBackground").fadeOut(animationDuration);
-	$(".wrapper").fadeOut(animationDuration);
-	setTimeout(function(){$("#portfolioWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	if(!$("#portfolioWrapper").is(':visible')){
+		$(".navItemLink").removeClass("navItemLinkSelected");
+		$("#navItemPortfolio").addClass("navItemLinkSelected");
+		
+		$("#navItemSelected").animate({
+			top: '162'
+		}, animationDuration)
+		
+		$(".wrapper").fadeOut(animationDuration);
+		$.scrollTo(0, animationDuration);
+		setTimeout(function(){$("#portfolioWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	}
 }
 
 function showResume(){
-	$(".navItemLink").removeClass("navItemLinkSelected");
-	$("#navItemResume").addClass("navItemLinkSelected");
-	
-	$("#navItemSelected").animate({
-		top: '212'
-	}, animationDuration)
-	
-	$("#portfolioBackground").fadeOut(animationDuration);
-	$(".wrapper").fadeOut(animationDuration);
-	setTimeout(function(){$("#resumeWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	if(!$("#resumeWrapper").is(':visible')){
+		$(".navItemLink").removeClass("navItemLinkSelected");
+		$("#navItemResume").addClass("navItemLinkSelected");
+		
+		$("#navItemSelected").animate({
+			top: '212'
+		}, animationDuration)
+		
+		if(viewingItem)
+			toggleItem(lastViewedItem);
+		
+		$(".wrapper").fadeOut(animationDuration);
+		$.scrollTo(0, animationDuration);
+		setTimeout(function(){$("#resumeWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	}
 }
 
 function toggleItem(itemNumber){
 	viewingItem = !viewingItem;
+	lastViewedItem = itemNumber;
 	$("#portfolioBackground").fadeToggle(animationDuration);
+	$("#closePortfolioItemButton").fadeToggle(animationDuration);
 	$("#item" + itemNumber).toggleClass('itemContentForDescription');
 	$("#item" + itemNumber).toggleClass('itemContent');
 			
@@ -55,5 +70,15 @@ function toggleItem(itemNumber){
 		$(".itemContent").animate({opacity: 1}, animationDuration);
 		$("#item" + itemNumber + "Description").hide();
 	}
+}
+
+function closeItem(){
+	viewingItem = false;
+	$("#portfolioBackground").fadeOut(animationDuration);
+	$("#closePortfolioItemButton").fadeOut(animationDuration);
+	$("#item" + lastViewedItem).removeClass('itemContentForDescription');
+	$("#item" + lastViewedItem).addClass('itemContent');
+	$(".itemContent").animate({opacity: 1}, animationDuration);
+	$(".itemDescription").hide();
 }
 

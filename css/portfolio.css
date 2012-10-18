@@ -94,6 +94,28 @@
 	background-image: url('../images/portfolioImages/thumbnails/readerThumbnail.png');
 }
 
+#closePortfolioItemButton{
+	position: fixed;
+	bottom: 0;
+	right: 25px;
+	z-index: 100;
+	display: none;
+	padding: 5px;
+	font-family: Novecentowide-DemiBold;
+	font-size: 16pt;
+	cursor: pointer;
+	
+	transition: color 300ms ease-out;
+	-webkit-transition: color 300ms ease-out;
+	color: #6b6b6b;
+}
+
+#closePortfolioItemButton:hover{
+	transition: color 500ms ease-out;
+	-webkit-transition: color 500ms ease-out;
+	color: #e3e3e3;
+}
+
 .portfolioFinalistRibbon{
 	position: absolute;
 	right: 0px;
@@ -158,11 +180,14 @@
 	float: left;
 	width: 450px;
 }
+
 .itemTitle{
 	font-family: Novecentowide-DemiBold;
 	font-size: 18pt;
 	margin: 0 0 0 20px;
+	cursor: pointer;
 }
+
 .itemPreview{
 	margin: 10px 0 0 20px;
 }

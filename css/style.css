@@ -7,21 +7,38 @@ html, body{
 	min-height: 1000px;
 }
 
+img{
+	border-style: none;
+}
+
 a:link, a:visited{
 	text-decoration: none;
 	color: #43b6d7;
 }
 
+a:active, a:hover{
+	text-decoration: underline;
+	color: #43b6d7;
+}
+
 a.navItemLink:link, a.navItemLink:visited{
 	text-decoration: none;
-	color: #6b6b6b;
 	font-size: 18px;
+	transition: color 300ms ease-out;
+	-webkit-transition: color 1s ease-out;
+	color: #6b6b6b;
+}
+
+a.navItemLink:hover, a.navItemLink:active{
+	transition: color 500ms ease-out;
+	-webkit-transition: color 1s ease-out;
+	color: #e3e3e3;
 }
 
 a.navItemLinkSelected:link, a.navItemLinkSelected:visited{
 	text-decoration: none;
-	color: #e3e3e3;
 	font-size: 18px;
+	color: #e3e3e3;
 }
 
 body{
@@ -143,19 +160,6 @@ body{
 	top: 0;
 	width: 298px;
 	height: 298px;
-	border: 1px solid #1a1a1a;
-	background: rgb(41,41,41); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,41,41,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	
 	font-family: Novecentowide-Normal;
 	font-weight: normal;
@@ -164,11 +168,11 @@ body{
 }
 
 .navItem{
-	color: #6b6b6b;
 	cursor: pointer;
 	float: left;
 	width: 100%;
 	line-height: 50px;
+	color: #6b6b6b;
 }
 
 #navItemContainer{
@@ -327,6 +331,22 @@ ul.resumeList{
 	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 }
 
+.tileDarkGradient{
+	border: 1px solid #1a1a1a;
+	background: rgb(41,41,41); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,41,41,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+}
+
 #twitterHandle{
 	font-family: Novecentowide-DemiBold;
 	font-size: 24pt;
@@ -336,6 +356,11 @@ ul.resumeList{
 	float: left;
 	margin: 50px 25px 0 25px;
 	width: 448px;
+	height: 420px;
+}
+
+#twitter-widget-0{
+	margin: 0 0 0 4px;
 }
 
 .twitterList li{
