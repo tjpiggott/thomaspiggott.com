@@ -107,12 +107,14 @@
 	
 	transition: color 300ms ease-out;
 	-webkit-transition: color 300ms ease-out;
+	-moz-transition: color 300ms ease-out;
 	color: #6b6b6b;
 }
 
 #closePortfolioItemButton:hover{
 	transition: color 500ms ease-out;
 	-webkit-transition: color 500ms ease-out;
+	-moz-transition: color 500ms ease-out;
 	color: #e3e3e3;
 }
 
@@ -157,9 +159,19 @@
 
 .itemDescription{
 	float: left;
-	margin: 50px 0 0 20px; 
-	width: 600px;
+	margin: 50px 0 0 0; 
 	display: none;
+}
+
+.itemText{
+	float: left;
+	width: 500px;
+	margin: 0 25px 0 0;
+}
+
+.itemMeta{
+	float: right;
+	width: 175px;
 }
  
 .itemIntro{
