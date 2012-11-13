@@ -126,9 +126,6 @@
 
 .portfolioImage{
  	border: 2px solid #b3b3b3;
-	-moz-box-shadow: 0 5px 10px #000;
-	-webkit-box-shadow: 0 5px 10px #000;
-	box-shadow: 0 5px 10px #000;
  }
  
 #portfolioWrapper{
@@ -143,18 +140,18 @@
 .itemContent{
 	float: left;
 	margin: 0 0 50px 50px;
-	width: 700px;
-	background-color: #f3f3f3;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
+	padding: 5px;
+	width: 698px;
+	background-color: #f1f1f1;
+	border: 1px solid #dddddd;
 }
 
 .itemContentForDescription{
 	float: left;
 	margin: 0 0 50px 50px;
-	width: 700px;
+	width: 698px;
 	color: #e3e3e3;
+	padding: 6px;
 }
 
 .itemDescription{
@@ -165,7 +162,7 @@
 
 .itemText{
 	float: left;
-	width: 500px;
+	width: 498px;
 	margin: 0 25px 0 0;
 }
 
@@ -198,6 +195,17 @@
 	font-size: 18pt;
 	margin: 0 0 0 20px;
 	cursor: pointer;
+	
+	transition: color 300ms ease-out;
+	-webkit-transition: color 300ms ease-out;
+	-moz-transition: color 300ms ease-out;
+}
+
+.itemTitle:hover{
+	color: #8e32d5;
+	transition: color 300ms ease-out;
+	-webkit-transition: color 300ms ease-out;
+	-moz-transition: color 300ms ease-out;
 }
 
 .itemPreview{
@@ -208,7 +216,6 @@
 	float: left;
 	width: 160px;
 	height: 160px;
-	background-color: #f3f3f3;
 	border: 5px solid #ffffff;
 	position: relative;
 	cursor: pointer;
@@ -220,11 +227,7 @@
 	top: 30px;
 	left: 0;
 	padding: 20px 20px 20px 200px;
-	background-color: #f3f3f3;
 	border: 1px solid #dddddd;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 }
 
 #itemContentsContainer{
@@ -234,10 +237,6 @@
 	top: 150px;
 	width: 700px;
 	padding: 10px;
-	background-color: #f3f3f3;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 }
 
 #itemContentContainerCloseButton{
@@ -251,9 +250,6 @@
 
 	background-color: #292929;
 	border: 1px solid #1a1a1a;
-	-moz-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	-webkit-box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
-	box-shadow: 4px 4px 4px rgba(41,41,41,0.3);
 	-moz-border-bottom-right-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;
 	-moz-border-bottom-right-radius: 4px;
