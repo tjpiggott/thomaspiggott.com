@@ -69,6 +69,7 @@ function toggleItem(itemNumber){
 	else{
 		$(".itemContent").animate({opacity: 1}, animationDuration);
 		$("#item" + itemNumber + "Description").hide();
+		$.scrollTo("#item" + itemNumber, animationDuration, {offset: {top:-50}});
 	}
 }
 
@@ -80,5 +81,6 @@ function closeItem(){
 	$("#item" + lastViewedItem).addClass('itemContent');
 	$(".itemContent").animate({opacity: 1}, animationDuration);
 	$(".itemDescription").hide();
+	$.scrollTo("#item" + lastViewedItem, animationDuration, {offset: {top:-50}});
 }
 

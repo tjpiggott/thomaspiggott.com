@@ -162,13 +162,13 @@
 
 .itemText{
 	float: left;
-	width: 498px;
+	width: 488px;
 	margin: 0 25px 0 0;
 }
 
 .itemMeta{
 	float: right;
-	width: 175px;
+	width: 185px;
 }
  
 .itemIntro{
@@ -190,6 +190,27 @@
 	width: 450px;
 }
 
+.itemPreview{
+	margin: 10px 0 0 20px;
+}
+
+.itemScreenshots{
+	width: 100%;
+	float: left;
+	margin: 50px 0 0 0;
+}
+
+.itemScreenshot{
+	width: 200px;
+	float: left;
+	margin: 0 25px 25px 0;
+}
+
+.itemScreenshotBig{
+	width: 700px;
+	float: left;
+}
+
 .itemTitle{
 	font-family: Novecentowide-DemiBold;
 	font-size: 18pt;
@@ -206,10 +227,6 @@
 	transition: color 300ms ease-out;
 	-webkit-transition: color 300ms ease-out;
 	-moz-transition: color 300ms ease-out;
-}
-
-.itemPreview{
-	margin: 10px 0 0 20px;
 }
 
 .itemThumbnail{
