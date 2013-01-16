@@ -48,6 +48,12 @@
 				hook: 'leftmiddle',
 				offset: { x: -15, y: 0 },
 			});
+			
+			Tipped.create('.innerScreenshot', {
+				skin: 'darkFlat',
+				hook: 'topleft',
+				offset: { x: 15, y: 0 },
+			});
 		});
     </script>
 
@@ -75,21 +81,95 @@
 		</div>
 		<div id="navItemSelected"></div>
 		<div id="navItemContainer">
-			<div class="navItem" onclick="showSocial();"><a id="navItemSocial" class="navItemLink navItemLinkSelected" href="javascript:showSocial();">SOCIAL</a></div>
-			<div class="navItem" onclick="showPortfolio();"><a id="navItemPortfolio" class="navItemLink" href="javascript:showPortfolio();">PORTFOLIO</a></div>
-			<div class="navItem" onclick="showResume();"><a id="navItemResume" class="navItemLink" href="javascript:showResume();">RESUM&Eacute;</a></div>
+			<div class="navItem" onclick="showMe();"><a id="navItemMe" class="navItemLink navItemLinkSelected" href="javascript:showMe();">ME</a></div>
+			<div class="navItem" onclick="showPortfolio();"><a id="navItemPortfolio" class="navItemLink" href="javascript:showPortfolio();">MY PORTFOLIO</a></div>
+			<div class="navItem" onclick="showResume();"><a id="navItemResume" class="navItemLink" href="javascript:showResume();">MY RESUM&Eacute;</a></div>
+			<div class="navItem" onclick="showSocial();"><a id="navItemSocial" class="navItemLink" href="javascript:showSocial();">CONNECT</a></div>
+		</div>
+	</div>
+	
+	<div id="meWrapper" class="wrapper">
+		<div id="aboutIntroTile" class="tileLight">
+			<img id="aboutPicture" src="images/me.png" alt="Picture of Me!" />
+			<div id="aboutInfo">
+				<div id="aboutTitle">Hey there!</div>
+				<div id="aboutDescription">
+					Welcome to my website. I'm a User Experience Designer and Developer. I'm looking for roles that allow me to craft incredible user experiences. I believe in lifelong learning and an education for all and I find myself working on projects that promote this. And now, you ask yourself, "So what? Why would I want to hire you?"
+				</div>
+			</div>
+		</div>
+		
+		<div class="aboutTile tileLight">
+			<div class="tileTitle">Allow me to explain</div>
+			<div class="tileDescription">
+				I'm the kind of person that has always loved creating whether it's playing with Legos, building a sprawling metropolis in SimCity, or designing the future of mobile education and executing it. I'm excited about learning both in terms of helping others and the pursuit of lifelong learning for myself. I love to travel and explore. It's always amazing to take on a new adventure, experience new cultures, and meet new people. All this to say: I have the skills and passion you need to take your user experience to a place of joy for your users. 
+			</div>
+		</div>
+		
+		<div class="aboutTile tileLight">
+			<div class="tileTitle">the skills</div>
+			<div class="tileDescription">
+				You need someone that can get at what your users need. I've spent time watching, interviewing, and interacting with some of the most demanding (and rightfully so) users in the world: students and teachers. Teachers are balls of energy that have too much to do with too little time and need designs that work for them, quickly and intuitively. Students are balls of energy that can't wait to explore and as such are absolutely incredible at finding the flaws in your design. Users are always going to present a challenge but that's exactly what I want to tackle. Let me show you.
+			</div>
+		</div>
+		
+		<div class="aboutTile tileLight">
+			<div class="tileTitle">what I do</div>
+			<div class="tileDescription">
+				To make the best experience for your users, there's a lot of work to be done and I'm the man for the job.
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">I interview, observe, and analyze users.</div>
+				<img class="innerScreenshot" style="width:200px;" src="images/skills/affinityWall.png" alt="Affinity Wall for a student portfolio system" title="Affinity Wall for a student portfolio system" />
+				<img class="innerScreenshot" style="width:175px;" src="images/skills/model.png" alt="Cultural Model of a school using a student portfolio system" title="Cultural Model of a school using a student portfolio system" />
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">I create scenarios and personas to focus the designs.</div>
+				<img class="innerScreenshot" style="width:200px;" src="images/skills/persona.png" alt="Primary persona &amp; scenario for a university website" title="Primary persona &amp; scenario for a university website" />
+				<img class="innerScreenshot" style="width:175px;" src="images/skills/personaMap.jpg" alt="Persona Map with primary, secondary, and tertiary users" title="Persona Map with primary, secondary, and tertiary users" />
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">I develop an understanding of the experience through interaction maps and user flow diagrams.</div>
+				<img class="innerScreenshot" style="width:400px;" src="images/skills/interactionMap.png" alt="Interaction Map of Sweetland Writing Center's Website" title="Interaction Map of Sweetland Writing Center's Website" />
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">I test designs and iterate them through wireframes...</div>
+				<img class="innerScreenshot" style="width:175px;" src="images/skills/wireframe.jpg" alt="Wireframes for a student portfolio system" title="Wireframes for a student portfolio system" />
+				<img class="innerScreenshot" style="width:200px;" src="images/skills/wireframe2.jpg" alt="Wireframes for a student portfolio system" title="Wireframes for a student portfolio system" />
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">... and interactive prototypes.</div>
+				<img class="innerScreenshot" style="width:400px;" src="images/skills/prototype.png" alt="Prototype made with HTML5/CSS3 &amp; jQuery" title="Prototype made with HTML5/CSS3 &amp; jQuery" />
+				<img class="innerScreenshot" style="width:400px; margin: 25px 0 0 275px;" src="images/skills/prototype2.png" alt="Prototype made with Axure RP" title="Prototype made with Axure RP"/>
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">I run usability tests with users and heuristic evaluations when users aren't available.</div>
+				<img class="innerScreenshot" style="width:400px;" src="images/skills/heuristicEvaluation.png" alt="Heuristic Evaluation of GooruLearning.org" title="Heuristic Evaluation of GooruLearning.org" />
+			</div>
+			<div class="innerRow">
+				<div class="innerTile">And I deliver usable, enjoyable software.</div>
+				<img class="innerScreenshot" style="width:186px;" src="images/skills/usable2.jpg" alt="Students in Singapore using myDesk on their Windows Phones" title="Students in Singapore using myDesk on their Windows Phones" />
+				<img class="innerScreenshot" style="width:186px;" src="images/skills/usable3.jpg" alt="Students in Singapore using myDesk on their Windows Phones" title="Students in Singapore using myDesk on their Windows Phones" />
+				<img class="innerScreenshot" style="width:400px; margin: 25px 0 0 275px;" src="images/skills/usable.jpg" alt="Students in Singapore using myDesk on their Windows Phones" title="Students in Singapore using myDesk on their Windows Phones" />
+			</div>
+		</div>
+		
+		<div class="aboutTile tileLight">
+			<div class="tileTitle">what I want</div>
+			<div class="tileDescription">
+				Whoa, right? I have demands of my own?! Well, that's because it's important for us to find out if I match up with your company's culture and personality. I want to work for a company and team that share my passion for a great user experience. I'm as comfortable working independently as I am working directly with another person, collaborating all day. What I love is a place that values teamwork, regardless of the mode of work for each team member. I love a place that expects I'll help you whenever you need it and you'll do the same for me. Where mistakes are made faster in order to prevent the BIG one later on and we aren't afraid to "run the experiment" when we don't know the answer. I want to work hard for a company that's making a difference and making the world a better place.
+			</div>
+		</div>
+		
+		<div class="aboutTile tileLight">
+			<div class="tileTitle">Sound Good?</div>
+			<div class="tileDescription">
+				If I've intrigued you at all, then I invite you to <a href="javascript:showSocial()">connect with me</a>. I also invite you to take a look at the projects I've worked on in <a href="javascript:showPortfolio()">my portfolio</a> and to take a look at <a href="javascript:showResume()">my resum&eacute;</a>.
+			</div>
 		</div>
 	</div>
 	
 	<div id="socialWrapper" class="wrapper">
-		<div id="aboutTile" class="tileLight">
-			<img id="aboutPicture" src="images/me.png" alt="Picture of Me!" />
-			<div id="aboutInfo">
-				<div id="aboutTitle">Hey there!</div>
-				<div id="aboutDescription">Welcome to my website. I'm a User Experience Designer and Developer. I'm looking for roles that allow me to craft incredible user experiences. I believe in lifelong learning and an education for all and I find myself working on projects that promote this. Check out my <a href="javascript:showPortfolio()">portfolio</a> and <a href="javascript:showResume()">resum&eacute;</a> for more!</div>
-			</div>
-		</div>
-		
 		<div id="contactTile" class="tileLight">
 			<div class="tileTitle">Connect</div>
 			<div id="contactDescription">
@@ -165,6 +245,55 @@
 	<div id="closePortfolioItemButton" class="tileDarkGradient" onclick="closeItem()">CLOSE</div>
 	<div id="portfolioWrapper" class="wrapper">
 	
+		<div id="item19" class="itemContent">
+			<div class="itemIntro">
+				<div class="itemCategories">
+					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
+					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
+					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
+					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
+				</div>
+				<div id="item19Thumbnail" class="itemThumbnail" title="myDesk" onclick="toggleItem(19)"></div>
+				<div class="itemInfo">
+					<div class="itemTitle" onclick="toggleItem(19)">myDesk</div>
+					<div class="itemPreview">MyDesk is a project developed for schools to encourage a more constructivist learning environment using mobile phones and deployed to over 350 students at a primary school in Singapore. As the project lead in Singapore, I was the point person between the school and our developers, ran observations and interviews, and developed the apps further.</div>
+				</div> 
+			</div>
+			<div id="item19Description" class="itemDescription">
+				<div class="itemMeta">
+					Winter 2012
+					<br/><br/>
+					<b>Roles:</b> Project Lead, UX Designer, Developer
+					<br/><br/>
+					<b>Technology:</b> Illustrator, Photoshop, Visual Studio, C#, Silverlight, Git
+					<br/><br/>
+					<b>Project Length:</b> 4 Months
+				</div>
+				<div class="itemText">
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						MyDesk is a Windows Phone app with six mini-apps designed for students to engage in multi-modal learning anytime and anywhere. SketchBook, KWL, MapIt, Recorder, Blurb, and NotePad mini-apps can all be set up with assignments by teachers and turned in by students. Currently in use by 700 3rd and 4th graders at Nan Chiau Primary School in Singapore, the initial results are promising. We've seen a major shift from top down lecturing to a more constructivist learning style with discussion and exploration. 
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						I was in Singapore at our pilot school for 4 months, supporting the application, interviewing administrators, teachers and students, observing classes, and redesigning the platform based on these experiences. I also helped further develop the platform and successfully launched updates to the app with new features and bug fixes.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						The app is currently available in the <a href="http://www.windowsphone.com/en-us/store/app/mydesk/5f57dc71-3905-49e1-8144-fa840cf78a4b" target="_blank">Windows Marketplace</a> now, though it requires a username and password only available through the pilot schools. You can learn more about it <a target="_blank" href="http://cosmosmlp.org">here</a>.
+					</div>
+				</div>
+				<div class="itemScreenshots">
+					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/create.png" />
+					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/mapit.png" />
+					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/recorder.png" />
+					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/sketchbook.png" />
+					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/sketchbook3.png" />
+					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/sketchbook2.png" />
+				</div>
+			</div>
+		</div>
+		
 		<div id="item16" class="itemContent">
 			<div class="itemIntro">
 				<div class="itemCategories">
@@ -190,56 +319,23 @@
 					<b>Project Length:</b> 4 Months
 				</div>
 				<div class="itemText">
-					MessageBoard was designed to be very simple, allowing for easy control by administrators and easy discussion between students and teachers. Teachers and administrators are able to setup classroom groups that then have their own set of boards. Any student associated with a classroom is able to see and participate in those discussions. The platform was also built with a web-based backend so that we can eventually build clients that work on the Android and iOS platforms in addition to Windows Phone 7.
-					<br/><br/>
-					Available in the <a href="http://www.windowsphone.com/en-us/store/app/messageboard/7d2755b0-a26d-4293-ac2b-4b257c5a77ea" target="_blank">Windows Marketplace</a> now, you can learn more about it the whole Cosmos Mobile Learning Platform <a target="_blank" href="http://cosmosmlp.org">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						MessageBoard, a forum system, was designed to be very simple and allow for easy control by administrators. Teachers and administrators are able to setup classroom groups that then have their own set of boards, posts, and comments. Currently in use at Nan Chiau Primary School in Singapore, teachers and students have used to easily communicate with each other when in and out of class. The platform was built with a web-based backend so that eventually, clients for the Android and iOS platforms can be built.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						I completely designed and developed the Windows Phone 7 app. My teammate developed the backend web system and the two of us collaborated on the design of the API. I managed the deployment of the app to the school students and performed classroom observations along with analysis of the usage data for further design improvements.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Available in the <a href="http://www.windowsphone.com/en-us/store/app/messageboard/7d2755b0-a26d-4293-ac2b-4b257c5a77ea" target="_blank">Windows Marketplace</a> now, though it requires a username and password available only available to the pilot schools. You can learn more about it the whole Cosmos Mobile Learning Platform <a target="_blank" href="http://cosmosmlp.org">here</a>.
+					</div>
 				</div>
 				<div class="itemScreenshots">
 					<img class="itemScreenshot" src="images/portfolioImages/messageBoardScreenshots/boards.png" />
 					<img class="itemScreenshot" src="images/portfolioImages/messageBoardScreenshots/posts.png" />
 					<img class="itemScreenshot" src="images/portfolioImages/messageBoardScreenshots/comments.png" />
-				</div>
-			</div>
-		</div>
-		
-		<div id="item19" class="itemContent">
-			<div class="itemIntro">
-				<div class="itemCategories">
-					<img class="itemCategory" src="images/categories/ux.png" alt="UX Designer" title="UX Designer" />
-					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
-					<img class="itemCategory" src="images/categories/edu.png" alt="Education" title="Education" />
-					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
-				</div>
-				<div id="item19Thumbnail" class="itemThumbnail" title="myDesk" onclick="toggleItem(19)"></div>
-				<div class="itemInfo">
-					<div class="itemTitle" onclick="toggleItem(19)">myDesk</div>
-					<div class="itemPreview">MyDesk is a project developed for schools to encourage a more constructivist learning environment using mobile phones and deployed to over 350 students at a primary school in Singapore. As the project lead in Singapore, I've been the point person between our users and the development team at the University of Michigan.</div>
-				</div> 
-			</div>
-			<div id="item19Description" class="itemDescription">
-				<div class="itemMeta">
-					Winter 2012
-					<br/><br/>
-					<b>Roles:</b> Project Lead, UX Designer, Developer
-					<br/><br/>
-					<b>Technology:</b> Illustrator, Photoshop, Visual Studio, C#, Silverlight, Git
-					<br/><br/>
-					<b>Project Length:</b> 4 Months
-				</div>
-				<div class="itemText">
-					The Cosmos Mobile Learning Platform is a learn everywhere and anytime collection of Windows Phone 7 applications that lets students engage in exploratory and multi-modal learning wherever they go. MyDesk is the flagship app which has six mini-apps inside of it. It is currently in use by 350 3rd graders at Nan Chiau Primary School in Singapore and the initial results are promising. We've seen a major shift from top down lecturing to a more constructivist learning style with discussion and exploration.
-					<br/><br/>What's amazing about the myDesk Mobile Learning Platform is how well it encourages children to collaborate, explore, and learn anywhere and everywhere they go because they have the Windows Phone 7 devices with them at all times. Teachers are able to set up assignments for students to complete and submit and students are also able to make creations of their own whenever they like. The myDesk Mobile Learning Platform is supported in the background by a web interface that teachers can use to coordinate their classes.
-					<br/><br/>I was in Singapore at our pilot school for 4 months, supporting the application, interviewing administrators, teachers and students, observing classes, and redesigning the platform based on these experiences. I also helped further develop the platform and successfully launched updates to the app with new features and bug fixes.
-					<br/><br/>
-					Available in the <a href="http://www.windowsphone.com/en-us/store/app/mydesk/5f57dc71-3905-49e1-8144-fa840cf78a4b" target="_blank">Windows Marketplace</a> now, you can learn more about it <a target="_blank" href="http://cosmosmlp.org">here</a>.
-				</div>
-				<div class="itemScreenshots">
-					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/create.png" />
-					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/mapit.png" />
-					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/recorder.png" />
-					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/sketchbook.png" />
-					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/sketchbook3.png" />
-					<img class="itemScreenshot" src="images/portfolioImages/myDeskScreenshots/sketchbook2.png" />
 				</div>
 			</div>
 		</div>
@@ -254,7 +350,7 @@
 				<div id="item20Thumbnail" class="itemThumbnail" title="Elementary STEM Teacher Mastery Badges" onclick="toggleItem(20)"><img class="portfolioFinalistRibbon" src="images/portfolioImages/finalistRibbon.png" alt="Finalist" /></div>
 				<div class="itemInfo">
 					<div class="itemTitle" onclick="toggleItem(20)">Elementary STEM Teacher Mastery Badges</div>
-					<div class="itemPreview">As part of a competition, I helped design a badging system to help teachers improve their teaching skills centered around STEM topics.</div>
+					<div class="itemPreview">As part of a competition at the 2012 Digital Media & Learning Conference, I helped design a badging system to help teachers improve their teaching skills centered around STEM topics.</div>
 				</div> 
 			</div> 
 			<div id="item20Description" class="itemDescription">
@@ -268,9 +364,18 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					I competed in the <a target="_blank" href="http://dmlcompetition.net/">Badges for Lifelong Learning: Teacher Mastery</a> competition at the 2012 Digital Media &amp; Learning Conference in San Francisco, CA. As a finalist, my team was paired with a content expert and together we pitched a system to distribute badges to teachers in recognition of their mastery over particular skills.
-					<br/><br/>Our system is about teaching the teachers in a real world environment. During real-world teacher development classes, they would receive instruction and enact the things they learn in the classroom. Then, they would come back at a later date with evidence of their use of new concepts in the classroom and are able to discuss their experiences with other teachers and instructors. This gets put in the online system and teachers build up a backpack of badges that represent the things they've learned. Most importantly, they have the real world evidence and discussion to back up the badges that prove the hard work they've put in to earning the badges and learning new skills.
-					<br/><br/>See the poster created for our system <a target="_blank" href="portfolio/ExpoSItionPoster.pdf">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						This is the design of a system intended to provide better training to teachers in both a real world and digital environment. During real-world teacher development classes, teachers would receive instruction and enact the things they learn in the classroom. Then, they would come back at a later date with evidence of their use of new concepts in the classroom and would discuss their experiences with other teachers and instructors. Their evidence and discussion would be added to the online system and the teachers would build up a backpack of badges that represent the things they've learned. Most importantly, they have the real world evidence and discussion to back up the badges that prove the hard work they've put in to earning the badges and learning new skills.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						My team and I competed in the <a target="_blank" href="http://dmlcompetition.net/">Badges for Lifelong Learning: Teacher Mastery</a> competition at the 2012 Digital Media &amp; Learning Conference in San Francisco, CA. As a finalist, my team was paired with a content expert and together we pitched a system to distribute badges to teachers in recognition of their mastery over particular skills. As one of the designers, I helped fit the system to the content that would be taught.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Here is the poster created for our system <a target="_blank" href="portfolio/ExpoSItionPoster.pdf">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -298,9 +403,14 @@
 					<b>Project Length:</b> 1 Week
 				</div>
 				<div class="itemText">
-					As an assignment meant to honor an artist's life and work, I felt the best tribute was to adapt his own style. Nam June Paik was interested in how technology and the internet have shaped us as a people. Much of his work incorporates TVs, robots, and other electronics to express that we are integrating technology into our lives more and more. The design of this poster highlights some of his most famous works. The timeline takes the shape of one of his often used robots and is made up of the same TVs he used in his artwork.
-					<br/><br/>
-					See the full poster <a target="_blank" href="portfolio/NamJunePaikPoster.pdf">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						As an assignment meant to honor an artist's life and work, I felt the best tribute was to adapt his own style. Nam June Paik was interested in how technology and the internet have shaped us as a people. Much of his work incorporates TVs, robots, and other electronics to express that we are integrating technology into our lives more and more. The design of this poster highlights some of his most famous works. The timeline takes the shape of one of his often used robots and is made up of the same TVs he used in his artwork.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						View the full poster <a target="_blank" href="portfolio/NamJunePaikPoster.pdf">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -328,9 +438,14 @@
 					<b>Project Length:</b> 2 Weeks
 				</div>
 				<div class="itemText">
-					The illustrations for each poster are meant to be fun and inviting so that students actually feel like the library services are there for them and that they shouldn't be afraid of asking for help. I felt this was the best direction to take as being an undergraduate can be an intimidating experience, especially when you don't know where to go for help. A big challenge in this project was that each poster would be stretched across 4 LCD screens. This meant that part of each advertisement would get cutoff where the 4 monitors joined. So, a plus shaped area of each poster would not be visible on the TV screens. The design I created deals with this by ensuring that the important information appears within the visible bounds. The larger text however sometimes gets cutoff in places. I made sure that anything that gets cutoff was still easily dechiperable by testing the design with multiple people. I asked 10 students if they could tell me what each poster said without providing any context.
-					<br/><br/>
-					View all 12 advertisements <a target="_blank" href="portfolio/DigitalSignage.pdf">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Meant to advertise services offered to students at the library, the illustrations for each poster are meant to be fun and inviting so that students aren't afraid of asking for help. I felt this was the best direction because asking for help, especially as a new student, can be intimidating. A big challenge in this project was that each poster would be stretched across 4 LCD screens. This meant that part of each advertisement would get cutoff where the 4 monitors joined. So, a plus shaped area of each poster would not be visible on the TV screens. The design I created deals with this by ensuring that the important information appears within the visible bounds. The larger text however sometimes gets cutoff in places. I made sure that anything that gets cutoff was still easily decipherable by testing the design with multiple people. I asked 10 students if they could tell me what each poster said without providing any context.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						View all 12 advertisements <a target="_blank" href="portfolio/DigitalSignage.pdf">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -358,9 +473,14 @@
 					<b>Project Length:</b> 1 Week
 				</div>
 				<div class="itemText">
-					This assignment required we take the old website and leave it mostly intact. However, they wanted the University's colors (Maize and Blue) used instead of what was in use (Red and Blue). They also wanted us to use some of their analytics data to reorder and redesign some of the information layouts. So, with this knowledge, I created a design that is both in tune with the desired University of Michigan School of Information branding and has a better layout for the information. Graphically, the background uses the University colors and relates to the School of Information with a Stream Graph data visualization. The information laid out focuses more directly on getting the heaviest users of the site to the information they need. This meant giving better links to students, such as direct access to courses and timetables along with graduation requirements.
-					<br/><br/>
-					View the full redesign <a target="_blank" href="portfolio/SIWebsiteRedesign.pdf">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						This assignment required we take the old website and leave it mostly intact. However, they wanted the University's colors (Maize and Blue) used instead of what was in use (Red and Blue). They also wanted us to use some of their analytics data to reorder and redesign some of the information layouts. So, with this knowledge, I created a design that is both in tune with the desired University of Michigan School of Information branding and has a better layout for the information. Graphically, the background uses the University colors and relates to the School of Information with a Stream Graph data visualization. The information laid out focuses more directly on getting the heaviest users of the site to the information they need. This meant giving better links to students, such as direct access to courses and timetables along with graduation requirements.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						View the full redesign <a target="_blank" href="portfolio/SIWebsiteRedesign.pdf">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -388,10 +508,18 @@
 					<b>Project Length:</b> 2 Months
 				</div>
 				<div class="itemText">
-					Athenaeum is a design for a tablet app with the primary goal of helping users understand and improve their reading habits. The design of this product involved multiple stages. Our first was evaluation of need which we did through a survey of our fellow students and evaluation of competitors. We found that many students would like to do better reading and that there was no real competition to this. However, there were programs that had useful features, such as Amazon Kindle highlighting that shows what other people have found interesting.
-					<br/><br/>We began recording information on our own reading sessions and were able to determine factors we thought conducive to successful reading sessions. The next stage was of design and user testing. We tested our drawn prototypes with students in our school, iterated, and did further testing. Our final high fidelity prototype shows a very analytical approach to reading data which we found compelling and useful for improving reading habits. The app would collect many different data points such as reading session information (location, time of day, time spent reading) along with an aggregate "comprehension" score derived from factors such as highlights made, notes taken, traversal of the reading, time spent reading, number of reading sessions, and more.
-					<br/><br/>
-					View the prototype <a target="_blank" href="readerprototype">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Athenaeum is a design for a tablet app with the primary goal of helping users understand and improve their reading habits. The prototype shows a very analytical approach to reading data. The app would collect many different data points such as reading session information (location, time of day, time spent reading) along with an aggregate "comprehension" score derived from factors such as highlights made, notes taken, traversal of the reading, time spent reading, number of reading sessions, and more. This was developed with a team of four, including myself.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						In designing this product, multiple stages were necessary. As a team, we evaluated the need for something like this through a survey of our fellow students which I contributed questions to and then helped analyze the data. We each recorded information on our own reading sessions and were able to determine factors we thought conducive to successful reading sessions. Each team member then tested their own drawn prototypes with students in our school, iterated with the group, and did further testing. After determining the best features, one other group member and I developed our final high fidelity prototype using HTML5, CSS3, Javascript, JQuery, and Google Charts. 
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						View the prototype <a target="_blank" href="readerprototype">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -407,7 +535,7 @@
 				<div id="item17Thumbnail" class="itemThumbnail" title="Gooru" onclick="toggleItem(17)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle" onclick="toggleItem(17)">Gooru</div>
-					<div class="itemPreview">As a User Experience Design Intern here, I helped develop Gooru's online presence, designed new features, and supported staff with internal tools.</div>
+					<div class="itemPreview">As a User Experience Design Intern with Gooru, I helped develop their online presence, designed new features, and supported staff with internal tools.</div>
 				</div> 
 			</div>
 			<div id="item17Description" class="itemDescription">
@@ -421,9 +549,18 @@
 					<b>Time at Position:</b> 4 Months
 				</div>
 				<div class="itemText">
-					Gooru is a startup company developing a web platform that allows teachers and students to share and learn from the best learning resources. In the summer of 2011, I interned at Gooru (formerly Ednovo) as a User Experience Designer. While there, I had the opportunity to work on many different projects. One of my big projects was designing and developing the company's website. With the name change to Gooru, a new website was developed and it can be seen at <a target="_blank" href="http://goorulearning.org">GooruLearning.org</a>. Another of the projects I worked on was a tool for Gooru Administrators to edit large amounts of content in a quick and efficient manner. I also ran usability tests with teachers to discover areas they were having trouble with which has informed further design refinements.
-					<br/><br/>
-					Give <a target="_blank" href="http://goorulearning.org">Gooru</a> a try.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Gooru is an educational technology company that's developed a web platform that allows teachers and students to share and learn from the best learning resources. Teachers and students can search for resources, quizzes, or full collections of resources and quizzes all organized around the Common Core State Standards. Teachers are encouraged to create collections to map out their full curriculum with collections as their lessons. Students are encouraged to learn topics through viewing collections and also creating their own. 
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						In the summer of 2011, I interned at Gooru as a User Experience Designer. While there, I had the opportunity to work on many different projects. One of my big projects was designing and developing the organization's website which provided information about Gooru and the company. Another of the projects I worked on was a tool for Gooru Administrators to edit large amounts of content in a quick and efficient manner. I also performed heuristic evaluations on Gooru in order to determine our areas of greatest need. Once those areas were determined, I ran usability tests with teachers to get a sense of where they were having trouble and we also tested new designs with them for the trouble areas found in the heuristic evaluations.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Give <a target="_blank" href="http://goorulearning.org">Gooru</a> a try.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -437,7 +574,7 @@
 				<div id="item18Thumbnail" class="itemThumbnail" title="Menlo Innovations" onclick="toggleItem(18)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle" onclick="toggleItem(18)">Menlo Innovations</div>
-					<div class="itemPreview">Menlo is a software contractor where I've played the role of Developer, Quality Advocate, and High-Tech Anthropologist. I've developed strong communication skills with teammates and clients in an agile, test driven development, and extreme programming environment. I've worked with them as an intern, part-time, and full-time contractor. The project range has included many different technologies.</div>
+					<div class="itemPreview">Menlo is a software contractor where I've been a Developer, Quality Advocate, and High-Tech Anthropologist. I developed strong communication skills with teammates and clients in an agile, test driven development, and extreme programming environment. The project range has included many different technologies.</div>
 				</div> 
 			</div>
 			<div id="item18Description" class="itemDescription">
@@ -451,19 +588,25 @@
 					<b>Time at Position:</b> 3 Years
 				</div>
 				<div class="itemText">
-					Menlo Innovations is one of the coolest and most unique custom software development firms you're going to find. I first joined Menlo as a Software Development Intern in the summer of 2008. Since then, I've worked for them full-time and part-time, and in different roles such as Quality Assurance 
-					and their designer role called High-Tech Anthropology&trade;. They're unique because they develop software using agile methodologies, pairing with a partner at all times, 
-					and use test-driven development. All of this combines to form an amazing experience for clients and the people working there.
-					<br/><br/>
-					While working there, I've worked on many different projects:
-					<ul>
-						<li>Developed industry-leading flow cytometry software in Java</li>
-						<li>Developed their website using WordPress, PHP, JavaScript, HTML/CSS</li>
-						<li>Designed and developed a prescription management app for the iOS</li>
-						<li>Developed survey tracking software in C#</li>
-						<li>Developed patient tracking software using Visual Basic</li>
-					</ul>
-					Learn more about them at their <a target="_blank" href="http://menloinnovations.com">website</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Menlo Innovations is one of the coolest and most unique custom software development firms you're going to find. They're unique because they develop software using agile methodologies and everyone is required to be paired with a partner at all times. This forces everyone to be constantly talking with each other and thus teaching and trading information. They also use test-driven development which helps ensure fewer BIG problems down the road. They also work closely with the clients, requiring them to come see and try the software being developed for them at least once a week.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						I first joined Menlo as a Software Development Intern in the summer of 2008. Since then, I've worked for them full-time and part-time, and in different roles such as Quality Assurance and their designer role called High-Tech Anthropology&trade;. While working there, I worked on many different projects:
+						<ul>
+							<li>Developed industry-leading flow cytometry software in Java</li>
+							<li>Developed their website using WordPress, PHP, JavaScript, HTML/CSS</li>
+							<li>Designed and developed a prescription management app for the iOS</li>
+							<li>Developed survey tracking software in C#</li>
+							<li>Developed patient tracking software using Visual Basic</li>
+						</ul>
+					</div>
+					<div class="itemSubTitle">Learn more!</div>
+					<div class="itemSubInfo">
+						Check them out at <a target="_blank" href="http://menloinnovations.com">menloinnovations.com</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -494,13 +637,22 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					The Video Game Popularity Visualization uses site traffic data provided by IGN to let users explore the popularity of video games 
-					over time on IGN.com. It lets users choose from a large array of games and provides multiple options for making comparisons. Users can 
-					look at the popularity chronologically or normalized around release date. This allows users to better compare popularity of games across a 
-					series (like the Halo games) or across platform (ex: comparing XBOX to PS3). 
-					<br/><br/>
-					Try it out <a target="_blank" href="portfolio/gamepopularity/">here</a>. Please note that it takes a while to load. It works best in Google Chrome
-					or Mozilla Firefox.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Video Game Popularity Visualization is like the title says and uses site traffic data provided by IGN to let users explore the popularity of video games over time on IGN.com. Choosing from a large array of games, users can look at the popularity chronologically or normalized around release date. This allows users to better compare popularity of games across a series (like the Halo games) or across platform (ex: comparing XBOX to PS3). The idea for this came out of the desire to further explore information presented in a graphic on IGN.com <a target="_blank" href="http://www.ign.com/articles/2011/10/07/your-most-wanted-video-games">here</a>.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						As a team, we prototyped our designs on paper first and then presented them to the team at IGN. After getting feedback, we refined the designs and began implementing the design. We used d3.js for its powerful visualization capabilities and the DataTables jQuery plug-in for game selection. I handled implementation of the stream graph (the top one) and part of the selection tool while putting together the CSS and jQuery for the look and feel.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Try it out <a target="_blank" href="portfolio/gamepopularity/">here</a>. Please note that it takes a while to load. It works best in Google Chrome or Mozilla Firefox.
+					</div>
+				</div>
+				<div class="itemScreenshots">
+					<img class="itemScreenshotBig" src="images/portfolioImages/gamePopularityVisualization.png" />
+					<img class="itemScreenshotBig" src="images/portfolioImages/gamePopularityVisualization2.png" />
 				</div>
 			</div>
 		</div>
@@ -531,9 +683,17 @@
 					<b>Project Length:</b> 1 Week
 				</div>
 				<div class="itemText">
-					This is a visualization of my commute time for one month as I traveled to and from downtown Ann Arbor by bus and car. This was done for my Information Visualization class and we were tasked with taking tracking personal data and visualizing it in a meaningful way. I chose to track my various trips to and from downtown Ann Arbor. I wondered how consistent the buses were in getting me to and from where I needed to be. Unsurprisingly, driving was the quickest. Perhaps somewhat unexpectedly, I found that my trip length was almost always the same time (about 26 minutes) except for around rush hour (4 - 6 PM) where trips could take up to an hour. This particular visualization was meant to allow exploration between different factors. Updating the smaller graphs as options changed was also a key part of making the visualization engaging and meaningful.
-					<br/><br/>
-					Try it out <a target="_blank" href="portfolio/commutevisualization/">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						This is a visualization of my commute time for one month as I traveled to and from downtown Ann Arbor by bus and car. This was done for my Information Visualization class and we were tasked with taking tracking personal data and visualizing it in a meaningful way. I chose to track my various trips to and from downtown Ann Arbor. I wondered how consistent the buses were in getting me to and from where I needed to be. Unsurprisingly, driving was the quickest. Perhaps somewhat unexpectedly, I found that my trip length was almost always the same time (about 26 minutes) except for around rush hour (4 - 6 PM) where trips could take up to an hour. This particular visualization was meant to allow exploration between different factors. Updating the smaller graphs as options changed was also a key part of making the visualization engaging and meaningful.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Try it out <a target="_blank" href="portfolio/commutevisualization/">here</a>.
+					</div>
+				</div>
+				<div class="itemScreenshots">
+					<img class="itemScreenshotBig" src="images/portfolioImages/commuteVisualization.png" />
 				</div>
 			</div>
 		</div>
@@ -548,7 +708,7 @@
 				<div id="item11Thumbnail" class="itemThumbnail" title="Super Readers" onclick="toggleItem(11)"></div>
 				<div class="itemInfo">
 					<div class="itemTitle" onclick="toggleItem(11)">Super Readers</div>
-					<div class="itemPreview">A design document for a game that teaches elementary school students how to read. The system continues to support learners from Kindergarten through 5th grade and grows with the student, always providing learning objectives that map to real world use. Students become superheros and help their city gain their stolen words back from a nefarious villain.</div>
+					<div class="itemPreview">A design document for a game that teaches elementary school students how to read. The system continues to support learners from Kindergarten through 5th grade and grows with the student, always providing learning objectives that map to real world use. Students become superheroes and help their city gain their stolen words back from a nefarious villain.</div>
 				</div> 
 			</div>
 			<div id="item11Description" class="itemDescription">
@@ -564,12 +724,18 @@
 					<b>Project Length:</b> 4 Months (semester-long project)
 				</div>
 				<div class="itemText">
-					The Adventures of the Super Readers is a touch-enabled game that allows students to improve their reading skills. 
-					Students become super heroes that help a city that's had all of its words scrambled by a nefarious villain. It is intended 
-					to be an aide to teachers and parents, engaging students from Kindergarten through 5th Grade. The game grows with the 
-					children and continues to work on skills that the Common Core State Standards recommend.
-					<br/><br/>
-					Read more about it at the <a target="_blank" href="http://superheroreading.wordpress.com">design blog</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						The Adventures of the Super Readers is the design for a touch-enabled game that allows students to improve their reading skills. Students become super heroes that help a city that's had all of its words scrambled by a nefarious villain. It is intended to be an aide to teachers and parents, engaging students from Kindergarten through 5th Grade. The game grows with the children and continues to work on skills that the Common Core State Standards recommend.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						As a team, we all designed word games that could be used in the game to teach word skills. We researched the Common Core State Standards and what students would learn at each grade. We also did comparisons with other games we found that aimed to teach similar things. We created sketches for our game including the setup interface, the game world, game characters, and for the mini-games.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Read more about it at the <a target="_blank" href="http://superheroreading.wordpress.com">design blog</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -602,13 +768,17 @@
 					<b>Project Length:</b> 4 Months (semester-long project)
 				</div>
 				<div class="itemText">
-					The Sweetland Center for Writing is a department at the University of Michigan that offers services and classes 
-					to students that focus on improving their writing skills. The website serves as a portal for students to sign up for 
-					advising appointments and to learn more about writing requirements and classes. My team evaluated their site by performing many 
-					different usability studies. We created an interaction map, performed interviews, ran comparative analysis, heuristic evaluations, 
-					conducted a survey with more than 2,000 responses, and carried out usability tests with current students.
-					<br/><br/>
-					View the interaction map <a target="_blank" href="portfolio/Sweetland_WebsiteInteractionMap.pdf">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						The Sweetland Center for Writing is a department at the University of Michigan that offers services and classes to students that focus on improving their writing skills. The website serves as a portal for students to sign up for advising appointments and to learn more about writing requirements and classes. My team evaluated their site by performing many different usability studies. We created an interaction map, developed scenarios and personas, performed interviews, ran a comparative analysis, heuristic evaluations, conducted a survey with more than 2,100 responses, carried out usability tests with current students, and developed mock ups for potential site enhancements.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						View the full interaction map <a target="_blank" href="portfolio/Sweetland_WebsiteInteractionMap.pdf">here</a>.
+					</div>
+				</div>
+				<div class="itemScreenshots">
+					<img class="itemScreenshotBig" src="images/portfolioImages/sweetlandInteractionMap.png" />
 				</div>
 			</div>
 		</div>
@@ -641,14 +811,19 @@
 					<b>Project Length:</b> 4 Months (semester-long project)
 				</div>
 				<div class="itemText">
-					The Summers-Knoll Digital Portfolio is a system designed to allow teachers to easily save students works 
-					into a digital portfolio. The system is designed with the teacher in mind, allowing them to easily manage each 
-					portfolio, the media associated with it, the student's own reflections, and the teacher's assessment of the work. 
-					The system was designed over the course of one semester at the behest of Summers-Knoll administration. The Hi-Fi 
-					prototype was created using Axure RP.
-					<br/><br/>
-					See the Hi-Fi prototype <a target="_blank" href="http://thomaspiggott.com/summersknollprototype">here</a> and
-					see all the deliverables <a target="_blank" href="https://sites.google.com/site/tautdesign/">here</a> (Affinity Wall, Personas &amp; Scenarios, Lo-Fi Prototype, User Testing).
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+					The Summers-Knoll Digital Portfolio is a system designed to allow teachers to easily save students works into a digital portfolio. The system is designed with the teacher in mind, allowing them to easily manage each portfolio, the media associated with it, the student's own reflections, and the teacher's assessment of the work. The system was designed over the course of one semester at the behest of Summers-Knoll Elementary administration. The Hi-Fi prototype was created using Axure RP.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						I participated in each step with my team, crafting interview questions, putting together the affinity wall, developing personas and scenarios, sketching parts of the lo-fi prototype, and leading development of the hi-fi prototype because of my experience with development.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Try the Hi-Fi prototype <a target="_blank" href="http://thomaspiggott.com/summersknollprototype">here</a> and
+						view all of the deliverables <a target="_blank" href="https://sites.google.com/site/tautdesign/">here</a> (Affinity Wall, Personas &amp; Scenarios, Lo-Fi Prototype, User Testing).
+					</div>
 				</div>
 			</div>
 		</div>
@@ -674,15 +849,14 @@
 					<b>Project Length:</b> 3 Weeks
 				</div>
 				<div class="itemText">
-					Throughout the semester, my class explored the use of technology in the classroom. What we found out is that 
-					a lot of different technologies claim to aid learning but what we found is that most can't live up to this 
-					claim. For my final paper, I examined touch screen technology and its educational promise. What I found is 
-					that for the most part, touch screens are not yet transforming the way we learn. There is a lot of promise 
-					though, especially in the realm of group collaboration and for special needs students, particularly those 
-					with Autism.
-					<br/><br/>
-					Read the paper <a target="_blank" href="portfolio/TouchScreensInEducation_Piggott.pdf">here</a>. You can also read my 
-					<a target="_blank" href="portfolio/TechnologyConceptualFramework_Piggott.pdf">Conceptual Framework</a> exploring what I think makes a transformative technology.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Throughout the semester, my class explored the use of technology in the classroom. What we found out is that a lot of different technologies claim to aid learning but what we found is that most can't live up to this claim. For my final paper, I examined touch screen technology and its educational promise. What I found is that for the most part, touch screens are not yet transforming the way we learn. There is a lot of promise though, especially in the realm of group collaboration and for special needs students, particularly those with Autism.
+					</div>
+					<div class="itemSubTitle">Read it!</div>
+					<div class="itemSubInfo">
+						Get the paper <a target="_blank" href="portfolio/TouchScreensInEducation_Piggott.pdf">here</a>. You can also read my <a target="_blank" href="portfolio/TechnologyConceptualFramework_Piggott.pdf">Conceptual Framework</a> exploring what I think makes a  technology truly transformative.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -713,12 +887,14 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					The Kerrytown BookFest is an annual celebration of books. It goes beyond just what we read, but also the science behind binding, 
-					the authors behind the books, explorations of the paper used to print on, and so much more. In 2009, the Kerrytown BookFest was looking 
-					to upgrade their web presence. As a volunteer, I remade their website with a custom WordPress theme and a custom back-end to help the 
-					Board track exhibitors, speakers, volunteers, and events. This project involved using Flash, PHP, SQL, JavaScript, and HTML/CSS.
-					<br/><br/>
-					While the visuals have since changed by another's hand, much of the layout and backend remains in use. See it <a target="_blank" href="http://kerrytownbookfest.org">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						The Kerrytown BookFest is an annual celebration of books. It goes beyond just what we read, but also the science behind binding, the authors behind the books, explorations of the paper used to print on, and so much more. In 2009, the Kerrytown BookFest was looking to upgrade their web presence. As a volunteer, I remade their website with a custom WordPress theme and a custom back-end to help the Board track exhibitors, speakers, volunteers, and events. This project involved using Flash, PHP, SQL, JavaScript, and HTML/CSS.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						While the visuals have since changed by another's hand, much of the layout and backend remains in use. See it <a target="_blank" href="http://kerrytownbookfest.org">here</a>.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -749,11 +925,21 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					The goal of this project was to use technology to teach something in an interesting way. My group tackled typography and its use in signage. 
-					We took examples found around Ann Arbor, MI and created a map to navigate around to the examples. Using Adobe Flash, we created an interactive site 
-					that lets the user select different locations and read about the particular typography used.
-					<br/><br/>
-					See the site <a target="_blank" href="http://umich.edu/~typhist">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						The goal of this project was to use technology to teach something in an interesting way. My group tackled typography and its use in signage. We took examples found around Ann Arbor, MI and created a map to navigate around to the examples. Each example names the font if we could find it and explains what feelings the font evokes. It also addresses the effectiveness of the font in relation to the message the business or building is trying to present.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						Using Adobe Flash, I developed the website and co-designed the look and feel with one of my teammates as the others collected and refined the content of the site. Together, we created an interactive site that lets the user select different locations around the city to learn about the particular typography used.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						See the site <a target="_blank" href="http://umich.edu/~typhist">here</a>.
+					</div>
+				</div>
+				<div class="itemScreenshots">
+					<img class="itemScreenshotBig" src="images/portfolioImages/typography.png" />
 				</div>
 			</div>
 		</div>
@@ -784,13 +970,18 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					Squirrel Sense is a fast-paced action video game for the PC. You choose your squirrel and compete against up to three other players. The goal is to collect and hide as many 
-					acorns as you can. Helping you to do this is your Squirrel Sense, which reveals buried acorns in enemy territory and your Squirrel Scream which chases off other 
-					squirrels. The squirrel you choose affects the strength of those two powers and also the speed at which you can move and the number of acorns you can carry. 
-					Squirrel Sense was written in C/C++ and uses the proprietary <a target="_blank" href="http://www.zenilib.com">ZeniLib</a> engine.
-					<br/><br/>
-					Learn more about the game <a target="_blank" href="http://wolverinesoft.org/game/139/squirrel-sense">here</a> 
-					and get the game <a target="_blank" href="portfolio/SquirrelSense.zip">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Squirrel Sense is a fast-paced action video game for the PC. You choose your squirrel and compete against up to three other players. The goal is to collect and hide as many acorns as you can. Helping you to do this is your Squirrel Sense, which reveals buried acorns in enemy territory and your Squirrel Scream which chases off other squirrels. The squirrel you choose affects the strength of those two powers and also the speed at which you can move and the number of acorns you can carry. Squirrel Sense was written in C/C++ and uses the proprietary <a target="_blank" href="http://www.zenilib.com">ZeniLib</a> engine.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+					I was in charge of the graphics, the user interface, and the user testing while all group members worked on the game design. In order to test it, we brought it in front of the University of Michigan's WolvSoft club of game developers multiple times. We recorded their actions and what they were saying as we had them play the game.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Learn more about the game <a target="_blank" href="http://wolverinesoft.org/game/139/squirrel-sense">here</a> and get the game <a target="_blank" href="portfolio/SquirrelSense.zip">here</a>.
+					</div>
 				</div>
 				<div class="itemScreenshots">
 					<img class="itemScreenshot" src="images/portfolioImages/squirrelSense.png" />
@@ -826,11 +1017,14 @@
 					<b>Project Length:</b> 2 Weeks
 				</div>
 				<div class="itemText">
-					GravEATy is an arcade game for the PC that pits you against the sudden loss of gravity's affect on you. The people on the ground are trying to help you by 
-					throwing food at you for you to eat. Why? Because you need to gain weight, and gain weight fast before you're lost to space. GravEATy was written in C/C++ and 
-					uses the proprietary <a target="_blank" href="http://www.zenilib.com">ZeniLib</a> engine.
-					<br/><br/>
-					Get the game <a target="_blank" href="portfolio/GravEATy.zip">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						GravEATy is an arcade game for the PC that pits you against the sudden loss of gravity's affect on you. The people on the ground are trying to help you by throwing food at you for you to eat. Why? Because you need to gain weight and fast before you're lost to space. GravEATy was written in C/C++ and uses the proprietary <a target="_blank" href="http://www.zenilib.com">ZeniLib</a> engine.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Get the game <a target="_blank" href="portfolio/GravEATy.zip">here</a>.
+					</div>
 				</div>
 				<div class="itemScreenshots">
 					<img class="itemScreenshot" src="images/portfolioImages/gravEATy.png" />
@@ -867,9 +1061,14 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					Vocabulearner is a tool that aims to help you learn new vocabulary. It is a Windows Gadget that lets you look up definitions and save them or your own 
-					custom definition. Then, at user defined times, Vocabulearner pops up a little quiz to test what you've learned. It's also possible to look through your 
-					saved definitions for review. Vocabulearner was written using SQL, JavaScript, and HTML/CSS.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						Vocabulearner is a tool that aims to help you learn new vocabulary. It is a Windows Gadget that lets you look up definitions and save them or your own custom definition. Then, at user defined times, Vocabulearner pops up a little quiz to test what you've learned. It's also possible to look through your saved definitions for review. Vocabulearner was written using SQL, JavaScript, and HTML/CSS.
+					</div>
+					<div class="itemSubTitle">What did I do?</div>
+					<div class="itemSubInfo">
+						I designed the look and feel while implementing the front-end HTML, CSS, and Javascript.
+					</div>
 				</div>
 			</div>
 		</div>
@@ -898,61 +1097,24 @@
 					<b>Project Length:</b> 1 Month
 				</div>
 				<div class="itemText">
-					The Ultimate Machine is a design document for a game that focuses on teaching middle school aged children about physics. The child builds a plane, boat, or car and
-					races them against other children or computer players. A parental-figure provides advice to the player in order to make a better machine. There would also be an online 
-					community for children to discuss and share their designs.
-					<br/><br/>
-					The game takes advantage of different aspects of behavioral, cognitive, and constructivist learning theory in order to support the student's learning. Behavioral learning theory is employed through positive and negative reinforcement. Cognitive learning theory is also relied upon through tutorials and providing access to information on all the machine parts and physics topics. Most importantly, constructivism is used as continued success in the competitions relies on continuing to use knowledge learned from past competitions while new wrinkles are introduced.
-					<br/><br/>
-					Read it <a target="_blank" href="portfolio/TheUltimateMachine_Piggott.pdf">here</a>.
+					<div class="itemSubTitle">What is it?</div>
+					<div class="itemSubInfo">
+						The Ultimate Machine is a design document for a game that focuses on teaching middle school aged children about physics. The child builds a plane, boat, or car and	races them against other children or computer players. A parental-figure provides advice to the player in order to make a better machine. There would also be an online community for children to discuss and share their designs.
+						<br/><br/>
+						The game takes advantage of different aspects of behavioral, cognitive, and constructivist learning theory in order to support the student's learning. Behavioral learning theory is employed through positive and negative reinforcement. Cognitive learning theory is also relied upon through tutorials and providing access to information on all the machine parts and physics topics. Most importantly, constructivism is used as continued success in the competitions relies on continuing to use knowledge learned from past competitions while new wrinkles are introduced.
+					</div>
+					<div class="itemSubTitle">See it!</div>
+					<div class="itemSubInfo">
+						Read it <a target="_blank" href="portfolio/TheUltimateMachine_Piggott.pdf">here</a>.
+						<br/><br/>
+						<br/><br/>
+						<br/><br/>
+						<br/><br/>
+						<br/><br/>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div id="item9" class="itemContent">
-			<div class="itemIntro">
-				<div class="itemCategories">
-					<img class="itemCategory" src="images/categories/dev.png" alt="Developer" title="Developer" />
-					<img class="itemCategory" src="images/categories/team.png" alt="Team Project" title="Team Project" />
-				</div>
-				<div id="item9Thumbnail" class="itemThumbnail" title="Bill Manager" onclick="toggleItem(9)"></div>
-				<div class="itemInfo">
-					<div class="itemTitle" onclick="toggleItem(9)">Bill Manager</div>
-					<div class="itemPreview">One of my earliest group projects as a Computer Science student that taught me about the importance of considering the UX from the beginning. The program helps manage bills shared by multiple people but doesn't make it easy to do it. A success in that the product "works" and a failure in that no sane person would use it.</div>
-				</div> 
-			</div>
-			<div id="item9Description" class="itemDescription">
-				<div class="itemMeta">
-					Fall 2008
-					<br/><br/>
-					<b>Role:</b> Developer
-					<br/><br/>
-					<b>Course:</b> Java Programming
-					<br/><br/>
-					<b>Technology:</b> Java, Eclipse, SVN
-					<br/><br/>
-					<b>Project Length:</b> 3 Weeks
-				</div>
-				<div class="itemText">
-					Bill Manager is PC application that helps manage bill collection between people. The primary use case was for a household of people all splitting bills. The 
-					application supports multiple users and splitting of bills by as many people as you want. This comes from the beginning of my career and it's not pretty, but it works. 
-					I choose to include this in my portfolio not just because I'm proud of my first real development project but because it helps to show how far I've come in terms of development and design.
-					<br/><br/>
-					Try it out by downloading it <a target="_blank" href="portfolio/BillManager.zip">here</a>.
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-					<br/><br/>
-				</div>
-			</div>
-		</div>
-		
 	</div>
 	
 	<div id="resumeWrapper" class="wrapper">

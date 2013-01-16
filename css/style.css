@@ -69,9 +69,16 @@ body{
 	font-weight: bold;
 }
 
-#aboutTile{
+.aboutTile{
 	float: left;
-	margin: 0 25px 0 25px;
+	margin: 25px;
+	width: 698px;
+	padding: 0 0 25px 0;
+}
+
+#aboutIntroTile{
+	float: left;
+	margin: 0 25px 25px 25px;
 	width: 698px;
 	position: relative;
 }
@@ -115,7 +122,7 @@ body{
 #contactTile{
 	float: left;
 	width: 198px;
-	margin: 50px 25px 0 25px;
+	margin: 0 25px 0 25px;
 }
 
 #contactDescription{
@@ -174,7 +181,7 @@ body{
 	left: 25px;
 	top: 0;
 	width: 298px;
-	height: 298px;
+	height: 338px;
 	
 	font-family: Novecentowide-Normal;
 	font-weight: normal;
@@ -238,6 +245,26 @@ body{
 	margin: 0 0 20px 20px;
 }
 
+.innerRow{
+	width: 100%;
+	float: left;
+	margin: 20px 0 0 0;
+}
+
+.innerTile{
+	float: left;
+	padding: 25px;
+	background-color: #dddddd;
+	text-align: center;
+	width: 200px;
+}
+
+.innerScreenshot{
+	float: left;
+	border: 1px solid #dddddd;
+	margin: 0 0 0 25px;
+}
+
 #pageWrapper{
 	width: 1100px;
 	margin: 0 auto 0 auto;
@@ -256,7 +283,7 @@ body{
 #resumeTile{
 	float: left;
 	font-size: 14px;
-	margin: 0 0 50px 0;
+	margin: 0 0 50px 25px;
 	position: relative;
 }
 
@@ -312,11 +339,19 @@ ul.resumeList{
 	float: left;
 }
 
+#socialWrapper{
+	display:none;
+}
+
 .tileTitle{
 	font-family: Novecentowide-DemiBold;
 	font-size: 24pt;
 	padding: 10px 5px 10px 5px;
 	text-align: center;
+}
+
+.tileDescription{
+	padding: 0 25px 0 25px;
 }
 
 .tileLight{
@@ -344,7 +379,6 @@ ul.resumeList{
 	background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(41,41,41,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-
 }
 
 #twitterHandle{
@@ -354,7 +388,7 @@ ul.resumeList{
 
 #twitterTile{
 	float: left;
-	margin: 50px 25px 0 25px;
+	margin: 0 25px 0 25px;
 	width: 448px;
 	height: 420px;
 }

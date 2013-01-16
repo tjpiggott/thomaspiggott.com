@@ -2,10 +2,10 @@ var viewingItem = false;
 var lastViewedItem = 0;
 var animationDuration = 500;
 
-function showSocial(){
-	if(!$("#socialWrapper").is(':visible')){
+function showMe(){
+	if(!$("#meWrapper").is(':visible')){
 		$(".navItemLink").removeClass("navItemLinkSelected");
-		$("#navItemSocial").addClass("navItemLinkSelected");
+		$("#navItemMe").addClass("navItemLinkSelected");
 		
 		$("#navItemSelected").animate({
 			top: '112'
@@ -16,7 +16,7 @@ function showSocial(){
 			
 		$(".wrapper").fadeOut(animationDuration);
 		$.scrollTo(0, animationDuration);
-		setTimeout(function(){$("#socialWrapper").fadeIn(animationDuration/2)}, animationDuration);
+		setTimeout(function(){$("#meWrapper").fadeIn(animationDuration/2)}, animationDuration);
 	}
 }
 
@@ -41,7 +41,7 @@ function showResume(){
 		$("#navItemResume").addClass("navItemLinkSelected");
 		
 		$("#navItemSelected").animate({
-			top: '212'
+			top: '213'
 		}, animationDuration)
 		
 		if(viewingItem)
@@ -50,6 +50,24 @@ function showResume(){
 		$(".wrapper").fadeOut(animationDuration);
 		$.scrollTo(0, animationDuration);
 		setTimeout(function(){$("#resumeWrapper").fadeIn(animationDuration/2)}, animationDuration);
+	}
+}
+
+function showSocial(){
+	if(!$("#socialWrapper").is(':visible')){
+		$(".navItemLink").removeClass("navItemLinkSelected");
+		$("#navItemSocial").addClass("navItemLinkSelected");
+		
+		$("#navItemSelected").animate({
+			top: '264'
+		}, animationDuration)
+		
+		if(viewingItem)
+			toggleItem(lastViewedItem);
+			
+		$(".wrapper").fadeOut(animationDuration);
+		$.scrollTo(0, animationDuration);
+		setTimeout(function(){$("#socialWrapper").fadeIn(animationDuration/2)}, animationDuration);
 	}
 }
 

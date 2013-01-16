@@ -197,7 +197,7 @@
 .itemScreenshots{
 	width: 100%;
 	float: left;
-	margin: 50px 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 .itemScreenshot{
@@ -207,8 +207,8 @@
 }
 
 .itemScreenshotBig{
-	width: 700px;
 	float: left;
+	margin: 0 25px 25px 0;
 }
 
 .itemTitle{
@@ -227,6 +227,18 @@
 	transition: color 300ms ease-out;
 	-webkit-transition: color 300ms ease-out;
 	-moz-transition: color 300ms ease-out;
+}
+
+.itemSubTitle{
+	color: #8e32d5;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0 0 10px 0;
+}
+
+.itemSubInfo{
+	font-size: 16px;
+	margin: 0 0 20px 0;
 }
 
 .itemThumbnail{
