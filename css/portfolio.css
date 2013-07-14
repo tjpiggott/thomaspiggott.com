@@ -131,8 +131,7 @@
 #portfolioWrapper{
 	display: none;
 	float: left;
-	margin: 100px auto 0 350px;
-	width: 750px;
+	margin: 100px auto 0 0;
 	position: relative;
 	z-index: 11;
  }
@@ -301,12 +300,40 @@
 
 #portfolioHead{
 	padding: 20px;
-	margin: 0 0 25px 10px;
+	margin: 0 0 25px 0;
 	float: left;
 	color: #6b6b6b;
 }
 
+.filterItem{
+	float: left;
+	margin: 0 25px 0 0;
+}
+
+#filterOptions{
+	font-family: Novecentowide-Normal;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 18px;
+	z-index: 100;
+}
+
+.filterItemImage{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+#portfolioFilterTitle{
+	font-family: Novecentowide-DemiBold;
+	font-size: 24pt;
+	padding: 10px 0 10px 0;
+	margin: 0;
+	color: #8e32d5;
+	clear: both;
+}
+
 #portfolioFilterDescription{
-	margin: 0 0 0 25px;
+	margin: 0;
 	color: #e3e3e3;
 }

@@ -63,24 +63,7 @@ a.navItemLinkSelected:link, a.navItemLinkSelected:visited{
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: #666666; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover,  #666666 0%, #333333 99%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#666666), color-stop(99%,#333333)); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover,  #666666 0%,#333333 99%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover,  #666666 0%,#333333 99%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover,  #666666 0%,#333333 99%); /* IE10+ */
-background: radial-gradient(ellipse at center,  #666666 0%,#333333 99%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-/*
-	background: -moz-radial-gradient(center, ellipse cover,  #f6f6f6 0%, #dddddd 100%); 
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f6f6f6), color-stop(100%,#dddddd)); 
-	background: -webkit-radial-gradient(center, ellipse cover,  #f6f6f6 0%,#dddddd 100%);
-	background: -o-radial-gradient(center, ellipse cover,  #f6f6f6 0%,#dddddd 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  #f6f6f6 0%,#dddddd 100%);
-	background: radial-gradient(ellipse at center,  #f6f6f6 0%,#dddddd 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dddddd',GradientType=1 );
-*/
+	background: #262626; /* Old browsers */
 }
 
 body{
@@ -90,6 +73,7 @@ body{
 .book{
 	float: left;
 	padding: 0 10px 15px 10px;
+	width: 150px;
 }
 
 .bookTitle{
@@ -98,8 +82,8 @@ body{
 
 .aboutTile{
 	float: left;
-	margin: 25px;
-	width: 698px;
+	margin: 25px 50px 25px 0;
+	width: 446px;
 	padding: 0 0 25px 0;
 }
 
@@ -135,47 +119,36 @@ body{
 	margin: 10px 0 10px 0;
 }
 
+#connectTile{
+	float: left;
+	padding: 20px;
+	margin: 25px 0 0 0;
+}
+
 .connectLogo{
 	width: 50px;
 	height: 50px;
 }
 
-.connectText{
-	width: 50px;
-	height: 54px;
-	line-height: 50px;
+#connectLogoList li{
+	float: left;
+	margin: 0 30px 0 30px;
 }
 
-#contactTile{
+#connectTextList li{
+	width: 110px;
 	float: left;
-	width: 198px;
-	margin: 0 25px 0 25px;
+	margin: 10px 0 0 0;
+	text-align: center;
 }
 
-#contactDescription{
+#connectDescription{
 	float: left;
-	margin: 0 20px 20px 20px;
 }
 
 #centeredContainer{
 	width: 1200px;
 	margin: 0 auto 0 auto;
-}
-
-#filterTile{
-	display: none;
-	position: fixed;
-	left: 25px;
-	top: 348px;
-	width: 298px;
-	height: 338px;
-	padding: 25px;
-	
-	font-family: Novecentowide-Normal;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 18px;
-	z-index: 100;
 }
 
 .title{
@@ -194,16 +167,14 @@ body{
 	margin: 0 0 10px 0;
 }
 
-#headTile{
-	width: 300px;
-	height: 75px;
-	margin: 25px 0 0 0;
+#navHeadTile{
+	margin: 10px 20px 15px 20px;
 	text-align: center;
 	float: left;
 	cursor: pointer;
 }
 
-.headFont{
+.navHeadFont{
 	position: relative;
 	font-family: Novecentowide-Light;
 	font-size: 30px;
@@ -211,7 +182,7 @@ body{
 	line-height: 30px;
 }
 
-.headSubFont{
+.navHeadSubFont{
 	position: relative;
 	font-family: Novecentowide-DemiBold;
 	font-size: 18px;
@@ -221,10 +192,9 @@ body{
 
 #navTile{
 	position: fixed;
-	left: 25px;
-	top: 0;
-	width: 298px;
-	height: 338px;
+	left: 0px;
+	top: 0px;
+	width: 100%;
 	
 	font-family: Novecentowide-Normal;
 	font-weight: normal;
@@ -235,7 +205,7 @@ body{
 .navItem{
 	cursor: pointer;
 	float: left;
-	width: 100%;
+	margin: 10px 10px 0 25px;
 	line-height: 50px;
 	color: #6b6b6b;
 }
@@ -258,11 +228,8 @@ body{
 
 #instagramTile{
 	float: left;
-	width: 448px;
-	margin: 50px 25px 50px 25px;
-	background-color: #292929;
-	border: 1px solid #1a1a1a;
-	
+	width: 473px;
+	margin: 50px 0 50px 25px;	
 }
 
 #instagramInfo{
@@ -315,14 +282,13 @@ body{
 }
 
 #pageWrapper{
-	width: 1100px;
+	width: 1000px;
 	margin: 0 auto 0 auto;
 }
 
 #readingTile{
 	float: left;
-	margin: 50px 25px 50px 25px;
-	width: 198px;
+	margin: 0 0 50px 0;
 }
 
 #resumeWrapper{
@@ -437,9 +403,9 @@ ul.resumeList{
 
 #twitterTile{
 	float: left;
-	margin: 0 25px 0 25px;
-	width: 448px;
-	height: 420px;
+	margin: 50px 25px 50px 0;
+	width: 473px;
+	height: 529px;
 }
 
 #twitter-widget-0{
@@ -466,14 +432,10 @@ ul.unadornedList{
 	padding: 0;
 }
 
-.unadornedList li{
-	margin: 0 0 10px 0;
-}
-
 .wrapper{
 	float: left;
-	margin: 100px 0 0 375px;
-	width: 750px;
+	margin: 100px 0 0 0;
+	width: 1000px;
 }
 
 .t_Content_darkFlat{

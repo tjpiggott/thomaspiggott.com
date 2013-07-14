@@ -24,7 +24,7 @@
 		$(document).ready(function() {
 			$('#instagramPhoto').embedagram({
 				instagram_id: 30671089,
-				thumb_width: 405,
+				thumb_width: 430,
 				wrap_tag: '',
 				limit: 1
 			});
@@ -54,6 +54,12 @@
 				hook: 'topleft',
 				offset: { x: 15, y: 0 },
 			});
+			
+			Tipped.create('.filterItemImage', {
+				skin: 'darkFlat',
+				hook: 'topmiddle',
+				offset: { x: 0, y: 0 },
+			});
 		});
     </script>
 
@@ -75,90 +81,78 @@
 <div id="pageWrapper">
 	
 	<div id="navTile" class="tileDarkGradient">
-		<div id="headTile" onclick="showSocial();">
-			<div class="headFont">THOMAS PIGGOTT</div>
-			<div class="headSubFont">USER EXPERIENCE DESIGN</div>
+		<div id="navHeadTile" onclick="showSocial();">
+			<div class="navHeadFont">THOMAS PIGGOTT</div>
+			<div class="navHeadSubFont">USER EXPERIENCE DESIGN</div>
 		</div>
-		<div id="navItemSelected"></div>
 		<div id="navItemContainer">
-			<div class="navItem" onclick="showMe();"><a id="navItemMe" class="navItemLink navItemLinkSelected" href="javascript:showMe();">ME</a></div>
-			<div class="navItem" onclick="showPortfolio();"><a id="navItemPortfolio" class="navItemLink" href="javascript:showPortfolio();">MY PORTFOLIO</a></div>
-			<div class="navItem" onclick="showResume();"><a id="navItemResume" class="navItemLink" href="javascript:showResume();">MY RESUM&Eacute;</a></div>
+			<div class="navItem" onclick="showMe();"><a id="navItemMe" class="navItemLink navItemLinkSelected" href="javascript:showMe();">ABOUT ME</a></div>
+			<div class="navItem" onclick="showPortfolio();"><a id="navItemPortfolio" class="navItemLink" href="javascript:showPortfolio();">PORTFOLIO</a></div>
 			<div class="navItem" onclick="showSocial();"><a id="navItemSocial" class="navItemLink" href="javascript:showSocial();">CONNECT</a></div>
 		</div>
 	</div>
 	
-	<div id="filterTile" class="tileNoColor">
-		<div class="filterItem" style="font-size: 18px; padding-bottom: 10px; color: #e3e3e3;">Filters</div>
-		<div class="filterItem" onclick="filter('filter_work');"><a class="filterItemLink" href="javascript:filter('all');">Show All</a></div>
-		<div class="filterItem" onclick="filter('filter_work');"><a class="filterItemLink" href="javascript:filter('filter_work');">Professional Work</a></div>
-		<div class="filterItem" onclick="filter('filter_school');"><a class="filterItemLink" href="javascript:filter('filter_school');">Schoolwork</a></div>
-		<div class="filterItem" onclick="filter('filter_dev');"><a class="filterItemLink" href="javascript:filter('filter_dev');">Development</a></div>
-		<div class="filterItem" onclick="filter('filter_graphics');"><a class="filterItemLink" href="javascript:filter('filter_graphics');">Graphic Design</a></div>
-		<div class="filterItem" onclick="filter('filter_infoVis');"><a class="filterItemLink" href="javascript:filter('filter_infoVis');">Information Visualization</a></div>
-		<div class="filterItem" onclick="filter('filter_videoGames');"><a class="filterItemLink" href="javascript:filter('filter_videoGames');">Video Games</a></div>
-		<div class="filterItem" onclick="filter('filter_prototypes');"><a class="filterItemLink" href="javascript:filter('filter_prototypes');">Prototypes</a></div>
-	</div>
-	
 	<div id="meWrapper" class="wrapper">
-		<div id="aboutIntroTile" class="tileLight">
-			<img id="aboutPicture" src="images/me.png" alt="Picture of Me!" />
-			<div id="aboutInfo">
-				<div id="aboutTitle">Hey there!</div>
-				<div id="aboutDescription">
-					My name is Thomas Piggott and I'm a User Experience Designer. I'm seeking roles that allow me to craft incredible user experiences. In the past, I've worked on Windows Phone apps for elementary school classrooms, iPad apps for patients that have difficulty with speech, FDA regulated flow cytometry software for the desktop, and more.
-				</div>
-			</div>
-		</div>
+		
+		<img class="tileLight" style="float: left; margin: 25px 50px 25px 0;" src="images/me2.png" />
 		
 		<div class="aboutTile tileLight">
-			<div class="tileTitle">Design</div>
+			<div class="tileTitle">Hey there!</div>
 			<div class="tileDescription">
-				As a designer, it's my job to understand the user and design the experience they need. This happens through observations, interviews, mapping work flows, creating and mapping personas, coming up with conceptual designs, wireframes, and prototypes, and then iterating the design through design assessments. All this to say: I have the skills and passion you need to take your user experience to a place of joy for your users. 
+				My name is Thomas Piggott and I'm a User Experience Designer. I'm seeking roles that allow me to craft incredible user experiences. In the past, I've worked on Windows Phone apps for elementary school classrooms, iPad apps for patients that have difficulty with speech, FDA regulated flow cytometry software for the desktop, and more.
 			</div>
 		</div>
 		
 		<div class="aboutTile tileLight">
 			<div class="tileTitle">Consulting</div>
 			<div class="tileDescription">
-				As a consultant, I've had the privilege to design for many companies, all with different needs, desires, and business goals. I can help a business understand where to create the most value. As a consultant, it's my job to know which design tools are most appropriate for their project, their time, and their budget.
+				As a consultant, I've had the privilege to design for many companies, all with different needs, desires, and business goals. I help businesses understand where to create the most value. It's my job to know which design tools are most appropriate for their project, their time, and their budget.
+			</div>
+		</div>
+		
+		<div class="aboutTile tileLight">
+			<div class="tileTitle">Design</div>
+			<div class="tileDescription">
+				As a designer, it's my job to understand the user and design the experience they need. I design solutions based on the qualitative and quantitative data gathered through observations and interviews, crucial tools that let me gain real insight into how users work. Most importantly, I bring the skills and passion you need to take your user experience to a place of joy for your users. 
 			</div>
 		</div>
 		
 		<div class="aboutTile tileLight">
 			<div class="tileTitle">Development</div>
 			<div class="tileDescription">
-				With my background in Computer Science, I am well equipped to take conceptual designs from mockups to working prototypes and even working products, ready for release. I have experience developing prototypes with technologies like HTML/CSS, Axure, and PowerPoint when the need arises. I can't call myself a master of any one language either as I use whatever works best for the client or project. I've developed professionally in Java and C# for desktop applications, PHP, HTML, CSS, Javascript, and Flash/Actionscript for the web, in C#/Silverlight for Windows Phone Apps, and Objective-C for an iPhone app. 
+				With my background in Computer Science, I am well equipped to take conceptual designs from mockups to working prototypes and even polished products, ready for release. I've developed mobile apps, commercial websites, and desktop applications all with a wide array of technologies - whatever works best for the client and the product. 
 			</div>
 		</div>
 		
 		<div class="aboutTile tileLight">
 			<div class="tileTitle">Sound Good?</div>
 			<div class="tileDescription">
-				If I've intrigued you at all, then I invite you to <a href="javascript:showSocial()">connect with me</a>. I also invite you to take a look at the projects I've worked on in <a href="javascript:showPortfolio()">my portfolio</a> and to take a look at <a href="javascript:showResume()">my resum&eacute;</a> to find out if I might be a fit for your needs.
+				If I've intrigued you at all, then I invite you to <a href="javascript:showSocial()">connect with me</a>. I also invite you to take a look at the projects I've worked on in <a href="javascript:showPortfolio()">my portfolio</a> to get a better idea of if I might be a fit for your needs.
 			</div>
 		</div>
 	</div>
 	
 	<div id="socialWrapper" class="wrapper">
-		<div id="contactTile" class="tileLight">
-			<div class="tileTitle">Connect</div>
-			<div id="contactDescription">
-				<ul class="unadornedList" style="float: left; margin: 0 20px 0 10px;">
+		
+		<div id="connectTile" class="tileLight">
+			<div class="tileTitle" style="float: left; margin: 10px 0 0 41px;">Connect</div>
+			<div style="float: left;">
+				<ul id="connectLogoList" class="unadornedList">
 					<li><a href="mailto:thomas@thomaspiggott.com"><img class="connectLogo" src="images/connect/emailLogo.png" alt="Email: thomas@thomaspiggott.com" /></a></li>
 					<li><a href="http://www.linkedin.com/profile/view?id=68654986&amp;locale=en_US&amp;trk=tab_pro" target="_blank"><img class="connectLogo" src="images/connect/linkedInLogo.png" alt="LinkedIn" /></a></li>
-					<li><a href="https://github.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/githubLogo.png" alt="Github" /></a></li>
 					<li><a href="http://www.facebook.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/facebookLogo.jpg" alt="Facebook" /></a></li> 
 					<li><a href="http://www.twitter.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/twitterLogo.png" alt="Twitter" /></a></li>
+					<li><a href="https://github.com/tjpiggott" target="_blank"><img class="connectLogo" src="images/connect/githubLogo.png" alt="Github" /></a></li>
 				</ul>
-				<ul class="unadornedList" style="float: left;">
+				<ul id="connectTextList" class="unadornedList">
 					<li class="connectText"><a href="mailto:thomas@thomaspiggott.com">Email</a></li>
 					<li class="connectText"><a href="http://www.linkedin.com/profile/view?id=68654986&amp;locale=en_US&amp;trk=tab_pro" target="_blank">LinkedIn</a></li>
-					<li class="connectText"><a href="https://github.com/tjpiggott" target="_blank">Github</a></li>
 					<li class="connectText"><a href="http://www.facebook.com/tjpiggott" target="_blank">Facebook</a></li> 
 					<li class="connectText"><a href="http://www.twitter.com/tjpiggott" target="_blank">Twitter</a></li>
+					<li class="connectText"><a href="https://github.com/tjpiggott" target="_blank">Github</a></li>
 				</ul>
 			</div>
+			<div class="tileTitle" style="float: left; margin: 10px 41px 0 0;">With Me</div>
 		</div>
 		
 		<div id="twitterTile" class="tileDark">
@@ -166,7 +160,7 @@
 				<img src="images/twitter.png" style="height: 46px;" alt="Twitter" />
 				<span style="vertical-align: top"><a href="http://twitter.com/tjpiggott" style="vertical-align: top" target="_blank">TWITTER</a></span>
 			</div>
-			<a class="twitter-timeline" data-dnt=true href="https://twitter.com/tjpiggott" data-widget-id="256671767760879616" width="440" height="350">... loading tweets</a>
+			<a class="twitter-timeline" data-dnt=true href="https://twitter.com/tjpiggott" data-widget-id="256671767760879616" width="465" height="485">... loading tweets</a>
 			<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 		
@@ -178,41 +172,7 @@
 			</div>
 			<div id="instagramPhoto"></div>
 		</div>
-		
-		<div id="readingTile" class="tileLight">
-			<div class="tileTitle">Reading...</div>
-				<div class="book">
-					<span class="bookTitle">Influencer: The Power to Change Anything</span> by Kerry Patterson, Joseph Grenny, David Maxfield, Ron McMillan, and Al Switzler
-				</div>
-			<div class="tileTitle">Read</div>
-			<div class="book">
-				<span class="bookTitle">The Five Dysfunctions of a Team</span> by Patrick Lencioni
-			</div>
-			<div class="book">
-				<span class="bookTitle">The Experience Economy: Work Is Theater & Every Business a Stage</span> by B. Joseph Pine II and James H. Gilmore 
-			</div>
-			<div class="book">
-				<span class="bookTitle">Song of Achilles</span> by Madeleine Miller
-			</div>
-			<div class="book">
-				<span class="bookTitle">I Am Legend</span> by Richard Matheson
-			</div>
-			<div class="book">
-				<span class="bookTitle">Penpal</span> by Dathan Auerbach
-			</div>
-			<div class="book">
-				<span class="bookTitle">Blackout / All Clear</span> by Connie Willis
-			</div>
-			<div class="book">
-				<span class="bookTitle">Hanging Out, Messing Around, and Geeking Out</span> by Mimi Ito
-			</div>
-			<div class="book">
-				<span class="bookTitle">Wool</span> by Hugh Howey
-			</div>
-			<div class="book">
-				<span class="bookTitle">The Walking Dead</span> by Robert Kirkman, Tony Moore, and Charlie Adlard
-			</div>
-		</div>
+	
 	</div>
 	
 	<div id="portfolioBackground"></div>
@@ -220,8 +180,18 @@
 	<div id="portfolioWrapper" class="wrapper">
 		
 		<div id="portfolioHead">
-			<div id="portfolioFilterTitle" class="tileTitle" style="color: #8e32d5;">Full Portfolio</div>
-			<div id="portfolioFilterDescription">See the places I've worked and the projects of which I'm most proud. All works have included significant amounts of design but often involving different aspects of the design world. To get a look at just the parts you might be interested in, use the filters.</div>
+			<div id="filterOptions">
+				<div class="filterItem" onclick="filter('all');"><img class="filterItemImage" src="images/portfolioImages/filters/all.png" title="Show All" /></div>
+				<div class="filterItem" onclick="filter('filter_work');"><img class="filterItemImage" src="images/portfolioImages/filters/professional.png" title="Professional Work"/></div>
+				<div class="filterItem" onclick="filter('filter_school');"><img class="filterItemImage" src="images/portfolioImages/filters/school.png" title="Schoolwork"/></div>
+				<div class="filterItem" onclick="filter('filter_dev');"><img class="filterItemImage" src="images/portfolioImages/filters/development.png" title="Development"/></div>
+				<div class="filterItem" onclick="filter('filter_graphics');"><img class="filterItemImage" src="images/portfolioImages/filters/graphicDesign.png" title="Graphic Design"/></div>
+				<div class="filterItem" onclick="filter('filter_infoVis');"><img class="filterItemImage" src="images/portfolioImages/filters/infoVis.png" title="Information Visualization"/></div>
+				<div class="filterItem" onclick="filter('filter_videoGames');"><img class="filterItemImage" src="images/portfolioImages/filters/videoGames.png" title="Video Games"/></div>
+				<div class="filterItem" onclick="filter('filter_prototypes');"><img class="filterItemImage" src="images/portfolioImages/filters/prototypes.png" title="Prototypes"/></div>
+			</div>
+			<div id="portfolioFilterTitle">Full Portfolio</div>
+			<div id="portfolioFilterDescription">Take a look at the full list of places I've worked and projects I've worked on.</div>
 		</div>
 		
 		<div id="item18" class="itemContent filter_work filter_design filter_dev" name="Menlo Innovations">
@@ -976,153 +946,7 @@
 		
 	</div>
 	
-	<div id="resumeWrapper" class="wrapper">
-		<div id="resumeTile" class="tileLight">
-			<div id="resumeHeader" >
-				<div class="resumeHeadFont">Thomas J Piggott</div>
-				<div class="resumeSubFont">thomas@thomaspiggott.com</div>
-			</div>
-			<div id="resumeLeftColumn">
-				<div id="resumeProfile">
-					<div class="title">Profile</div>
-					<div class="description" style="font-size: 12px;">
-						User Experience Designer with a strong technical background. Passionate about crafting great user experiences. Interested in adventure and exploring how to improve lives with technology.
-					</div>
-				</div>
-				<div id="resumeSkills">
-					<div class="title">Skills</div>
-					<div class="description">
-						<ul class="resumeList">
-							<li>Usability Testing</li>
-							<li>Heuristic Evaluation</li>
-							<li>Project Management</li>
-							<li>Prototyping</li>
-							<li>Wireframing</li>
-							<li>Contextual Inquiry</li>
-						</ul>
-					</div>
-				</div>
-				<div id="resumeSoftware">
-					<div class="title">Software</div>
-					<div class="description">
-						<ul class="resumeList">
-							<li>Adobe Photoshop</li>
-							<li>Adobe Illustrator</li>
-							<li>Adobe Flash</li>
-							<li>Axure RP</li>
-							<li>Balsamiq</li>
-							<li>Eclipse</li>
-							<li>Microsoft Visual Studio</li>
-							<li>Microsoft Office</li>
-						</ul>
-					</div>
-				</div>
-				<div id="resumeRelevantCourses">
-					<div class="title">Coursework</div>
-					<div class="description">
-						<ul class="resumeList">
-							<li>Interface &amp; Interaction Design</li>
-							<li>Contextual Inquiry</li>
-							<li>Technology in the Classroom</li>
-							<li>Choice Architecture</li>
-							<li>Social Influence</li>
-							<li>Educational Software Design</li>
-							<li>Video Games &amp; Learning</li>
-							<li>Video Game Development</li>
-							<li>Evaluation of Systems &amp; Services</li>
-							<li>User Generated Content</li>
-							<li>Recommender Systems</li>
-							<li>Data Visualization</li>
-							<li>Personal Informatics</li>
-							<li>Game Theory &amp; Microeconomics</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="resumeRightColumn">
-				<div id="resumeItems">
-					<div class="title">Professional Experience</div>
-					<div class="resumeItem">
-						<div class="resumeItemInfo">MENLO INNOVATIONS</div>
-						<div class="resumeItemSubInfo"><div style="float: left">High Tech Anthropologist&reg;</div><div style="float: right">2013-Present</div></div>
-						<div class="resumeItemSubInfo"><div style="float: left">Software Developer</div><div style="float: right">2010-2012</div></div>
-						<div class="resumeItemSubInfo"><div style="float: left">Software Development Intern</div><div style="float: right">2008-2009</div></div>
-						<ul class="resumeList">
-							<li>Act as user's biggest advocate in designing solutions.</li>
-							<li>Conduct user-centric design processes such as observations, interviews, and design assessments</li>
-							<li>Create mockups and prototypes using paper, Balsamiq, Adobe Creative Suite</li>
-							<li>Consult with clients in making, presenting, and supporting design recommendations</li>
-							<li>Create marketing materials and maintain company website</li>
-						</ul>
-					</div>
-					<div class="resumeItem">
-						<div class="resumeItemInfo">COSMOS MOBILE LEARNING PLATFORM</div>
-						<div class="resumeItemSubInfo"><div style="float: left">Singapore Project Lead</div><div style="float: right">2012</div></div>
-						<ul class="resumeList">
-							<li>Oversaw the design, development, and deployment of 2 apps to 350 students and 10 teachers for daily classroom use.</li>
-							<li>Performed classroom observations around student use of our two apps, MyDesk and MessageBoard</li>
-							<li>Performed interviews with teachers and students to better understand their use of our apps</li>
-						</ul>
-					</div>
-					<div class="resumeItem">
-						<div class="resumeItemInfo">GOORU</div>
-						<div class="resumeItemSubInfo"><div style="float: left">User Experience Design Intern</div><div style="float: right">2011-2012</div></div>
-						<ul class="resumeList">
-							<li>Helped design educational resource sharing platform “Gooru”</li>
-							<li>Designed and implemented system for administrators to create and edit content</li>
-							<li>Designed and developed the Ednovo.org website</li>
-							<li>Designed interactive tutorials and help center to aid users with system</li>
-							<li>Designed and developed Insights visualizations to help users improve their learning and use of the system</li>
-						</ul>
-					</div>
-					<div class="resumeItem">
-						<div class="resumeItemInfo">AMERICAN AXLE &amp; MANUFACTURING</div>
-						<div class="resumeItemSubInfo"><div style="float: left">Quality Assurance Intern</div><div style="float: right">2006-2007</div></div>
-						<ul class="resumeList">
-							<li>Helped implement Oracle database system that identified rejected parts</li>
-							<li>Performed studies on manufacturing processes to improve productivity</li>
-							<li>Completed diagnostics on rejected parts to determine point of failure</li>
-						</ul>
-					</div>
-				</div>
-				<div id="resumeEducation">
-					<div class="title">Education</div>
-					<div class="resumeItem">
-						<div class="resumeItemInfo">UNIVERSITY OF MICHIGAN - SCHOOL OF INFORMATION</div>
-						<div class="resumeItemSubInfo"><div style="float: left">Master of Science in Information</div><div style="float: right">May 2012</div></div>
-						<div style="float: left; font-size: 12px;">Specialization in Human-Computer Interaction and Information Economics for Management</div>
-					</div>
-					<div class="resumeItem">
-						<div class="resumeItemInfo">UNIVERSITY OF MICHIGAN - COLLEGE OF ENGINEERING</div>
-						<div class="resumeItemSubInfo"><div style="float: left">Bachelor of Science in Engineering</div><div style="float: right">December 2009</div></div>
-						<div style="float: left; font-size: 12px;">Computer Science</div>
-					</div>
-				</div>
-				<div id="resumeProjects">
-					<div class="title">Projects</div>
-					<div class="resumeItem" style="font-size: 12px;">See my <a target="_blank" href="javascript:showPortfolio();">portfolio</a></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
 </div>
 		
-<script type="text/javascript">
-	var navTileLeftPosition = 25;
-	var windowWidth = $(window).width();
-	if(windowWidth >= 1100)
-		navTileLeftPosition = windowWidth/2-525;
-	else
-		navTileLeftPostion = -1 * (1100-windowWidth) / 2;
-	
-	$("#navTile").animate({
-		left: navTileLeftPosition
-	}, 500);
-	
-	$("#filterTile").animate({
-		left: navTileLeftPosition
-	}, 500);
-</script>
 </body>
 </html>
