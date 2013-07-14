@@ -71,8 +71,9 @@ function closeItem(){
 	$("#item" + lastViewedItem).removeClass('itemContentForDescription');
 	$("#item" + lastViewedItem).addClass('itemContent');
 	$(".itemContent").animate({opacity: 1}, animationDuration);
+	$("#portfolioHead").animate({opacity: 1}, animationDuration);
 	$(".itemDescription").hide();
-	$.scrollTo("#item" + lastViewedItem, animationDuration, {offset: {top:-50}});
+	$.scrollTo("#item" + lastViewedItem, animationDuration, {offset: {top:-100}});
 }
 
 function filter(filterTag){
