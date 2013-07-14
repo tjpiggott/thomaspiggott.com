@@ -298,3 +298,15 @@
 	left: 0;
 	z-index: 1;
 }
+
+#portfolioHead{
+	padding: 20px;
+	margin: 0 0 25px 10px;
+	float: left;
+	color: #6b6b6b;
+}
+
+#portfolioFilterDescription{
+	margin: 0 0 0 25px;
+	color: #e3e3e3;
+}
