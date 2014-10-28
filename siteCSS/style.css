@@ -1,0 +1,108 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #515151;
+	min-height: 1000px;
+}
+
+img{
+	border-style: none;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+	color: #43b6d7;
+}
+
+a:active, a:hover{
+	text-decoration: underline;
+	color: #43b6d7;
+}
+
+a.navItemLink:link, a.navItemLink:visited{
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 300ms ease-out;
+	-webkit-transition: color 300ms ease-out;
+	-moz-transition: color 300ms ease-out;
+	color: #6b6b6b;
+}
+
+a.navItemLink:hover, a.navItemLink:active{
+	transition: color 500ms ease-out;
+	-webkit-transition: color 500ms ease-out;
+	-moz-transition: color 500ms ease-out;
+	color: #e3e3e3;
+}
+
+a.filterItemLink:link, a.filterItemLink:visited{
+	text-decoration: none;
+	font-size: 16px;
+	transition: color 300ms ease-out;
+	-webkit-transition: color 300ms ease-out;
+	-moz-transition: color 300ms ease-out;
+	color: #e3e3e3;
+}
+
+a.filterItemLink:hover, a.filterItemLink:active{
+	transition: color 500ms ease-out;
+	-webkit-transition: color 500ms ease-out;
+	-moz-transition: color 500ms ease-out;
+	color: #8e32d5;
+}
+
+a.navItemLinkSelected:link, a.navItemLinkSelected:visited{
+	text-decoration: none;
+	font-size: 18px;
+	color: #e3e3e3;
+}
+
+#banner{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #262626;
+	text-align: center;
+	opacity: .9;
+}
+
+#bannerTitle{
+	color: #cccccc;
+	font-size: 36pt;
+	font-family: 'Novecentosanswide-Light';
+	width: 100%;
+	margin: 0 0 0 0;
+	letter-spacing: .75em;
+	word-spacing: .1em;
+}
+
+#bannerSubtitle{
+	color: #ffffff; /*#8e32d5;*/
+	font-size: 16pt;
+	font-family: 'Novecentosanswide-DemiBold';
+	width: 100%;
+	margin: 0 0 10px 0;
+	letter-spacing: 1em;
+	word-spacing: 1em;
+}
+
+body{
+	background: #f6f6f6;
+}
+
+.section{
+	margin: 50px;
+}
+
+.sectionTitle{
+	font-family: 'Pacifico', cursive;
+	font-size: 64pt;
+}
+
+.sectionDescription{
+	font-size: 16pt;
+	font-family: 'Novecentosanswide-Light';
+}
