@@ -18,7 +18,6 @@
 	<script type="text/javascript" src="siteJS/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script type="text/javascript" src="siteJS/siteActions.js"></script>
 
-
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-22591285-1']);
@@ -37,35 +36,99 @@
 		<div id="bannerSubtitle">user experience design</div>
 	</div>
 
-	<div id="topBuffer" style="width:100%; height: 50px;"></div>
+	<div id="topBuffer" style="width:100%; height: 100px;"></div>
 
-	<div id="sectionExploration" class="section">
+	<div id="sectionExplore" class="section wrapper">
 		<div class="sectionTitle">Explore</div>
 		<div class="sectionDescription">
-			Before a single sketch gets drawn, I must truly <i>know</i> my user. It's my job to understand, and beyond that, empathize with the people I design for. That means getting out into the field, observing, and asking questions to ensure no assumptions go unchecked.
+			Before a single sketch gets drawn, it's my job to understand and truly empathize with the people that will interact with my designs.
+		</div>
+		<div class="sectionExamples">
+			<div class="sectionExample"><a class="exploreLink" href="javascript:toggleSubsection('#subsectionExplore', '#subsectionInterviews')">Interviews / Observations</a></div>
+			<div class="sectionExample"><a class="exploreLink" href="javascript:toggleSubsection('#subsectionExplore', '#subsectionWorkflows')">Workflows</a></div>
+			<div class="sectionExample"><a class="exploreLink" href="javascript:toggleSubsection('#subsectionExplore', '#subsectionPersonas')">Personas</a></div>
 		</div>
 	</div>
 
-	<div id="sectionDesign" class="section">
-		<div class="sectionTitle">Design</div>
+	<div id="subsectionExplore" class="subsection">
+		<div id="subsectionInterviews" class="wrapper subsectionExample">
+			Interviews and observations are an important first step in knowing your user.
+		</div>
+		<div id="subsectionWorkflows" class="wrapper subsectionExample">
+			Workflows force you to understand what a user wants to do and needs to do.
+		</div>
+		<div id="subsectionPersonas" class="wrapper subsectionExample">
+			Personas are the final step before design, where everyone gets on the same page about who the end project will be for.
+		</div>
+	</div>
+
+	<div id="sectionCraft" class="section wrapper">
+		<div class="sectionTitle">Craft</div>
 		<div class="sectionDescription">
-			Design is an iterative process that allows me to try multiple solutions in order to see what works best. The entire process runs through sketches, paper prototypes, and digital wireframes for a start, all the way up to custom-built interactive prototypes and pixel-perfect photoshop mockups.
+			The iterative process of design allows me to try multiple solutions while continuing to build up the right solution for users.
+		</div>
+		<div class="sectionExamples">
+			<div class="sectionExample"><a class="craftLink" href="javascript:toggleSubsection('#subsectionCraft', '#subsectionPaperPrototypes')">Paper Prototypes</a></div>
+			<div class="sectionExample"><a class="craftLink" href="javascript:toggleSubsection('#subsectionCraft', '#subsectionInteractivePrototypes')">Interactive Prototypes</a></div>
+			<div class="sectionExample"><a class="craftLink" href="javascript:toggleSubsection('#subsectionCraft', '#subsectionFinalDesigns')">Final Designs</a></div>
 		</div>
 	</div>
 
-	<div id="sectionShare" class="section">
+	<div id="subsectionCraft" class="subsection">
+		<div id="subsectionPaperPrototypes" class="wrapper subsectionExample">
+			Paper Prototypes is a quick way to check assumptions.
+		</div>
+		<div id="subsectionInteractivePrototypes" class="wrapper subsectionExample">
+			Interactive Prototypes give users a great look at real functionality.
+		</div>
+		<div id="subsectionFinalDesigns" class="wrapper subsectionExample">
+			The final layer of polish.
+		</div>
+	</div>
+
+	<div id="sectionShare" class="section wrapper">
 		<div class="sectionTitle">Share</div>
 		<div class="sectionDescription">
-			No design work is done in a vacuum; The importance of sharing designs with teammates, stakeholders, and users cannot be underestimated. Working together, teaching each other, and responding to feedback are essential to a successful product.
+			No design work is done in a vacuum; I love the opportunity to teach and learn from teammates and clients to reach the best solution. 
+		</div>
+		<div class="sectionExamples">
+			<div class="sectionExample"><a class="shareLink" href="javascript:toggleSubsection('#subsectionShare', '#subsectionConsultantWork')">Consultant Work</a></div>
+			<div class="sectionExample"><a class="shareLink" href="javascript:toggleSubsection('#subsectionShare', '#subsectionTeachingClasses')">Teaching Classes</a></div>
+			<div class="sectionExample"><a class="shareLink" href="javascript:toggleSubsection('#subsectionShare', '#subsectionConferences')">Conferences</a></div>
 		</div>
 	</div>
 
-	<div id="sectionAbout" class="section">
-		<div class="sectionTitle">About</div>
-		<div class="sectionDescription">
-			My curiosity about users extends to the world-at-large. I love travelling and I've been lucky enough to travel parts of 3 continents so far. I've still got South America, Africa, Antartica, and Australia to go (though I'm far from finished with the other 3).
+	<div id="subsectionShare" class="subsection">
+		<div id="subsectionConsultantWork" class="wrapper subsectionExample">
+			I work with many types of clients.
+		</div>
+		<div id="subsectionTeachingClasses" class="wrapper subsectionExample">
+			I've taught classes.
+		</div>
+		<div id="subsectionConferences" class="wrapper subsectionExample">
+			I've spoken at conferences.
+		</div>
+	</div>
 
-			I enjoy tennis, swimming, and I'm just now getting into hiking. I also enjoy reading -- anything from science fiction, to comics, to the latest thinking on design methods. I'll never stop learning from the world around me.
+	<div class="clearingDiv"></div>
+
+	<div id="footer">
+		<div id="sectionAbout" class="wrapper">
+			<div id="sectionHeader">
+				<div class="sectionTitle" style="float:left;">About Me</div>
+				<img id="footerPic" src="siteImages/me.png" />
+			</div>
+			<div class="sectionDescription" style="clear: both;">
+				I've always loved the art and science of creation and design, whether it's playing with LEGOs or professionalizing as a design consultant. With a Master's of Science in Information specializing in Human-Computer Interaction and a Bachelor's of Science in Engineering in Computer Science, I have the academic background with unique experience in the world of design and consulting.
+			</div>
+		</div>
+		<div id="footerConnectInfo">
+			<a href="mailto:thomas@thomaspiggott.com"><img class="footerConnectImage" src="siteImages/connect/emailLogo.png" /></a>
+			<a href="https://www.linkedin.com/in/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/linkedInLogo.png" /></a>
+			<a href="https://twitter.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/twitterLogo.png" /></a>
+			<a href="https://www.facebook.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/facebookLogo.png" /></a>
+			<a href="https://github.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/githubLogo.png" /></a>
+			<a href="http://instagram.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/instagramLogo.png" /></a>
 		</div>
 	</div>
 
