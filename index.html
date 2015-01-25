@@ -8,15 +8,16 @@
 	<meta name="description" content="Portfolio of Thomas Piggott, User Experience Designer" /> 
 	<meta name="keywords" content="Thomas, Piggott, Thomas Piggott, ThomasPiggott, Tom Piggott, Tom Piggot, Thomas Piggot, Piggot, Portfolio, Interaction Design, User Experience Design, UX, HCI, Human-Computer Interaction, Computer Science, Software Development, Development, Designer, Developer" /> 
 	
-	<link rel="icon" type="image/png" href="images/siteIcon.png" /> 
+	<link rel="icon" type="image/png" href="favicon.ico" /> 
 
-	<link rel="stylesheet" type="text/css" href="siteCSS/style.css" />
-	<link rel="stylesheet" type="text/css" href="siteFonts/MyFontsWebfontsKit.css" />
-	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Pacifico'>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/tipped/tipped.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css" />
 
-	<script type="text/javascript" src="siteJS/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="siteJS/jquery.scrollTo-1.4.3.1-min.js"></script>
-	<script type="text/javascript" src="siteJS/siteActions.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="js/tipped/tipped.js"></script>
+	<script type="text/javascript" src="js/siteActions.js"></script>
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -29,108 +30,266 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+	
 </head>
-<body>
-	<div id="banner">
-		<div id="bannerTitle">thomas piggott</div>
-		<div id="bannerSubtitle">user experience design</div>
+<body onload="startup()">
+	<div id="banner" class="section">
+		<img id="bannerLogo" style="display: none;" src="images/piggy.svg" />
+		<div id="bannerTitle" style="display: none;">thomas piggott</div>
+		<div id="bannerSubtitle" style="display: none;">user experience design</div>
+		<img id="arrowDown" style="display: none;" onclick="toNextSection('');" src="images/arrowDown.svg">
 	</div>
 
-	<div id="topBuffer" style="width:100%; height: 100px;"></div>
-
-	<div id="sectionExplore" class="section wrapper">
-		<div class="sectionTitle">Explore</div>
-		<div class="sectionDescription">
-			Before a single sketch gets drawn, it's my job to understand and truly empathize with the people that will interact with my designs.
+	<div id="navigation">
+		<img id="navLogo" onclick="toNextSection('#banner');" width='70px' src="images/piggy.svg" />
+		<div id="navTitles" onclick="toNextSection('#welcome');">
+			<div id="navTitle">thomas piggott</div>
+			<div id="navSubtitle">user experience design</div>
 		</div>
-		<div class="sectionExamples">
-			<div class="sectionExample"><a class="exploreLink" href="javascript:toggleSubsection('#subsectionExplore', '#subsectionInterviews')">Interviews / Observations</a></div>
-			<div class="sectionExample"><a class="exploreLink" href="javascript:toggleSubsection('#subsectionExplore', '#subsectionWorkflows')">Workflows</a></div>
-			<div class="sectionExample"><a class="exploreLink" href="javascript:toggleSubsection('#subsectionExplore', '#subsectionPersonas')">Personas</a></div>
-		</div>
+		<div class="navItem" onclick="toNextSection('#finishedProducts');">finished products</div>
+		<div class="navItem" onclick="toNextSection('#skills');">skills</div>
+		<div class="navItem" onclick="toNextSection('#consulting');">consulting</div>
+		<div class="navItem" onclick="toNextSection('#aboutMe');">about me</div>
 	</div>
-
-	<div id="subsectionExplore" class="subsection">
-		<div id="subsectionInterviews" class="wrapper subsectionExample">
-			Interviews and observations are an important first step in knowing your user.
-		</div>
-		<div id="subsectionWorkflows" class="wrapper subsectionExample">
-			Workflows force you to understand what a user wants to do and needs to do.
-		</div>
-		<div id="subsectionPersonas" class="wrapper subsectionExample">
-			Personas are the final step before design, where everyone gets on the same page about who the end project will be for.
-		</div>
-	</div>
-
-	<div id="sectionCraft" class="section wrapper">
-		<div class="sectionTitle">Craft</div>
-		<div class="sectionDescription">
-			The iterative process of design allows me to try multiple solutions while continuing to build up the right solution for users.
-		</div>
-		<div class="sectionExamples">
-			<div class="sectionExample"><a class="craftLink" href="javascript:toggleSubsection('#subsectionCraft', '#subsectionPaperPrototypes')">Paper Prototypes</a></div>
-			<div class="sectionExample"><a class="craftLink" href="javascript:toggleSubsection('#subsectionCraft', '#subsectionInteractivePrototypes')">Interactive Prototypes</a></div>
-			<div class="sectionExample"><a class="craftLink" href="javascript:toggleSubsection('#subsectionCraft', '#subsectionFinalDesigns')">Final Designs</a></div>
-		</div>
-	</div>
-
-	<div id="subsectionCraft" class="subsection">
-		<div id="subsectionPaperPrototypes" class="wrapper subsectionExample">
-			Paper Prototypes is a quick way to check assumptions.
-		</div>
-		<div id="subsectionInteractivePrototypes" class="wrapper subsectionExample">
-			Interactive Prototypes give users a great look at real functionality.
-		</div>
-		<div id="subsectionFinalDesigns" class="wrapper subsectionExample">
-			The final layer of polish.
-		</div>
-	</div>
-
-	<div id="sectionShare" class="section wrapper">
-		<div class="sectionTitle">Share</div>
-		<div class="sectionDescription">
-			No design work is done in a vacuum; I love the opportunity to teach and learn from teammates and clients to reach the best solution. 
-		</div>
-		<div class="sectionExamples">
-			<div class="sectionExample"><a class="shareLink" href="javascript:toggleSubsection('#subsectionShare', '#subsectionConsultantWork')">Consultant Work</a></div>
-			<div class="sectionExample"><a class="shareLink" href="javascript:toggleSubsection('#subsectionShare', '#subsectionTeachingClasses')">Teaching Classes</a></div>
-			<div class="sectionExample"><a class="shareLink" href="javascript:toggleSubsection('#subsectionShare', '#subsectionConferences')">Conferences</a></div>
-		</div>
-	</div>
-
-	<div id="subsectionShare" class="subsection">
-		<div id="subsectionConsultantWork" class="wrapper subsectionExample">
-			I work with many types of clients.
-		</div>
-		<div id="subsectionTeachingClasses" class="wrapper subsectionExample">
-			I've taught classes.
-		</div>
-		<div id="subsectionConferences" class="wrapper subsectionExample">
-			I've spoken at conferences.
-		</div>
-	</div>
-
-	<div class="clearingDiv"></div>
-
-	<div id="footer">
-		<div id="sectionAbout" class="wrapper">
-			<div id="sectionHeader">
-				<div class="sectionTitle" style="float:left;">About Me</div>
-				<img id="footerPic" src="siteImages/me.png" />
-			</div>
-			<div class="sectionDescription" style="clear: both;">
-				I've always loved the art and science of creation and design, whether it's playing with LEGOs or professionalizing as a design consultant. With a Master's of Science in Information specializing in Human-Computer Interaction and a Bachelor's of Science in Engineering in Computer Science, I have the academic background with unique experience in the world of design and consulting.
+		
+	<div id="pageContent" style="display:none">
+		<div id="welcome" class="section">
+			<div id="welcomeText">
+				<span class="blackBackgroundText">hello! my name is thomas and i’m a</span>
+				<span class="blackBackgroundText">ux designer, passionate about </span>
+				<span class="blackBackgroundText">understanding your business and </span>
+				<span class="blackBackgroundText">your users’ needs in service of </span>
+				<span class="blackBackgroundText">delivering the best possible </span>
+				<span class="blackBackgroundText">solution.</span>
 			</div>
 		</div>
-		<div id="footerConnectInfo">
-			<a href="mailto:thomas@thomaspiggott.com"><img class="footerConnectImage" src="siteImages/connect/emailLogo.png" /></a>
-			<a href="https://www.linkedin.com/in/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/linkedInLogo.png" /></a>
-			<a href="https://twitter.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/twitterLogo.png" /></a>
-			<a href="https://www.facebook.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/facebookLogo.png" /></a>
-			<a href="https://github.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/githubLogo.png" /></a>
-			<a href="http://instagram.com/tjpiggott"><img class="footerConnectImage" src="siteImages/connect/instagramLogo.png" /></a>
-		</div>
-	</div>
 
+		<div id="finishedProducts" class="section">
+			<div class="sectionTitle">finished products</div>
+			<div class="sectionDesc">examples of work sent out into the world</div>
+			<div class="sectionItemsList">
+				<div class="sectionItem" onclick="showSectionItem('.products', '.foreignLands');">foreign lands</div>
+				<div class="sectionItem" onclick="showSectionItem('.products', '.vidatalk');">vidatalk</div>
+				<div class="sectionItem" onclick="showSectionItem('.products', '.cosmos');">cosmos mobile learning platform</div>
+			</div>
+			<div class="sectionContent">
+				<div class="sectionItemDesc">
+					<div class="foreignLands products">
+						<div class="sectionItemImage">
+							<img style="float: left; width: 250px; margin: 0 0 0 50px" src="images/portfolioImages/foreignLands1.png" />
+						</div>
+						<div class="sectionItemText">
+							<div class="sectionItemTitle">Foreign Lands</div>
+							<div>
+								foreign lands was born out of a need to help travelers adapt to their locations. switching to a new measurement system, currency, and timezone can be difficult and this app aims to help you with the most  common conversions for speed, distance, etc. This was designed and developed by myself as a side project allowing me to keep up with the latest Android design langugage.
+							</div>
+						</div>
+					</div>
+					<div class="vidatalk products hideAtStart">
+						<div class="sectionItemImage">
+							<img style="float: left; width: 500px;" src="images/portfolioImages/vidatalk1.png" />	
+						</div>
+						<div class="sectionItemText">
+							<div class="sectionItemTitle">VidaTalk</div>
+							<div>
+								vidatalk is an ipad app that was developed to support those in the hospital that couldn't speak for themselves. we studied nurses, doctors, and those in serious condition such as the emergency room and those that had recently been extubated. this helped inform what the most important responses were and the easiest ways for nurses, doctors, and family to interact with patients. for more, head over <a href="http://www.vidatak.com/vidatalk.html">here</a>
+							</div>
+						</div>
+					</div>
+					<div class="cosmos products hideAtStart">
+						<div class="sectionItemImage">
+							<img style="border: 1px solid #515151; float: left; width: 200px;" src="images/portfolioImages/myDeskScreenshots/sketchbook1.png" />
+							<img style="border: 1px solid #515151; float: left; width: 200px; margin: 20px 0 0 -30px;" src="images/portfolioImages/myDeskScreenshots/sketchbook2.png" />
+							<img style="float: left; width: 250px; margin: 35px 0 0 -300px;" src="images/portfolioImages/myDeskScreenshots/sketchbookWithFrame.png" />
+						</div>
+						<div class="sectionItemText">
+							<div class="sectionItemTitle">Cosmos Mobile Learning Platform</div>
+							<div>
+								the cosmos mobile learning platform is a set of windows phone apps used by 3rd graders in singapore that originated from a class of mine at the university of michigan. the mydesk app is a container around 6 separate apps and messageboard is a standalone app for communicating with classmates. these apps were deeply integrated into the curriculum so that their use supported, rather than directed, their learning. See them in the windows phone store here: <a href="http://www.windowsphone.com/en-us/store/app/mydesk/5f57dc71-3905-49e1-8144-fa840cf78a4b">mydesk</a> and <a href="http://www.windowsphone.com/en-in/store/app/messageboard/7d2755b0-a26d-4293-ac2b-4b257c5a77ea">messageboard</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="skills" class="section">
+			<div class="sectionTitle">skills</div>
+			<div class="sectionDesc">the tools and process necessary for the job</div>
+			<div class="sectionContent" style="margin-top: 50px;">
+				<div class="skillSection">
+					<div class="sectionItemTitle">process</div>
+					<div class="skill">
+						<div id="observations" class="skillIcon" data-tipped-options="inline: 'tip_observations'"></div>
+						<div>observations &amp interviews</div>
+						<div id="tip_observations" class="hideAtStart">
+							interviews and observation are the fundamental building block to understanding the problem space and the user. so, i head out into the field with pen and notebook, ready to not just ask about what's going on, but to observe in context how users carry out their tasks.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="personas" class="skillIcon" data-tipped-options="inline: 'tip_personas'"></div>
+						<div class="skillTitle">personas</div>
+						<div id="tip_personas" class="hideAtStart">
+							personas are the most amazing tool to put the focus of design efforts where they belong: on the end user. light weight and flexible, personas allow the business and designers to remove their biases and speak a common language around who a product is truly for.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="workflows" class="skillIcon" data-tipped-options="inline: 'tip_workflows'"></div>
+						<div class="skillTitle">workflows</div>
+						<div id="tip_workflows" class="hideAtStart">
+							workflows help me to ensure i know what skillses have been captured and where potential information is missing. these lead directly into design so it's important to know the user's underlying work flow.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="wireframes" class="skillIcon" data-tipped-options="inline: 'tip_wireframes'"></div>
+						<div class="skillTitle">wireframes</div>
+						<div id="tip_wireframes" class="hideAtStart">
+							wireframing helps me setup my thinking after carrying out all the ux research. often i use paper to start and move up to other tools such as balsamiq, fireworks, or axure.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="prototypes" class="skillIcon" data-tipped-options="inline: 'tip_prototypes'"></div>
+						<div class="skillTitle">prototypes</div>
+						<div id="tip_prototypes" class="hideAtStart">
+							prototypes come in all shapes and sizes from paper prototypes to axure up through custom prototypes in html / css / javascript. As a project progresses it's often useful to increase fidelity but even paper works well when you need to quickly try out ideas. Take a look at a prototype made for a tablet reading app <a href="downloads/reader/index.html">here</a>.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="designAssessments" class="skillIcon" data-tipped-options="inline: 'tip_designAssessments'"></div>
+						<div class="skillTitle">design assessments</div>
+						<div id="tip_designAssessments" class="hideAtStart">
+							design assessments are key to testing design assumptions. setting a design and watching as a user struggles through a design is as informational as it is humbling.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="documentation" class="skillIcon" data-tipped-options="inline: 'tip_documentation'"></div>
+						<div class="skillTitle">documentation</div>
+						<div id="tip_documentation" class="hideAtStart">
+							documenting the requirements of a project is what the whole process has built towards so that developers can start making designs come to life. i've worked primarily with story cards in an agile setting meaning i'm used to writing digestible pieces and parts of features, pages, and functionality.
+						</div>
+					</div>
+				</div>
+				<div class="skillSection">
+					<div class="sectionItemTitle">tools</div>
+					<div class="skill">
+						<div id="penPaper" class="skillIcon" data-tipped-options="inline: 'tip_penPaper'"></div>
+						<div class="skillTitle">pen &amp paper</div>
+						<div id="tip_penPaper" class="hideAtStart">
+							my favorite tool to start designs with (this or a white board). nothing's faster than drawing a picture when you need to express ideas quickly and get a basic structure down.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="axure" class="skillIcon" data-tipped-options="inline: 'tip_axure'"></div>
+						<div class="skillTitle">axure</div>
+						<div id="tip_axure" class="hideAtStart">
+							axure lets me build prototypes that easily flex between sketchy looking designs to full fledged interactive prototypes making it a valuable tool that i have extensive experience with.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="balsamiq" class="skillIcon" data-tipped-options="inline: 'tip_balsamiq'"></div>
+						<div class="skillTitle">balsamiq</div>
+						<div id="tip_balsamiq" class="hideAtStart">
+							balsamiq is particularly nice when moving into a little bit higher fidelity than hand drawn and because of the impressive suite of add-ons, it's easy to get designs for any form factor quickly made.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="illustrator" class="skillIcon" data-tipped-options="inline: 'tip_illustrator'"></div>
+						<div class="skillTitle">illustrator</div>
+						<div id="tip_illustrator" class="hideAtStart">
+							illustrator is a powerful tool that i use for most of my intense graphics work because of the ability to make vector based graphics.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="photoshop" class="skillIcon" data-tipped-options="inline: 'tip_photoshop'"></div>
+						<div class="skillTitle">photoshop</div>
+						<div id="tip_photoshop" class="hideAtStart">
+							photoshop is the tool used for adding that final layer of polish onto graphics.
+						</div>
+					</div>
+					<div class="skill">
+						<div id="htmlcssjs" class="skillIcon" data-tipped-options="inline: 'tip_htmlcssjs'"></div>
+						<div class="skillTitle">html/css/javascript</div>
+						<div id="tip_htmlcssjs" class="hideAtStart">
+							because of my development background, i am extremely comfortable using html, css, and javascript to make customized prototypes. i also have experience with php, java, objective-c, c#, and sql which is extremely useful when working with the development team.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="consulting" class="section">
+			<div class="sectionTitle">consulting</div>
+			<div class="sectionDesc">sharing with the world</div>
+			<div class="sectionItemsList">
+				<div class="sectionItem" onclick="showSectionItem('.consulting', '.menlo');">menlo innovations</div>
+				<div class="sectionItem" onclick="showSectionItem('.consulting', '.teaching');">teaching</div>
+				<div class="sectionItem" onclick="showSectionItem('.consulting', '.conferences');">conferences</div>
+			</div>
+			<div class="sectionContent">
+				<div class="menlo consulting">
+					<div class="sectionItemImage">
+						<img class="menlo consulting" style="border: 1px solid #515151; width: 350px;" src="images/photos/pairing.jpg" />
+					</div>
+					<div class="sectionItemText">
+						<div class="sectionItemTitle">Menlo Innovations</div>
+						<div>
+							<a href="http://menloinnovations.com">menlo innovations</a> has been my primary client for the past seven years which has allowed me to work across a wide swath of industries including: automotive, health, education, hardware, and publishing. this has also given me the opportunity to work across many form factors like smartphones (iOS and android), tablets (iOS and custom), and desktop (windows and mac). These opportunities have allowed me to learn from so many people and do my fair share of teaching with clients and teammates. 
+						</div>
+					</div>
+				</div>
+				<div class="teaching consulting hideAtStart">
+					<div class="sectionItemImage">
+						<img class="menlo consulting" style="border: 1px solid #515151; width: 350px;" src="images/photos/pairing.jpg" />
+					</div>
+					<div class="sectionItemText">
+						<div class="sectionItemTitle">Teaching</div>
+						<div>
+							as part of Menlo Innovations, i have been able to connect with and teach many companies our best practices when it comes to design, agile, and corporate culture. this has allowed me to experience a whole new world when it comes to organizational change. from large corporations diving into agile to small companies getting their first taste of user centric practices. Here's a link to the course description: <a href="http://menloinnovations.com/by-visiting/high-tech-anthropology">High-Tech Anthropology&reg;</a>
+						</div>
+					</div>
+				</div>
+				<div class="conferences consulting hideAtStart">
+					<div class="sectionItemImage">
+						<img class="menlo consulting" style="border: 1px solid #515151; width: 350px;" src="images/photos/pairing.jpg" />
+					</div>
+					<div class="sectionItemText">
+						<div class="sectionItemTitle">Conferences</div>
+						<div>
+							i've had the opportunity to speak at a few conferences allowing me to give back to the agile and design community that has given so much to me. i've spoken at both national and local events including Agile 2013. Below are the presentations i've given.
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="aboutMe" class="section">
+			<div class="sectionTitle"><span class="blackBackgroundText">about me</span></div>
+			<div class="sectionDesc" style="margin-top: -3px;">
+				<div><span class="blackBackgroundText">an adventurer at heart, i love to travel and explore.</span></div>
+				<div><span class="blackBackgroundText">i love reading (sci-fi especially), tennis, &amp; snowboarding.</span></div>
+				<div><span class="blackBackgroundText">i'm as happy playing with legos as i am photoshop.</span></div>
+				<div><span class="blackBackgroundText">please get in touch!</span></div>
+			</div>
+			<div id="connectInfo">
+				<a href="mailto:thomas@thomaspiggott.com">
+					<img class="connectImage" src="images/connect/emailLogo.png" />
+				</a>
+				<a href="https://www.linkedin.com/in/tjpiggott">
+					<img class="connectImage" src="images/connect/linkedInLogo.png" />
+				</a>
+				<a href="https://twitter.com/tjpiggott">
+					<img class="connectImage" src="images/connect/twitterLogo.png" />
+				</a>
+				<a href="https://www.facebook.com/tjpiggott">
+					<img class="connectImage" src="images/connect/facebookLogo.png" />
+				</a>
+				<a href="http://instagram.com/tjpiggott">
+					<img class="connectImage" src="images/connect/instagramLogo.png" />
+				</a>
+			</div>
+		</div>
+
+	</div>
 </body>
 </html>

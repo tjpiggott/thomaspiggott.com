@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<title>Reading Tracker</title>
+	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="../css/styles.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script src="../js/highcharts.js"></script>
+	<script src="../js/scripts.js"></script>			
+	<link href='http://fonts.googleapis.com/css?family=Merriweather|News+Cycle' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div data-role="page" id="wrapper">
+		<header>
+			<img id="owlLogo" src="../images/owl.png" />
+			<span id="site-title">athenaeum.</span><span id="subtitle"> read smarter.</span>
+			<span id="icon-wrapper">
+				<a href="../index.html" data-ajax="false"><span>p</span></a>
+				<span class="nav-selected">7</span>
+				<a href="../readingModule.html" data-ajax="false"><span>K</span></a>
+				<a href="../settings.html" data-ajax="false"><span>(</span></a>
+			</span>
+		</header>
+		<div id="stats-content">
+			<div id="chart-block">
+				<div class="content-block">
+					<h2>You do your best reading:</h2>
+					<div id="stats-dashboard-items">
+						<span class="stats-dashboard-item" id="stats-wednesday"></span>
+						<span class="stats-dashboard-item" id="stats-time"></span>					
+						<span class="stats-dashboard-item" id="stats-hatcher"></span>
+					</div>										
+					<!-- <h2>7 Day Average:</h2>
+										<span class="stats-dashboard-item"><span class="stat-box-title">Pages per minute</span><span class="stat-box-number">0.3</span></span>
+										<span class="stats-dashboard-item"><span class="stat-box-title">Comprehension</span><span class="stat-box-number">4.3</span></span> -->
+					<h3 class="stats-suggestion">You should consider reading at this time more often!</h3>
+					<a href="#" id="reading-appointment" data-rel="dialog" data-role="button" data-theme="b">add this time to my calendar</a>
+				</div>
+			</div>
+			<div id="stats-select-menu" data-role="controlgroup" data-type="horizontal">
+				<a href="#" data-role="button" class="stat-nav-selected" onclick="resetDashboard();">stats dashboard</a>
+				<a href="#" data-role="button" onclick="breakdown();">efficiency breakdown</a>
+				<a href="#" data-role="button" onclick="dayEfficiency();">day of week</a>
+				<a href="#" data-role="button" onclick="locationEfficiency()">locations</a>
+				<a href="#" data-role="button" onclick="timeEfficiency();">time of day</a>
+				<a href="#" data-role="button" onclick="subjectEfficiency();">group</a>
+				<a href="#" data-role="button" onclick="noiseEfficiency();">noise level</a>	
+			</div>
+		</div>
+	</div>
+	<script src="../js/stats.js"></script>
+</body>
+
+</html>
