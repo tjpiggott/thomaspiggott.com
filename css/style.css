@@ -29,6 +29,11 @@ a:active, a:hover{
     background-position: center center; 
 }
 
+#aboutMeText{
+	margin: 50px 0 0 50px;
+	position: relative;
+}
+
 #arrowDown{
 	position: fixed;
 	bottom: 80px;
@@ -75,9 +80,13 @@ a:active, a:hover{
 
 .blackBackgroundText{
 	background-color: #000000;
-	opacity: .85;
+	font-size: 20pt;
+	letter-spacing: .05em;
+	opacity: .9;
 	padding: 1px 4px 2px 4px;
-	margin: 2px 0 2px 0;
+	display: none;
+	position: absolute;
+	left: 0;
 }
 
 .connectImage{
@@ -86,7 +95,7 @@ a:active, a:hover{
 }
 
 #connectInfo{
-	margin: 150px 0 0 0;
+	margin: 400px 0 0 0;
 	text-align: center;
 }
 
@@ -164,7 +173,8 @@ a:active, a:hover{
 	color: #cccccc;
 	font-size: 32pt;
 	font-family: 'Novecentosanswide-DemiBold';
-	margin: 30px 0 0 50px;
+	margin: 10px 0 25px 50px;
+	float: left;
 }
 
 .sectionDesc{
@@ -172,15 +182,18 @@ a:active, a:hover{
 	color: #ffffff;
 	font-size: 16pt;
 	font-family: 'Novecentosanswide-Light';
+	position: relative;
 }
 
 .sectionItemsList{
-	margin: 40px 0 0 50px;
+	float: left;
+	width: 100%;
+	margin: 25px 0 0 0;
 }
 
 .sectionItem{
 	float: left;
-	margin: 0 50px 0 0;
+	margin: 0 0 0 50px;
 	cursor: pointer;
 }
 
@@ -196,8 +209,8 @@ a:active, a:hover{
 }
 
 .sectionItemImage{
-	width: 375px;
 	float: left;
+	width: 375px;
 	height: 400px;
 	text-align: center;
 }
@@ -207,19 +220,17 @@ a:active, a:hover{
 }
 
 .sectionItemText{
-	background-color: #000000;
-    padding: 10px;
-    width: 500px;
-    margin: 0 0 0 25px;
+    width: 400px;
     float: left;
-    font-family: 'Novecentosanswide-Book';
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 300;
 }
 
 .sectionItemTitle{
 	color: #cccccc;
 	font-size: 18pt;
 	font-family: 'Novecentosanswide-DemiBold';
-	margin: 0 0 10px;
+	margin: 0 0 10px 0;
 }
 
 .skillSection{
@@ -228,13 +239,37 @@ a:active, a:hover{
 }
 
 .skill{
-	margin: 10px 50px 10px 0;
+	margin: 0 20px 10px 0;
 	float: left;
-	width: 200px;
+	width: 150px;
+	height: 100px;
+}
+
+.skillGroup{
+	width: 510px;
+	float: left;
 }
 
 .skillIcon{
 	cursor: pointer;
+}
+
+.skillsDescription{
+	width: 390px;
+	height: 100%;
+	margin: 0 70px 0 0;
+	float: left;
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 300;
+}
+
+.subtitle{
+	color: #8466c3;
+}
+
+.tooltip{
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 300;
 }
 
 .welcome{
@@ -245,16 +280,14 @@ a:active, a:hover{
 }
 
 #welcomeText{
-	float: left;
-	font-size: 20pt;
 	width: 500px;
 	margin: 50px 0 0 50px;
-	letter-spacing: .05em;
+	position: relative;
 }
 
 /* Sprites for Skills */
 
-#observations, #personas, #workflows, #wireframes, #prototypes, #designAssessments, #documentation, #penPaper, #photoshop, #illustrator, #balsamiq, #axure, #htmlcssjs{
+#observations, #personas, #workflows, #wireframes, #prototypes, #designAssessments, #storycards, #screenplay, #documentation, #penPaper, #photoshop, #illustrator, #balsamiq, #axure, #htmlcssjs{
 	background-image: url('../images/skills/sprites.png');
 	background-image: no-repeat;
 	height: 50px;
@@ -317,4 +350,12 @@ a:active, a:hover{
 
 #htmlcssjs{
 	background-position: 0 -50px;
+}
+
+#storycards{
+	background-position: -50px -150px;
+}
+
+#screenplay{
+	background-position: -100px -150px;
 }

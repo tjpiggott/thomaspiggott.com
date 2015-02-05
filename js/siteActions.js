@@ -20,7 +20,7 @@ function startup(){
 	setTimeout(function(){$("#aboutMe").addClass("aboutMe")}, 1000);
 
 	Tipped.create('.skillIcon', '', {
-		position: 'right',
+		position: 'bottom',
 		maxWidth: 350,
 		skin: 'black',
 		size: 'large',
@@ -35,9 +35,17 @@ function showNav(){
 		$("#navigation").css("bottom", 0);
 	}
 
+	var duration = 1000;
+	var options = "{direction: 'down', easing: 'easeOutQuad'}";
+	
 	if(window.pageYOffset >= windowHeight * 5){
 		currentSection = "#aboutMe";
 		$("#arrowDown").addClass("rotated180");
+		$("#about1").show("slide", options, duration);
+		setTimeout(function(){$("#about2").show("slide", options, duration)}, 50);
+		setTimeout(function(){$("#about3").show("slide", options, duration)}, 100);
+		setTimeout(function(){$("#about4").show("slide", options, duration)}, 150);
+		setTimeout(function(){$("#about5").show("slide", options, duration)}, 200);
 	}else{
 		$("#arrowDown").removeClass("rotated180");
 		if(window.pageYOffset >= windowHeight * 4)
@@ -45,9 +53,16 @@ function showNav(){
 		else if(window.pageYOffset >= windowHeight * 3)
 			currentSection = "#skills";
 		else if(window.pageYOffset >= windowHeight * 2)
-			currentSection = "#finishedProducts";
-		else if(window.pageYOffset >= windowHeight)
+			currentSection = "#projects";
+		else if(window.pageYOffset >= windowHeight){
 			currentSection = "#welcome";
+			$("#welcome1").show("slide", options, duration);
+			setTimeout(function(){$("#welcome2").show("slide", options, duration)}, 50);
+			setTimeout(function(){$("#welcome3").show("slide", options, duration)}, 100);
+			setTimeout(function(){$("#welcome4").show("slide", options, duration)}, 150);
+			setTimeout(function(){$("#welcome5").show("slide", options, duration)}, 200);
+			setTimeout(function(){$("#welcome6").show("slide", options, duration)}, 250);
+		}
 		else if(window.pageYOffset == 0)
 			currentSection = "#banner";
 	}
@@ -59,8 +74,8 @@ function toNextSection(section){
 		if(currentSection == "#banner")
 			currentSection = "#welcome";
 		else if(currentSection == "#welcome")
-			currentSection = "#finishedProducts";
-		else if(currentSection == "#finishedProducts")
+			currentSection = "#projects";
+		else if(currentSection == "#projects")
 			currentSection = "#skills";
 		else if(currentSection == "#skills")
 			currentSection = "#consulting";
@@ -85,8 +100,10 @@ function toNextSection(section){
 	}
 }
 
-function showSectionItem(section, item){
+function showSectionItem(subtitle, subtitleSection, section, item){
 	var timing = 250
+	$(subtitleSection).text(subtitle);
 	$(section).fadeOut(timing);
 	setTimeout(function(){$(item).fadeIn(timing)}, timing);
+	//setTimeout(function(){$(item).show("slide", {direction: 'up'}, timing)}, timing);
 }
