@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head> 
+	<title>Thomas Piggott</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Thomas Piggott" /> 
+	<meta name="description" content="Portfolio of Thomas Piggott, User Experience Designer" /> 
+	<meta name="keywords" content="Thomas, Piggott, Thomas Piggott, ThomasPiggott, Tom Piggott, Tom Piggot, Thomas Piggot, Piggot, Portfolio, Interaction Design, User Experience Design, UX, HCI, Human-Computer Interaction, Computer Science, Software Development, Development, Designer, Developer" /> 
+	
+	<link rel="icon" type="image/png" href="favicon.ico" /> 
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/siteActions.js"></script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-22591285-1']);
+		_gaq.push(['_trackPageview']);
+	
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+</head>
+<body onload="startup()">
+	<div id="banner" class="section" style="background-color: #262626;">
+		<img id="bannerLogo" style="display: none;" src="images/piggy.svg" />
+		<div id="bannerTitle" style="display: none;">thomas piggott</div>
+		<div id="bannerSubtitle" style="display: none;">user experience design</div>
+		<img id="arrowDown" style="display: none;" onclick="toNextSection('');" src="images/arrowDown.svg">
+	</div>
+
+	<div id="navigation">
+		<img id="navLogo" onclick="toNextSection('#banner');" width='70px' src="images/piggy.svg" />
+		<div id="navTitles" onclick="toNextSection('#welcome');">
+			<div id="navTitle">thomas piggott</div>
+			<div id="navSubtitle">user experience design</div>
+		</div>
+		<div class="navItem" onclick="toNextSection('#projects');">projects</div>
+		<div class="navItem" onclick="toNextSection('#skills');">skills</div>
+		<div class="navItem" onclick="toNextSection('#consulting');">consulting</div>
+		<div class="navItem" onclick="toNextSection('#aboutMe');">about me</div>
+	</div>
+		
+	<div id="pageContent" style="display:none">
+		<div id="welcome" class="section">
+			<div id="welcomeText">
+				<span class="blackBackgroundText">hello! my name is thomas and i’m a</span>
+				<span class="blackBackgroundText">ux designer, passionate about </span>
+				<span class="blackBackgroundText">understanding your business and </span>
+				<span class="blackBackgroundText">your users’ needs in service of </span>
+				<span class="blackBackgroundText">delivering the best possible </span>
+				<span class="blackBackgroundText">solution.</span>
+			</div>
+		</div>
+
+		<div id="projects" class="section">
+			<div class="sectionItemsList">
+				<div id="foreignLandsItem" class="sectionItem projectsItem sectionItemSelected" onclick="showSectionItem('#foreignLandsItem', '&gt; foreign lands', '#projectsSubtitle', '.projects', '.foreignLands');">foreign lands</div>
+				<div id="vidatalkItem" class="sectionItem projectsItem" onclick="showSectionItem('#vidatalkItem', '&gt; vidatalk', '#projectsSubtitle', '.projects', '.vidatalk');">vidatalk</div>
+				<div id="cosmosItem" class="sectionItem projectsItem" onclick="showSectionItem('#cosmosItem', '&gt; cosmos mlp', '#projectsSubtitle', '.projects', '.cosmos');">cosmos mobile learning platform</div>
+			</div>
+			<div class="sectionTitle">projects <span id="projectsSubtitle" class="subtitle">&gt; foreign lands</span></div>
+			<div class="sectionContent">
+				<div class="sectionItemDesc">
+					<div class="foreignLands projects">
+						<div class="sectionItemImage">
+							<img style="float: left; width: 250px; margin: 0 0 0 50px" src="images/portfolioImages/foreignLands1.png" />
+						</div>
+						<div class="sectionItemText">
+							<div class="sectionItemTitle">Project Overview</div>
+							<div>
+								Foreign Lands was born out of a need to help travelers adapt to their locations. Switching to a new measurement system, currency, and timezone can be difficult and this app aims to help with the most common conversions for speed, distance, etc. I designed and developed this app as a personal project allowing me to keep up with the latest Android design langugage.
+							</div>
+							<a style="float: left; margin: 20px 0 0 0;" href="https://play.google.com/store/apps/details?id=com.thomaspiggott.foreignlands">
+  								<img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+							</a>
+						</div>
+					</div>
+					<div class="vidatalk projects hideAtStart">
+						<div class="sectionItemImage">
+							<img style="float: left; width: 450px;" src="images/portfolioImages/vidatalk1.png" />	
+						</div>
+						<div class="sectionItemText" style="margin: 0 0 0 150px;">
+							<div class="sectionItemTitle">Project Overview</div>
+							<div>
+								Vidatalk is an iPad app that was developed to support those in the hospital that couldn't speak for themselves. As part of the research team, I interviewed and observed nurses, doctors, and patients in serious condition (such as the emergency room) with inhibited speech. This helped inform what the most important responses were and the easiest ways for nurses, doctors, and family to interact with patients. With research in hand, I helped design a simple interface that put the most common responses up front. For more, head over <a href="http://www.vidatak.com/vidatalk.html">here</a>.
+							</div>
+						</div>
+					</div>
+					<div class="cosmos projects hideAtStart">
+						<div class="sectionItemImage">
+							<img style="border: 1px solid #515151; float: left; width: 200px; margin: 35px 0 0 0;" src="images/portfolioImages/myDeskScreenshots/sketchbook1.png" />
+							<img style="border: 1px solid #515151; float: left; width: 200px; margin: 35px 0 0 -30px;" src="images/portfolioImages/myDeskScreenshots/sketchbook2.png" />
+							<img style="float: left; width: 250px; margin: 20px 0 0 -310px;" src="images/portfolioImages/myDeskScreenshots/sketchbookWithFrame.png" />
+						</div>
+						<div class="sectionItemText" style="margin: 0 0 0 100px;">
+							<div class="sectionItemTitle">Project Overview</div>
+							<div>
+								The Cosmos Mobile Learning Platform (now the Intergalactic Mobile Learning Center) is a set of Windows Phone apps used by 3rd graders in Singapore that originated from a class of mine at the University of Michigan. The myDesk app is a container around 6 separate apps (SketchIt, Recorder, MapIt, KWL, NotePad, Blurb), and messageBoard is a standalone app for communicating with classmates. These apps were deeply integrated into the curriculum so that their use supported, rather than directed, their learning. I designed SketchIt, Recorder, and messageBoard. See the apps in the Windows Phone Store here: <a href="http://www.windowsphone.com/en-us/store/app/mydesk/5f57dc71-3905-49e1-8144-fa840cf78a4b">mydesk</a> and <a href="http://www.windowsphone.com/en-in/store/app/messageboard/7d2755b0-a26d-4293-ac2b-4b257c5a77ea">messageboard</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="skills" class="section">
+			<div class="sectionItemsList">
+				<div id="discoveryItem" class="sectionItem skillsItem sectionItemSelected" onclick="showSectionItem('#discoveryItem', '&gt; discovery', '#skillsSubtitle', '.skills', '.discovery');">discovery</div>
+				<div id="designItem" class="sectionItem skillsItem" onclick="showSectionItem('#designItem', '&gt; design', '#skillsSubtitle',  '.skills', '.design');">design</div>
+				<div id="deliveryItem" class="sectionItem skillsItem" onclick="showSectionItem('#deliveryItem', '&gt; delivery', '#skillsSubtitle', '.skills', '.delivery');">delivery</div>
+				<div id="toolsItem" class="sectionItem skillsItem" onclick="showSectionItem('#toolsItem', '&gt; tools', '#skillsSubtitle', '.skills', '.tools');">tools</div>
+			</div>
+			<div class="sectionTitle">skills <span id="skillsSubtitle" class="subtitle">&gt; discovery</span></div>
+			<div id="skillsSectionContent">
+				<div class="skills discovery">
+					<div class="skillsDescription">
+						<div class="sectionItemTitle">because you need to know you're solving the right problem</div>
+						So how do you do that? Empathy. Observing and speaking with users in their natural environment, taking those insights and capturing their goals, needs, and workflows.
+					</div>
+					<div class="skillGroup">
+						<div class="skill" onclick="showSkillDescription('#tip_observations', '.tip_discovery', '#observations', '.discoverySkillIcon')">
+							<div id="observations" class="skillIcon skillIconSelected discoverySkillIcon"></div>
+							<div class="skillTitle">observations</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_interviews', '.tip_discovery', '#interviews', '.discoverySkillIcon')">
+							<div id="interviews" class="skillIcon discoverySkillIcon"></div>
+							<div class="skillTitle">interviews</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_problem', '.tip_discovery', '#problemStatement', '.discoverySkillIcon')">
+							<div id="problemStatement" class="skillIcon discoverySkillIcon"></div>
+							<div class="skillTitle">problem statements</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_personas', '.tip_discovery', '#personas', '.discoverySkillIcon')">
+							<div id="personas" class="skillIcon discoverySkillIcon"></div>
+							<div class="skillTitle">personas</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_personaMap', '.tip_discovery', '#personaMap', '.discoverySkillIcon')">
+							<div id="personaMap" class="skillIcon discoverySkillIcon"></div>
+							<div class="skillTitle">persona maps</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_workflows', '.tip_discovery', '#workflows', '.discoverySkillIcon')">
+							<div id="workflows" class="skillIcon discoverySkillIcon"></div>
+							<div class="skillTitle">workflows</div>
+						</div>
+					</div>
+					<div class="skillDescription">
+						<div id="tip_observations" class="tip_discovery">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">observations</div>
+								Observations are the fundamental building blocks to understanding the problem space and the user. So, it's my job to watch and listen to users about how they go about their duties. Like a fly on the wall, I'm there to observe and note what users experience - interruptions, phone calls, office sounds, and all the distractions and pains that get in the way of their job. On top of that, much of what users do becomes second nature and they may not even be able to explain what they do without actually doing it.
+							</div>
+							<a href="images/skills/affinityWall.png"><img style="width: 400px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/affinityWall.png" /></a>
+						</div>
+						<div id="tip_workflows" class="tip_discovery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">workflows</div>
+								Workflows help me ensure that I know what processes have been captured and where potential information is missing. This process also helps identify pain points and leads to prioritizing which features will add the most value. With the right workflows in hand, designs will flow better and match the user's expectations.
+							</div>
+							<a href="images/skills/interactionMap.png"><img style="width: 400px; margin: 25px 0 0 75px; float: left; border: 2px solid #cccccc;" src="images/skills/interactionMap.png" /></a>
+						</div>
+						<div id="tip_personaMap" class="tip_discovery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">persona maps</div>
+								Persona Mapping is the key step to making personas useful. The business must come together to prioritize which users they want to focus on. A <i>single</i> persona must be chosen as the primary persona. Secondary and tertiary personas can be chosen as well but all decisions must be in line with the chosen primary persona. Not only does this aid prioritization, capturing why or why not each persona was chosen helps clarify what about the persona is most important. This decision will guide all future design and feature decisions.
+							</div>
+							<a href="images/skills/personaMap.png"><img style="width: 350px; margin: 25px 0 0 75px; float: left; border: 2px solid #cccccc;" src="images/skills/personaMap.png" /></a>
+						</div>
+						<div id="tip_interviews" class="tip_discovery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">interviews</div>
+								Combined with observations, interviews are extremely important for understanding the user's world. Interviews help make sense of the observational data and can clear up confusion. Also important is that what a user says is often at odds with what they do which is why pairing observations with interviews is so important.
+							</div>
+							<a href="images/skills/mindmap.png"><img style="width: 400px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/mindmap.png" /></a>
+						</div>
+						<div id="tip_personas" class="tip_discovery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">personas</div>
+								Personas are one of the most powerful tools for focusing design efforts where they belong: on the end user. Light weight and flexible, personas allow the business and designers to remove their biases and speak a common, user-centric language when talking about what is important for the product.
+							</div>
+							<a href="images/skills/persona_peter.jpg"><img style="width: 150px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/persona_peter.jpg" /></a>
+							<a href="images/skills/persona_marigold.jpg"><img style="width: 150px; margin: 50px 0 0 -25px; float: left; border: 2px solid #cccccc;" src="images/skills/persona_marigold.jpg" /></a>
+							<a href="images/skills/persona_steven.jpg"><img style="width: 150px; margin: 75px 0 0 -25px; float: left; border: 2px solid #cccccc;" src="images/skills/persona_steven.jpg" /></a>
+						</div>
+						<div id="tip_problem" class="tip_discovery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">problem statements</div>
+								It helps if you know what problem you're supposed to solve. It's even better when you, the team, and the business are in agreement. This lays out what will be addressed and just as importantly, what will be left out. This helps set expectations for a project early.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="skills design hideAtStart">
+					<div class="skillsDescription">
+						<div style="float: left; width: 400px">
+							<div class="sectionItemTitle">because you need pixels that have purpose</div>
+							Design shouldn't be decided by a designer making assumptions about what users might want. They should be backed by the many stories of real people with a designer that knows how to hear them.
+						</div>
+					</div>
+					<div class="skillGroup">
+						<div class="skill" onclick="showSkillDescription('#tip_wireframes', '.tip_design', '#wireframes', '.designSkillIcon')">
+							<div id="wireframes" class="skillIcon skillIconSelected designSkillIcon"></div>
+							<div class="skillTitle">wireframes</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_prototypes', '.tip_design', '#prototypes', '.designSkillIcon')">
+							<div id="prototypes" class="skillIcon designSkillIcon"></div>
+							<div class="skillTitle">prototypes</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_designAssessments', '.tip_design', '#designAssessments', '.designSkillIcon')">
+							<div id="designAssessments" class="skillIcon designSkillIcon"></div>
+							<div class="skillTitle">design assessments</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_iteration', '.tip_design', '#iteration', '.designSkillIcon')">
+							<div id="iteration" class="skillIcon designSkillIcon"></div>
+							<div class="skillTitle">iteration</div>
+						</div>
+					</div>
+					<div class="skillDescription">
+						<div id="tip_iteration" class="tip_design hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">iteration</div>
+								No design is going to be perfect right off the bat. That's why after a round of design assessments, it's time to take the feedback and refine the designs by merging the parts and pieces that worked best across concepts. Continuous incorporation of user feedback early and often ensures that the product truly meets the needs of users.
+							</div>
+							<a href="images/skills/iteration.png"><img style="width: 425px; margin: 0 0 0 50px; float: left;" src="images/skills/iteration.png" /></a>
+						</div>
+						<div id="tip_designAssessments" class="tip_design hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">design assessments</div>
+								Design Assessments are key to testing design assumptions. Getting a user in front of your designs and watching as they struggle through a design is as informative as it is humbling. Often, I will present multiple designs so that I can see different concepts in action. Then, when refining, I can pull what worked best from across the concepts.
+							</div>
+							<a href="images/skills/usable2.jpg"><img style="width: 200px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/usable2.jpg" /></a>
+							<a href="images/skills/usable3.jpg"><img style="width: 200px; margin: 75px 0 0 -50px; float: left; border: 2px solid #cccccc;" src="images/skills/usable3.jpg" /></a>
+						</div>
+						<div id="tip_prototypes" class="tip_design hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">prototypes</div>
+								Prototypes come in all shapes and sizes. I like to start with paper prototypes because of how quickly they can be formed. As detail increases, I like to move to Axure, Photoshop, and even custom prototypes in html / css / javascript when appropriate. Take a look at a custom HTML 5 prototype made for a tablet reading app <a href="downloads/reader/index.html">here</a>.
+							</div>
+							<a href="downloads/reader/index.html"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/prototype.png" /></a>
+						</div>
+						<div id="tip_wireframes" class="tip_design">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">wireframes</div>
+								Wireframing quickly gets the basic structure of designs on paper, like navigation, basic features, and layout. I often start with pen and paper (or whiteboard) to start because of how quick and easy it is to brainstorm and work with others. Once the basic frame is in place, designs can be moved up in fidelity with tools such as Axure, Balsamiq, or Fireworks.
+							</div>
+							<a href="images/skills/wireframes.png"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/wireframe.png" /></a>
+						</div>
+					</div>
+				</div>
+				<div class="skills delivery hideAtStart">
+					<div class="skillsDescription">
+						<div class="sectionItemTitle">because design is nothing without implementation</div>
+						Everyone on the team should be empowered to advocate for the user, not just the designers. It's my job to communicate the designs and make changes when development realities call for it.
+					</div>
+					<div class="skillGroup">
+						<div class="skill" onclick="showSkillDescription('#tip_screenplay', '.tip_delivery', '#screenplay', '.deliverySkillIcon')">
+							<div id="screenplay" class="skillIcon deliverySkillIcon skillIconSelected"></div>
+							<div class="skillTitle">screenplays</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_storycards', '.tip_delivery', '#storycards', '.deliverySkillIcon')">
+							<div id="storycards" class="skillIcon deliverySkillIcon"></div>
+							<div class="skillTitle">storycards</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_documentation', '.tip_delivery', '#documentation', '.deliverySkillIcon')">
+							<div id="documentation" class="skillIcon deliverySkillIcon"></div>
+							<div class="skillTitle">regulated documentation</div>
+						</div>
+					</div>
+					<div class="skillDescription">
+						<div id="tip_documentation" class="tip_delivery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">regulated documentation</div>
+								I've worked on FDA regulated software that had strict guidelines for documentation. So, I'm familiar with the rigorous level of detail and documentation needed for projects with government involvement. 
+							</div>
+						</div>
+						<div id="tip_storycards" class="tip_delivery hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">storycards</div>
+								Storycards with mockups are the best way to document the design in full detail. Because they capture low-level requirements, developers are able to estimate at a much higher confidence level. The key to storycard writing is to make it digestible for development but to always provide value to the end user.
+							</div>
+							<a href="images/skills/balsamiq.jpg"><img style="width: 350px; margin: 25px 0 0 75px; float: left; border: 2px solid #cccccc;" src="images/skills/storycard.jpg" /></a>
+						</div>
+						<div id="tip_screenplay" class="tip_delivery">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">screenplays</div>
+								Screenplays are a great tool for quickly conveying the designs to developers and other stakeholders. This shows of the new workflows based on the pages and interactions. It is the best tool for sharing the user's new story and experience with the team.
+							</div>
+							<a href="images/portfolioImages/ForeignLandsBalsamiq.png"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/portfolioImages/ForeignLandsBalsamiq.png" /></a>
+						</div>
+					</div>
+				</div>
+				<div class="skills tools hideAtStart">
+					<div class="skillsDescription">
+						<div class="sectionItemTitle">because each step needs the right tool</div>
+						I use whatever tool helps me to most effectively accomplish my goal. That means sometimes finding new tools and getting rid of ones that are no longer useful. Here is a subset of my most used tools.
+					</div>
+					<div class="skillGroup">
+						<div class="skill" onclick="showSkillDescription('#tip_penPaper', '.tip_tool ', '#penPaper', '.toolSkillIcon')">
+							<div id="penPaper" class="skillIcon skillIconSelected toolSkillIcon"></div>
+							<div class="skillTitle">hand drawn</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_balsamiq', '.tip_tool ', '#balsamiq', '.toolSkillIcon')">
+							<div id="balsamiq" class="skillIcon toolSkillIcon"></div>
+							<div class="skillTitle">balsamiq</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_axure', '.tip_tool ', '#axure', '.toolSkillIcon')">
+							<div id="axure" class="skillIcon toolSkillIcon"></div>
+							<div class="skillTitle">axure</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_illustrator', '.tip_tool ', '#illustrator', '.toolSkillIcon')">
+							<div id="illustrator" class="skillIcon toolSkillIcon"></div>
+							<div class="skillTitle">illustrator</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_photoshop', '.tip_tool ', '#photoshop', '.toolSkillIcon')">
+							<div id="photoshop" class="skillIcon toolSkillIcon"></div>
+							<div class="skillTitle">photoshop</div>
+						</div>
+						<div class="skill" onclick="showSkillDescription('#tip_htmlcssjs', '.tip_tool ', '#htmlcssjs', '.toolSkillIcon')">
+							<div id="htmlcssjs" class="skillIcon toolSkillIcon"></div>
+							<div class="skillTitle">html / css / javascript</div>
+						</div>
+					</div>
+					<div class="skillDescription">
+						<div id="tip_htmlcssjs" class="tip_tool hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">html / CSS / JS</div>
+								With my development background, I am extremely comfortable using html, css, and javascript to make customized prototypes. In fact, this site is coded with those technologies along with jQuery and tools based on it. I also have experience with PHP, Java, Objective-C, C#, and SQL, which is extremely useful when working with the development team.
+							</div>
+							<a href="images/skills/html.png"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/html.png" /></a>
+						</div>
+						<div id="tip_photoshop" class="tip_tool  hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">photoshop</div>
+								Photoshop is the tool I use most often to create finalized production assets which often originate in Illustrator. Photoshop, as any designer can tell you, is perfect for adding the final layer of polish.
+							</div>
+							<a href="images/skills/photoshop.png"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/photoshop.png" /></a>
+						</div>
+						<div id="tip_illustrator" class="tip_tool  hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">illustrator</div>
+								Illustrator is a powerful tool that I use for most of my graphics work because of the flexibility afforded by vector-based graphics. It is also the tool I am most experienced with from the Adobe Creative Suite.
+							</div>
+							<a href="images/skills/illustrator.png"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/illustrator.png" /></a>
+						</div>
+						<div id="tip_axure" class="tip_tool  hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">axure</div>
+								Axure is the tool I am most comfortable creating prototypes in. Axure allows me to build prototypes that easily flex between sketchy looking designs to full fledged interactive prototypes. With my background as a developer, it is particularly fun for me to quickly set up complex prototypes when certain features call for it.
+							</div>
+							<a href="images/skills/axure.png"><img style="width: 425px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/axure.png" /></a>
+						</div>
+						<div id="tip_balsamiq" class="tip_tool  hideAtStart">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">balsamiq</div>
+								I am experienced with a wide range of prototyping tools and I pick up on new tools quickly. Balsamiq is one of those tools that is particularly nice when moving up from hand-drawn designs.
+							</div>
+							<a href="images/skills/balsamiq.png"><img style="width: 200px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/balsamiq.png" /></a>
+						</div>
+						<div id="tip_penPaper" class="tip_tool ">
+							<div style="float: left; width: 400px">
+								<div class="sectionItemTitle">hand drawn</div>
+								This is my favorite tool to start designs with (this or a white board). Nothing's faster than drawing a picture when you need to express ideas quickly and get a basic structure down.
+							</div>
+							<a href="images/skills/handdrawn.jpg"><img style="width: 200px; margin: 25px 0 0 50px; float: left; border: 2px solid #cccccc;" src="images/skills/handdrawn.jpg" /></a>
+							<a href="images/skills/handdrawn2.jpg"><img style="width: 200px; margin: 75px 0 0 -50px; float: left; border: 2px solid #cccccc;" src="images/skills/handdrawn2.jpg" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="consulting" class="section">
+			<div class="sectionItemsList">
+				<div id="menloItem" class="sectionItem consultingItem sectionItemSelected" onclick="showSectionItem('#menloItem', '@ menlo innovations', '#consultingSubtitle', '.consulting', '.menlo');">menlo innovations</div>
+				<div id="conferencesItem" class="sectionItem consultingItem" onclick="showSectionItem('#conferencesItem', '&gt; conferences', '#consultingSubtitle', '.consulting', '.conferences');">conferences</div>
+				<div id="teachingItem" class="sectionItem consultingItem" onclick="showSectionItem('#teachingItem', '&gt; teaching', '#consultingSubtitle', '.consulting', '.teaching');">teaching</div>
+			</div>
+			<div class="sectionTitle">consulting <span id="consultingSubtitle" class="subtitle">@ menlo innovations</span></div>
+			<div class="sectionContent">
+				<div class="menlo consulting">
+					<div class="sectionItemImage">
+						<img class="menlo consulting" style="border: 1px solid #515151; width: 350px; margin: 20px 0 0 0;" src="images/photos/pairing.jpg" />
+					</div>
+					<div class="sectionItemText"style="width: 500px; margin: 10px 0 0 25px;">
+						<div class="sectionItemTitle">menlo innovations</div>
+						<div>
+							<a href="http://menloinnovations.com">Menlo Innovations</a> has been my primary client for the past seven years which has allowed me to work across a wide array of industries including: automotive, health, education, financial, and publishing. This has also given me the opportunity to work across many form factors like smartphones (iOS and Android), tablets (iOS and custom), and desktop (Windows and Mac). These opportunities have allowed me to learn from so many people and do my fair share of teaching with clients and teammates. 
+						</div>
+					</div>
+				</div>
+				<div class="teaching consulting hideAtStart">
+					<div class="sectionItemText" style="width: 950px;">
+						<div style="width: 420px; float: left;">
+							<div class="sectionItemTitle" style="margin: -10px 0 0 0;">teaching agile and ux</div>
+							<div>
+								As part of Menlo Innovations, I have been able to connect with and teach many companies our best practices when it comes to design, agile, and corporate culture. This has allowed me to experience a whole new world when it comes to organizational change; from large corporations diving into agile to small companies getting their first taste of user centric practices. Here's a link to the course description: <a href="http://menloinnovations.com/by-visiting/high-tech-anthropology">High-Tech Anthropology&reg;</a>
+							</div>
+						</div>
+						<div style="width: 420px; float: left; margin: 0 0 0 75px;">
+							<div class="sectionItemTitle" style="margin: -10px 0 0 0;">team collaboration</div>
+							<div>
+								Teammwork is the bedrock of successful organizations. I'm used to working with a pair partner for 8 hours a day every day. That means I am keenly aware of how to voice my ideas and present them to others. This has also opened me to the power of working with other's ideas and building on them to make them better than any one person could have created. It's also instilled a passionate belief that I work for a team and that the team's needs come before my own.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="conferences consulting hideAtStart">
+					<div class="sectionItemText" style="width: 950px;">
+						<div style="width: 420px; float: left;">
+							<div class="sectionItemTitle" style="margin: -10px 0 0 0;">the power of promiscuous pairing</div>
+							<div style="color: #ffffff; margin: 0 0 20px 0;">Agile and Beyond 2014 - Dearborn, MI</div>
+							<div>
+								This workshop takes a short time to introduce pairing and then gets right into the activity: pairing promiscuously! The activity has people work as a pair and then re-pair and re-pair again as they build on previous work. This intent is to show people that working with others, quickly and creatively, can help make work more fun and more productive. See the presentation <a href="downloads/The_Power_of_Promiscuous_Pairing.pptx">here</a>.
+							</div>
+						</div>
+						<div style="width: 420px; float: left; margin: 0 0 0 75px;">
+							<div class="sectionItemTitle" style="margin: -10px 0 0 0;">strength in scenarios</div>
+							<div style="color: #ffffff; margin: 0 0 20px 0;">Agile 2013 - Nashville, TN</div>
+							<div>
+								This presentation helps demonstrate the importance of using a realistic scenario when assessing designs. Using scenarios (workflow-based stories that provide a framework for getting user feedback) allows the user to give more honest, relevant feedback more closely related to the work they do on an everyday basis. See the full description <a href="http://sched.co/11SUAHC">here</a> and see the presentation <a href="downloads/Strength_in_Scenarios.pdf">here</a>.
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="aboutMe" class="section">
+			<div id="aboutMeText">
+				<div><span class="blackBackgroundText">i'm an adventurer at heart</span></div>
+				<div><span class="blackBackgroundText">i love building experiences that matter</span></div>
+				<div><span class="blackBackgroundText">and permeating design throughout the team</span></div>
+				<div><span class="blackBackgroundText">let's create something together</span></div>
+				<div><span class="blackBackgroundText">grab my <a href="downloads/Thomas_Piggott_UX_Resume.pdf">résumé</a> and</span></div>
+				<div><span class="blackBackgroundText">get in touch!</span></div>
+			</div>
+			<div id="connectInfo">
+				<a href="mailto:thomas@thomaspiggott.com">
+					<img class="connectImage" src="images/connect/emailLogo.png" />
+				</a>
+				<a href="https://www.linkedin.com/in/tjpiggott">
+					<img class="connectImage" src="images/connect/linkedInLogo.png" />
+				</a>
+				<a href="https://twitter.com/tjpiggott">
+					<img class="connectImage" src="images/connect/twitterLogo.png" />
+				</a>
+				<a href="https://www.facebook.com/tjpiggott">
+					<img class="connectImage" src="images/connect/facebookLogo.png" />
+				</a>
+				<a href="http://instagram.com/tjpiggott">
+					<img class="connectImage" src="images/connect/instagramLogo.png" />
+				</a>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

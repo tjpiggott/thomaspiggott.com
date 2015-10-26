@@ -1,26 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<html ng-app="piggottApp" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
 <head> 
 	<title>Thomas Piggott</title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Thomas Piggott" /> 
 	<meta name="description" content="Portfolio of Thomas Piggott, User Experience Designer" /> 
+	<meta name="viewport" content="width=device-width" />
 	<meta name="keywords" content="Thomas, Piggott, Thomas Piggott, ThomasPiggott, Tom Piggott, Tom Piggot, Thomas Piggot, Piggot, Portfolio, Interaction Design, User Experience Design, UX, HCI, Human-Computer Interaction, Computer Science, Software Development, Development, Designer, Developer" /> 
 	
 	<link rel="icon" type="image/png" href="favicon.ico" /> 
 
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" media="screen and (min-width: 500px)" href="css/style.css">
+	<link rel="stylesheet" media="screen and (max-width: 500px)" href="css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/tipped/tipped.css" />
 	<link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/tipped/tipped.js"></script>
-	<script type="text/javascript" src="js/siteActions.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/actions.js"></script>
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -35,306 +39,127 @@
 	</script>
 	
 </head>
-<body onload="startup()">
-	<div id="banner" class="section" style="background-color: #262626;">
-		<img id="bannerLogo" style="display: none;" src="images/piggy.svg" />
-		<div id="bannerTitle" style="display: none;">thomas piggott</div>
-		<div id="bannerSubtitle" style="display: none;">user experience design</div>
-		<img id="arrowDown" style="display: none;" onclick="toNextSection('');" src="images/arrowDown.svg">
+<body onload="startup()"  ng-controller="PortfolioController as portfolio">
+	<div id="banner" class="section">
+		<div id="bannerTitle">thomas piggott</div>
+		<div id="bannerSubtitle">user experience design</div>
+		<img id="bannerLogo" src="images/piggy.svg" />
+		<div id="bannerNav">
+			<svg class="navItem" onclick="goToSection('#portfolio')">
+				<g class="navItemGroup">
+				  	<rect class="navButton" />
+				  	<text class="navText" x="12" y="55">portfolio</text>
+				</g>
+			</svg>
+			<svg class="navItem" onclick="goToSection('#process')">
+				<g class="navItemGroup">
+				  	<rect class="navButton" />
+				  	<text class="navText" x="20" y="55">process</text>
+				</g>
+			</svg>
+			<svg class="navItem" onclick="goToSection('#aboutMe')">
+				<g class="navItemGroup">
+				  	<rect class="navButton" />
+				  	<text class="navText" x="15" y="55">about me</text>
+				</g>
+			</svg>
+		</div>
 	</div>
 
-	<div id="navigation">
-		<img id="navLogo" onclick="toNextSection('#banner');" width='70px' src="images/piggy.svg" />
-		<div id="navTitles" onclick="toNextSection('#welcome');">
-			<div id="navTitle">thomas piggott</div>
-			<div id="navSubtitle">user experience design</div>
+	<div id="infoOverlay">
+		<div id="infoSidebar">
+			<div class="infoOverlayTitleBar" ng-click="portfolio.toggleOverlay()">
+				<span style="float: left">Back</span>
+				<span id="infoTitle">{{portfolio.viewedProject.title}}</span>
+			</div>
 		</div>
-		<div class="navItem" onclick="toNextSection('#projects');">projects</div>
-		<div class="navItem" onclick="toNextSection('#skills');">skills</div>
-		<div class="navItem" onclick="toNextSection('#consulting');">consulting</div>
-		<div class="navItem" onclick="toNextSection('#aboutMe');">about me</div>
+		<div id="infoMainSection">
+			<div class="infoRestrictor">
+				<div class="infoBanner" style="background-image: url('{{portfolio.viewedProject.bannerImage}}')"></div>
+				<div class="infoText" ng-bind-html="portfolio.viewedProject.description"></div>
+			</div>
+		</div>
 	</div>
-		
-	<div id="pageContent" style="display:none">
-		<div id="welcome" class="section">
-			<div id="welcomeText">
-				<span id="welcome1" style="top: 0;" class="blackBackgroundText">hello! my name is thomas and i’m a</span>
-				<span id="welcome2" style="top: 40px;" class="blackBackgroundText">ux designer, passionate about </span>
-				<span id="welcome3" style="top: 80px;" class="blackBackgroundText">understanding your business and </span>
-				<span id="welcome4" style="top: 120px;" class="blackBackgroundText">your users’ needs in service of </span>
-				<span id="welcome5" style="top: 160px;" class="blackBackgroundText">delivering the best possible </span>
-				<span id="welcome6" style="top: 200px;" class="blackBackgroundText">solution.</span>
-			</div>
+
+	<div id="portfolio" class="section">
+		<h1>design</h1>
+		<div class="sectionDescription">take a look at some of my current and past projects</div>
+
+		<div ng-repeat="project in portfolio.projects" class="portfolioItem" ng-click="portfolio.toggleOverlay('project', $index)">
+			<div class="portfolioItemImage" style="background-image: url('{{project.thumbnail}}')"></div>
+			<div class="portfolioItemTitle">{{project.title}}</div>
+			<div class="portfolioItemWork">{{project.workType}} <span ng-show="project.inProgress" style="color: #ffffcc">- in progress</span></div>
+			<div class="portfolioItemRoles">{{project.roles}}</div>
 		</div>
 
-		<div id="projects" class="section">
-			<div class="sectionItemsList">
-				<div class="sectionItem" onclick="showSectionItem('&gt; foreign lands', '#projectsSubtitle', '.projects', '.foreignLands');">foreign lands</div>
-				<div class="sectionItem" onclick="showSectionItem('&gt; vidatalk', '#projectsSubtitle', '.projects', '.vidatalk');">vidatalk</div>
-				<div class="sectionItem" onclick="showSectionItem('&gt; cosmos mlp', '#projectsSubtitle', '.projects', '.cosmos');">cosmos mobile learning platform</div>
+		<div class="spacer" style="width:100%;" />
+		<h1 style="margin: 25px 0 0 0;">teaching</h1>
+		<div class="sectionDescription">view the topics i've spoken on at conferences and workshops taught for companies looking to understand agile and ux</div>
+
+		<div ng-repeat="presentation in portfolio.teaching" class="portfolioItem" ng-click="portfolio.toggleOverlay('presentation', $index)">
+			<div class="portfolioItemImage" style="background-image: url('{{presentation.thumbnail}}')">
+				<span ng-show="presentation.hasSource">source: <a class="sourceLink" href="{{presentation.sourceLink}}">{{presentation.source}}</a></span>
 			</div>
-			<div class="sectionTitle">projects <span id="projectsSubtitle" class="subtitle">&gt; foreign lands</span></div>
-			<div class="sectionContent">
-				<div class="sectionItemDesc">
-					<div class="foreignLands projects">
-						<div class="sectionItemImage">
-							<img style="float: left; width: 250px; margin: 0 0 0 50px" src="images/portfolioImages/foreignLands1.png" />
-						</div>
-						<div class="sectionItemText">
-							<div class="sectionItemTitle">Project Overview</div>
-							<div>
-								Foreign Lands was born out of a need to help travelers adapt to their locations. Switching to a new measurement system, currency, and timezone can be difficult and this app aims to help with the most  common conversions for speed, distance, etc. This app was designed and developed by myself as a side project allowing me to keep up with the latest Android design langugage.
-							</div>
-						</div>
-					</div>
-					<div class="vidatalk projects hideAtStart">
-						<div class="sectionItemImage">
-							<img style="float: left; width: 500px;" src="images/portfolioImages/vidatalk1.png" />	
-						</div>
-						<div class="sectionItemText" style="margin: 0 0 0 200px;">
-							<div class="sectionItemTitle">Project Overview</div>
-							<div>
-								Vidatalk is an iPad app that was developed to support those in the hospital that couldn't speak for themselves. We studied nurses, doctors, and those in serious condition such as the emergency room and those that had recently been extubated. This helped inform what the most important responses were and the easiest ways for nurses, doctors, and family to interact with patients. for more, head over <a href="http://www.vidatak.com/vidatalk.html">here</a>.
-							</div>
-						</div>
-					</div>
-					<div class="cosmos projects hideAtStart">
-						<div class="sectionItemImage">
-							<img style="border: 1px solid #515151; float: left; width: 200px; margin: 35px 0 0 0;" src="images/portfolioImages/myDeskScreenshots/sketchbook1.png" />
-							<img style="border: 1px solid #515151; float: left; width: 200px; margin: 35px 0 0 -30px;" src="images/portfolioImages/myDeskScreenshots/sketchbook2.png" />
-							<img style="float: left; width: 250px; margin: 20px 0 0 -310px;" src="images/portfolioImages/myDeskScreenshots/sketchbookWithFrame.png" />
-						</div>
-						<div class="sectionItemText" style="margin: 0 0 0 100px;">
-							<div class="sectionItemTitle">Project Overview</div>
-							<div>
-								The Cosmos Mobile Learning Platform is a set of Windows Phone apps used by 3rd graders in Singapore that originated from a class of mine at the university of michigan. The myDesk app is a container around 6 separate apps (SketchIt, Recorder, MapIt, KWL, NotePad, Blurb), and messageBoard is a standalone app for communicating with classmates. These apps were deeply integrated into the curriculum so that their use supported, rather than directed, their learning. I designed SketchIt, Recorder, and messageBoard. See the apps in the Windows Phone Store here: <a href="http://www.windowsphone.com/en-us/store/app/mydesk/5f57dc71-3905-49e1-8144-fa840cf78a4b">mydesk</a> and <a href="http://www.windowsphone.com/en-in/store/app/messageboard/7d2755b0-a26d-4293-ac2b-4b257c5a77ea">messageboard</a>
-							</div>
-						</div>
-					</div>
+			<div class="portfolioItemTitle">{{presentation.title}}</div>
+			<div class="portfolioItemWork">{{presentation.location}}</div>
+		</div>
+	</div>
+
+	<div id="process" class="section">
+		<div style="width: 100%;">
+			<h1 style="margin: 25px 0 0 0; color: #ffffff;">process</h1>
+			<div class="sectionDescription" style="color: #ffffff">My design process and philosophy</div>
+		</div>
+		<div class="centerer">
+			<div class="processItem">
+				<div class="interviews skillIcon"></div>
+				<div class="processItemTitle">Research</div>
+				<div class="processItemDescription">
+					Research is the key to ensuring you're building a solution for a problem that exists and matters.
+				</div>
+			</div>
+			<div class="processItem">
+				<div class="wireframes skillIcon"></div>
+				<div class="processItemTitle">Design</div>
+				<div class="processItemDescription">
+					Taking research and putting it to work, iteratively. No design will be perfect the first time, that's why design requires constant adjusting as more information is learned.
+				</div>
+			</div>
+			<div class="processItem">
+				<div class="htmlcssjs skillIcon"></div>
+				<div class="processItemTitle">Development</div>
+				<div class="processItemDescription">
+					Development should never mean a simple handoff of the design but rather an ongoing conversation with developers to balance design needs with the constraints of development.
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div id="skills" class="section">
-			<div class="sectionItemsList">
-				<div class="sectionItem" onclick="showSectionItem('&gt; discovery', '#skillsSubtitle', '.skills', '.discovery');">discovery</div>
-				<div class="sectionItem" onclick="showSectionItem('&gt; design', '#skillsSubtitle', '.skills', '.design');">design</div>
-				<div class="sectionItem" onclick="showSectionItem('&gt; delivery', '#skillsSubtitle', '.skills', '.delivery');">delivery</div>
+	<div id="aboutMe" class="section">
+		<div id="aboutMeText">
+				<div><span class="aboutMeTextLine">i love building experiences that matter</span></div>
+				<div><span class="aboutMeTextLine">and permeating design throughout the team</span></div>
+				<div><span class="aboutMeTextLine">let's create something together</span></div>
+				<div><span class="aboutMeTextLine">grab my <a href="downloads/Thomas_Piggott_UX_Resume.pdf">résumé</a> and</span></div>
+				<div><span class="aboutMeTextLine">get in touch!</span></div>
 			</div>
-			<div class="sectionTitle">skills <span id="skillsSubtitle" class="subtitle">&gt; discovery</span></div>
-			<div class="sectionContent" style="margin-top: 50px;">
-				<div class="skills discovery">
-					<div class="skillsDescription">
-						<div class="sectionItemTitle">Because you need to know you're solving the right problem</div>
-						People are natural problem solvers and are quick to come up with solutions. The discovery phase of any project is vital for a healthy project because it slows this natural reaction down. Observations and interviews with real people, in their real environment, helps confirms the problem and locates the real opportunity. These insights will ultimately determine the direction of the entire project and set up the designs for success.
-					</div>
-					<div class="skillGroup">
-						<div class="skill">
-							<div id="observations" class="skillIcon" data-tipped-options="inline: 'tip_observations'"></div>
-							<div>observations &amp interviews</div>
-							<div id="tip_observations" class="tooltip hideAtStart">
-								Interviews and observation are the fundamental building block to understanding the problem space and the user. So, I head out into the field with pen and notebook, ready to not just ask about what's going on, but to observe in context how users carry out their tasks. It's not unusual to find that what a user says versus what they do isn't that same thing.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="personas" class="skillIcon" data-tipped-options="inline: 'tip_personas'"></div>
-							<div class="skillTitle">personas</div>
-							<div id="tip_personas" class="tooltip hideAtStart">
-								Personas are one of the most powerful tools for focusing design efforts where they belong: on the end user. Light weight and flexible, personas allow the business and designers to remove their biases and speak a common, user-centric language when talking about what is important for the product.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="workflows" class="skillIcon" data-tipped-options="inline: 'tip_workflows'"></div>
-							<div class="skillTitle">workflows</div>
-							<div id="tip_workflows" class="tooltip hideAtStart">
-								Workflows help me ensure that I know what processes have been captured and where potential information is missing. This also helps identify These lead directly into design, so it's important to know the user's underlying workflow.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="skills design hideAtStart">
-					<div class="skillsDescription">
-						<div class="sectionItemTitle">Because you need pixels where they matter most</div>
-						The design phase is about testing design assumptions. No design is ever perfect, but it's my job to defend each pixel based on interviews, observations, and design assessments with real users. That's why iterating designs is important, so that feedback can be continuously incorporated back into the design. This ensures that the user's voice is heard and their needs are met.
-					</div>
-					<div class="skillGroup">
-						<div class="skill">
-							<div id="wireframes" class="skillIcon" data-tipped-options="inline: 'tip_wireframes'"></div>
-							<div class="skillTitle">wireframes</div>
-							<div id="tip_wireframes" class="tooltip hideAtStart">
-								Wireframing helps me setup my thinking after carrying out all the ux research. Often, I use pen and paper (or whiteboard) to start because of how quick and easy it is. Once the basic frame is in place, designs can be moved up in fidelity with tools such as Axure, Balsamiq, or Fireworks.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="prototypes" class="skillIcon" data-tipped-options="inline: 'tip_prototypes'"></div>
-							<div class="skillTitle">prototypes</div>
-							<div id="tip_prototypes" class="tooltip hideAtStart">
-								Prototypes come in all shapes and sizes. I like to start with paper prototypes because of how quickly they can be formed. As detail increases, I like to move to Axure, Photoshop, and even custom prototypes in html / css / javascript when appropriate. Take a look at a custom HTML 5 prototype made for a tablet reading app <a href="downloads/reader/index.html">here</a>.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="designAssessments" class="skillIcon" data-tipped-options="inline: 'tip_designAssessments'"></div>
-							<div class="skillTitle">design assessments</div>
-							<div id="tip_designAssessments" class="tooltip hideAtStart">
-								Design Assessments are key to testing design assumptions. Getting a user in front of your designs and watching as they struggle through a design is as informational as it is humbling. Often, I will present multiple designs so that I can see different concepts in action. Then, when refining, I can pull what worked best from across the concepts.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="penPaper" class="skillIcon" data-tipped-options="inline: 'tip_penPaper'"></div>
-							<div class="skillTitle">pen &amp paper</div>
-							<div id="tip_penPaper" class="tooltip hideAtStart">
-								This is my favorite tool to start designs with (this or a white board). Nothing's faster than drawing a picture when you need to express ideas quickly and get a basic structure down.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="axure" class="skillIcon" data-tipped-options="inline: 'tip_axure'"></div>
-							<div class="skillTitle">axure</div>
-							<div id="tip_axure" class="tooltip hideAtStart">
-								Axure is the tool I am most comfortable creating prototypes in. Axure allows me to build prototypes that easily flex between sketchy looking designs to full fledged interactive prototypes. With my background as a developer, it is particularly fun for me to quickly set up complex prototypes when certain features call for it.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="balsamiq" class="skillIcon" data-tipped-options="inline: 'tip_balsamiq'"></div>
-							<div class="skillTitle">balsamiq</div>
-							<div id="tip_balsamiq" class="tooltip hideAtStart">
-								I am experienced with a wide range of prototyping tools and I pick up on new tools quickly. Balsamiq is one of those tools that is particularly nice when moving up from hand-drawn designs.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="illustrator" class="skillIcon" data-tipped-options="inline: 'tip_illustrator'"></div>
-							<div class="skillTitle">illustrator</div>
-							<div id="tip_illustrator" class="tooltip hideAtStart">
-								Illustrator is a powerful tool that I use for most of my graphics work because of the flexibility afforded by vector-based graphics. It is also the tool I am most experienced with from the Adobe Creative Suite.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="photoshop" class="skillIcon" data-tipped-options="inline: 'tip_photoshop'"></div>
-							<div class="skillTitle">photoshop</div>
-							<div id="tip_photoshop" class="tooltip hideAtStart">
-								Photoshop is the tool I use most often to create finalized production assets which often originate in Illustrator. Photoshop, as any designer can tell you, is perfect for adding the final layer of polish.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="htmlcssjs" class="skillIcon" data-tipped-options="inline: 'tip_htmlcssjs'"></div>
-							<div class="skillTitle">html/css/javascript</div>
-							<div id="tip_htmlcssjs" class="tooltip hideAtStart">
-								Because of my development background, I am extremely comfortable using html, css, and javascript to make customized prototypes. In fact, this site is coded with those technologies along with jQuery and tools based on it. I also have experience with PHP, Java, Objective-C, C#, and SQL, which is extremely useful when working with the development team.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="skills delivery hideAtStart">
-					<div class="skillsDescription">
-						<div class="sectionItemTitle">Because design never ends at pixel-perfect mockups</div>
-						Delivery starts with communicating the design to the developers and doesn't end until it's been seen through to the finish. That often means adjustments and clarification to the design as the developers find issues or the business makes further decisions. It's my job to ensure the whole team is aware of the previous steps and most importantly, the primary persona. Everyone on the team should be empowered to advocate for the user, not just the designers.
-					</div>
-					<div class="skillGroup">
-						<div class="skill">
-							<div id="screenplay" class="skillIcon" data-tipped-options="inline: 'tip_screenplay'"></div>
-							<div class="skillTitle">screenplay</div>
-							<div id="tip_screenplay" class="tooltip hideAtStart">
-								Screenplays are a great tool for quickly describing the designs when handing off to development. I use screenplays as a way of showing the team see all potential pages and interactions. It is the best tool for quickly telling a story to stakeholders about what the final design is and what it allows for based on real user workflows.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="storycards" class="skillIcon" data-tipped-options="inline: 'tip_storycards'"></div>
-							<div class="skillTitle">storycards</div>
-							<div id="tip_storycards" class="tooltip hideAtStart">
-								Storycards with mockups are the best way to document the design in full detail. Because they capture low-level requirements, developers are able to estimate at a much higher confidence level.
-							</div>
-						</div>
-						<div class="skill">
-							<div id="documentation" class="skillIcon" data-tipped-options="inline: 'tip_documentation'"></div>
-							<div class="skillTitle">regulated documentation</div>
-							<div id="tip_documentation" class="tooltip hideAtStart">
-								I've worked on FDA regulated software that had strict guidelines for documentation. So, I'm familiar with the rigorous level of detail and documentation needed for projects with government involvement. 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="consulting" class="section">
-			<div class="sectionItemsList">
-				<div class="sectionItem" onclick="showSectionItem('@ menlo innovations', '#consultingSubtitle', '.consulting', '.menlo');">menlo innovations</div>
-				<div class="sectionItem" onclick="showSectionItem('&gt; conferences', '#consultingSubtitle', '.consulting', '.conferences');">conferences</div>
-				<div class="sectionItem" onclick="showSectionItem('&gt; classes', '#consultingSubtitle', '.consulting', '.teaching');">classes</div>
-			</div>
-			<div class="sectionTitle">consulting <span id="consultingSubtitle" class="subtitle">@ menlo innovations</span></div>
-			<div class="sectionContent">
-				<div class="menlo consulting">
-					<div class="sectionItemImage">
-						<img class="menlo consulting" style="border: 1px solid #515151; width: 350px; margin: 20px 0 0 0;" src="images/photos/pairing.jpg" />
-					</div>
-					<div class="sectionItemText"style="width: 500px; margin: 10px 0 0 25px;">
-						<div class="sectionItemTitle">menlo innovations</div>
-						<div>
-							<a href="http://menloinnovations.com">Menlo Innovations</a> has been my primary client for the past seven years which has allowed me to work across a wide swath of industries including: automotive, health, education, financial, and publishing. This has also given me the opportunity to work across many form factors like smartphones (iOS and Android), tablets (iOS and custom), and desktop (Windows and Mac). These opportunities have allowed me to learn from so many people and do my fair share of teaching with clients and teammates. 
-						</div>
-					</div>
-				</div>
-				<div class="teaching consulting hideAtStart">
-					<div class="sectionItemText" style="width: 650px;">
-						<div class="sectionItemTitle">teaching agile, teaching human-centered design</div>
-						<div>
-							As part of Menlo Innovations, I have been able to connect with and teach many companies our best practices when it comes to design, agile, and corporate culture. This has allowed me to experience a whole new world when it comes to organizational change; from large corporations diving into agile to small companies getting their first taste of user centric practices. Here's a link to the course description: <a href="http://menloinnovations.com/by-visiting/high-tech-anthropology">High-Tech Anthropology&reg;</a>
-						</div>
-					</div>
-				</div>
-				<div class="conferences consulting hideAtStart">
-					<div class="sectionItemText" style="width: 100%;">
-						<div style="width: 600px;">
-							<div class="sectionItemTitle">speaking opportunities</div>
-							<div>
-								I've had the opportunity to speak at a few conferences and they are always amazing. It's a great chance to learn from others, even as a speaker. I've spoken at both national and local events including Agile 2013. Below are the presentations I've given:
-							</div>
-						</div>
-						<div style="width: 425px; float: left; padding: 10px; margin: 50px 0 0 0; background-color: #000000;">
-							<div class="sectionItemTitle">the power of promiscuous pairing</div>
-							<div>
-								This engaging presentation takes a short time to introduce pairing and then gets right into the activity: pairing promiscuously! The activity has people work as a pair to design a house. Then, they re-pair and continue work on a house that they have had nothing to do with at the start. This presentation is intended to show people that working with others, quickly and creatively, can help make work more fun and more productive. See the presentation <a href="downloads/The_Power_of_Promiscuous_Pairing.pptx">here</a>.
-							</div>
-						</div>
-						<div style="width: 425px; float: left; padding: 10px;  margin: 50px 0 0 50px; background-color: #000000;">
-							<div class="sectionItemTitle">strength in scenarios</div>
-							<div>
-								This presentation helps demonstrate the importance of using a realistic scenario when sharing desings during design assessments. Using scenarios (workflow-based stories that provide a framework for getting user feedback) allows the user to give more honest, relevant feedback more closely related to the work they do on an everyday basis. See the full description <a href="http://sched.co/11SUAHC">here</a>.
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<div id="aboutMe" class="section">
-			<div id="aboutMeText">
-				<div><span id="about1" style="top: 0;" class="blackBackgroundText">i'm an adventurer at heart</span></div>
-				<div><span id="about2" style="top: 40px;" class="blackBackgroundText">i love building experiences that matter</span></div>
-				<div><span id="about3" style="top: 80px;" class="blackBackgroundText">and permeating design throughout the team</span></div>
-				<div><span id="about4" style="top: 120px;" class="blackBackgroundText">let's create something together</span></div>
-				<div><span id="about5" style="top: 160px;" class="blackBackgroundText">please get in touch!</span></div>
-			</div>
-			<div id="connectInfo">
+			<div id="aboutMeConnectInfo">
 				<a href="mailto:thomas@thomaspiggott.com">
-					<img class="connectImage" src="images/connect/emailLogo.png" />
+					<img class="aboutMeConnectImage" src="images/connect/emailLogo.png" />
 				</a>
 				<a href="https://www.linkedin.com/in/tjpiggott">
-					<img class="connectImage" src="images/connect/linkedInLogo.png" />
+					<img class="aboutMeConnectImage" src="images/connect/linkedInLogo.png" />
 				</a>
 				<a href="https://twitter.com/tjpiggott">
-					<img class="connectImage" src="images/connect/twitterLogo.png" />
+					<img class="aboutMeConnectImage" src="images/connect/twitterLogo.png" />
 				</a>
 				<a href="https://www.facebook.com/tjpiggott">
-					<img class="connectImage" src="images/connect/facebookLogo.png" />
+					<img class="aboutMeConnectImage" src="images/connect/facebookLogo.png" />
 				</a>
 				<a href="http://instagram.com/tjpiggott">
-					<img class="connectImage" src="images/connect/instagramLogo.png" />
+					<img class="aboutMeConnectImage" src="images/connect/instagramLogo.png" />
 				</a>
 			</div>
-		</div>
-
 	</div>
 </body>
 </html>

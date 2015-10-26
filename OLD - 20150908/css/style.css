@@ -1,0 +1,351 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Novecentosanswide-Light', Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #cccccc;
+	min-height: 1000px;
+	background: #262626;
+}
+
+img{
+	border-style: none;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+	color: #92DAF6;
+}
+
+a:active, a:hover{
+	text-decoration: underline;
+	color: #92DAF6;
+}
+
+.aboutMe{
+	background-image: url('../images/photos/aboutMe.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#aboutMeText{
+	margin: 50px 0 0 50px;
+	float: left;
+	display: none;
+	width: 700px;
+}
+
+#arrowDown{
+	position: fixed;
+	bottom: 80px;
+	cursor: pointer;
+	width: 50px;
+	z-index: 99;
+	margin-left: -25px;
+	transition: transform 500ms ease;
+}
+
+#arrowDown:active{
+	bottom: 78px;
+}
+
+#banner{
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin: 0 0 0 0;
+}
+
+#bannerLogo{
+	width: 480px;
+	margin: 50px 0 0 0;
+}
+
+#bannerTitle{
+	color: #cccccc;
+	font-size: 32pt;
+	font-family: 'Novecentosanswide-DemiBold';
+	width: 100%;
+	margin: 0 0 0 0;
+	letter-spacing: .20em;
+}
+
+#bannerSubtitle{
+	color: #ffffff;
+	font-size: 28pt;
+	font-family: 'Novecentosanswide-Light';
+	width: 100%;
+	margin: 0 0 10px 0;
+	letter-spacing: .05em;
+}
+
+.blackBackgroundText{
+	background-color: #000000;
+	font-size: 20pt;
+	letter-spacing: .05em;
+	opacity: .9;
+	padding: 1px 4px 2px 4px;
+}
+
+.connectImage{
+	width: 50px;
+	margin: 0 20px 0 20px;
+}
+
+#connectInfo{
+	margin: 400px 0 0 0;
+	text-align: center;
+}
+
+.hideAtStart{
+	display: none;
+}
+
+#navigation{
+	position: fixed;
+	bottom: -70px;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background: #000000;
+	opacity: .85;
+	float: left;
+	z-index: 99;
+}
+
+#navLogo{
+	float: left;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#navTitles{
+	float: left;
+	margin: 0 25px 0 0;
+	cursor: pointer;
+}
+
+#navTitle{
+	margin: 10px 0 0 0;
+	color: #cccccc;
+	font-size: 18pt;
+	font-family: 'Novecentosanswide-DemiBold';
+	letter-spacing: .20em;
+}
+
+#navSubtitle{
+	margin: -10px 0 0 0;
+	color: #ffffff;
+	font-size: 16pt;
+	font-family: 'Novecentosanswide-Light';
+	letter-spacing: .05em;
+}
+
+.navItem{
+	float: left;
+	margin: 20px 0px 0 40px;
+	color: #ffffff;
+	font-size: 14pt;
+	font-family: 'Novecentosanswide-Light';
+	cursor: pointer;
+	transition: color 200ms ease;
+}
+
+.navItem:hover{
+	color: #eaa3c8;
+	transition: color 200ms ease;
+}
+
+.rotated180{
+	transform: rotate(180deg);
+	transition: transform 500ms ease;
+}
+
+.section{
+	width: 100%;
+	float: left;
+	min-height: 678px;
+}
+
+.sectionTitle{
+	color: #ffffff;
+	font-size: 32pt;
+	font-family: 'Novecentosanswide-DemiBold';
+	margin: 20px 0 25px 50px;
+	float: left;
+}
+
+.sectionDesc{
+	margin: -10px 50px 0 50px;
+	color: #ffffff;
+	font-size: 16pt;
+	font-family: 'Novecentosanswide-Light';
+	position: relative;
+}
+
+.sectionItemsList{
+	float: left;
+	width: 100%;
+	color: #ffffff;
+	background-color: #8466c3;
+}
+
+.sectionItem{
+	float: left;
+	padding: 20px;
+	border-right: 1px solid #9E7AEA;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: background-color 500ms ease;
+}
+
+.sectionContent{
+	margin: 100px 50px 0 50px;
+	width: 1000px;
+	clear: both;
+}
+
+.sectionItemImage{
+	float: left;
+	width: 375px;
+	height: 400px;
+}
+
+.sectionItemText{
+    width: 400px;
+    float: left;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 300;
+}
+
+.sectionItemTitle{
+	color: #cccccc;
+	font-size: 18pt;
+	font-family: 'Novecentosanswide-DemiBold';
+	margin: 0 0 10px 0;
+}
+
+.subtitle{
+	color: #8466c3;
+}
+
+.tooltip{
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 300;
+}
+
+.welcome{
+	background-image: url('../images/photos/welcome.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+
+#welcomeText{
+	width: 500px;
+	margin: 50px 0 0 50px;
+	float: left;
+	display: none;
+}
+
+.sectionItemSelected{
+	background-color: #48386A;
+	transition: background-color 500ms ease;
+}
+
+.sectionItem:hover{
+	background-color: #48386A;
+	transition: background-color 500ms ease;
+}
+
+#skillsSectionContent{
+	float: left;
+	width: 1000px;
+	margin: 0 0 0 50px;
+}
+
+.skillsDescription{
+	float: left;
+	width: 400px;
+	display:none;
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 300;
+}
+
+.skillDescription{
+	width: 900px;
+	float: left;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 300;
+}
+
+.skillSection{
+	float: left;
+	width: 500px;
+}
+
+.skill{
+	margin: 0 25px 10px 0;
+	float: left;
+	width: 125px;
+	height: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.skillGroup{
+	float: left;
+}
+
+.skillIcon{
+	text-align: center;
+	margin: auto;
+    border-radius: 10px;
+    background-color: #16754A;
+    height: 50px;
+	width: 50px;
+	transition: background-color 500ms ease;
+}
+
+.skillIcon:hover{
+	background-color: #22b573;
+	transition: background-color 500ms ease;
+}
+
+.skillIconSelected{
+	background-color: #22b573;
+	transition: background-color 500ms ease;
+}
+
+.skillTitle{
+	margin: 10px 0 0 0;
+}
+
+/* Sprites for Skills */
+
+#observations, #interviews, #personas, #personaMap, #problemStatement, #workflows, #wireframes, #prototypes, #designAssessments, #iteration, #storycards, #screenplay, #documentation, #penPaper, #photoshop, #illustrator, #balsamiq, #axure, #htmlcssjs{
+	background-image: url('../images/skills/sprites.png');
+	background-image: no-repeat;
+
+}
+
+#interviews{ background-position: 0 0; }
+#observations{ background-position: -50px 0; }
+#personas{ background-position: -100px 0; }
+#workflows{	background-position: -150px 0; }
+#personaMap{ background-position: -200px 0; }
+#wireframes{ background-position: 0 -50px; }
+#penPaper{ background-position: -50px -50px; }
+#screenplay{ background-position: -100px -50px; }
+#storycards{ background-position: -150px -50px; }
+#problemStatement{ background-position: -200px -50px; }
+#htmlcssjs{	background-position: 0 -100px; }
+#photoshop{ background-position: -50px -100px; }
+#illustrator{ background-position: -100px -100px; }
+#axure{	background-position: -150px -100px; }
+#iteration{ background-position: -200px -100px; }
+#balsamiq{ background-position: 0 -150px; }
+#prototypes{ background-position: -50px -150px; }
+#designAssessments{ background-position: -100px -150px; }
+#documentation{ background-position: -150px -150px; }
