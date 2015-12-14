@@ -1,0 +1,112 @@
+<div id="banner" class="section">
+	<div id="bannerTitle">thomas piggott</div>
+	<div id="bannerSubtitle">user experience design</div>
+	<img id="bannerLogo" src="images/assets/piggy.svg" alt="thomaspiggott.com" />
+	<div>scroll down to explore</div>
+</div>
+
+<div id="welcome" class="section">
+	<div id="connectText">
+			<div><span class="connectTextLine">hey! i'm thomas and i champion</span></div>
+			<div><span class="connectTextLine">amazing user experiences</span></div>
+			<div><span class="connectTextLine">scroll on to explore my</div>
+			<div><span class="connectTextLine">education, skills, and portfolio</span></div>
+	</div>
+</div>
+
+<div id="about" class="section fp-auto-height">
+	<div style="width: 100%;">
+		<h1 class="mobileStyleH1" style="margin: 25px 0 0 0;">education</h1>
+	</div>
+	<div class="centerer">
+		<div class="aboutEduItem">
+			<div class="development skillIcon"></div>
+			<div class="aboutItemTitle">b.s.e. in computer science</div>
+			<div class="aboutItemDescription">
+				I have a degree in Computer Science from the University of Michigan - College of Engineering. So, while development is not my primary focus, I can hold my own in technical discussion which makes it much easier to work with the development team to come up with solutions when designs run into issues.
+			</div>
+		</div>
+		<div class="aboutEduItem">
+			<div class="personas skillIcon"></div>
+			<div class="aboutItemTitle">master of science in information</div>
+			<div class="aboutItemDescription">
+				I also have a master's degree specializing in Human-Computer Interaction from the University of Michigan's School of Information. This gives me a broad understanding of human behavior and how information can be architected to take advantage of the ways we work.
+			</div>
+		</div>
+	</div>
+
+	<div style="width: 100%;">
+		<h1 class="mobileStyleH1" style="margin: 25px 0 0 0;">skills</h1>
+	</div>
+	<div class="centerer">
+		<div class="aboutSkillItem">
+			<div class="interviews skillIcon"></div>
+			<div class="aboutItemTitle">research</div>
+			<div class="aboutItemDescription">
+				As a researcher, I pride myself in my ability to empathize with users to understand their experience, including both their pain and joy. I have a deep understanding of contextual inquiry, including interviewing and observing. I am well versed in persona and goal creation, workflow development, and design assessments.
+			</div>
+		</div>
+		<div class="aboutSkillItem">
+			<div class="wireframes skillIcon"></div>
+			<div class="aboutItemTitle">design</div>
+			<div class="aboutItemDescription">
+				As a designer, I move fluidly between pen, paper, and whiteboard to digital forms of designing - from balsamiq for lower-fidelity mockups to photoshop and the adobe creative suite for high fidelity. I'm also experienced with Axure for interactive prototyping and my developer background means I can also create custom prototypes when necessary. Graphic design is where I'm most interested in improving my skills.
+			</div>
+		</div>
+		<div class="aboutSkillItem">
+			<div class="htmlcssjs skillIcon"></div>
+			<div class="aboutItemTitle">development</div>
+			<div class="aboutItemDescription">
+				As a developer, I have experience with a wide range of technologies and what I am most proud of is my ability to learn new languages and frameworks. No, I'm no master at any one solution, but I can teach myself quickly enough to be dangerous in any.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="portfolio" class="section">
+	<h1>portfolio</h1>
+	<div class="sectionDescription">take a look at some of my current and past projects</div>
+
+	<div ng-repeat="project in projects" class="portfolioItem" ui-sref="{{project.id}}">
+		<div class="portfolioItemImage" style="background-image: url('{{project.thumbnail}}')"></div>
+		<div class="portfolioItemTitle">{{project.title}}</div>
+		<div class="portfolioItemRoles">{{project.roles}}</div>
+		<div class="portfolioItemWork">{{project.workType}} <span ng-show="project.inProgress" style="color: #ff0000">- in progress</span></div>
+	</div>
+
+	<div ng-repeat="presentation in slideDecks" class="portfolioItem" ui-sref="{{presentation.id}}">
+		<div class="portfolioItemImage" style="background-image: url('{{presentation.thumbnail}}')">
+			<span ng-show="presentation.hasSource">source: <a class="sourceLink" href="{{presentation.sourceLink}}">{{presentation.source}}</a></span>
+		</div>
+		<div class="portfolioItemTitle">{{presentation.title}}</div>
+		<div class="portfolioItemRoles">presentation</div>
+		<div class="portfolioItemWork">{{presentation.location}}</div>
+	</div>
+</div>
+
+<div id="connect" class="section">
+	<div id="connectText">
+			<div><span class="connectTextLine">i love building experiences that matter</span></div>
+			<div><span class="connectTextLine">and permeating design throughout the team.</span></div>
+			<div><span class="connectTextLine">let's create something together</span></div>
+			<div><span class="connectTextLine">grab my <a target="_self" ng-href="downloads/Thomas_Piggott_UX_Resume.pdf">résumé</a> and</span></div>
+			<div><span class="connectTextLine">get in touch!</span></div>
+	</div>
+	<div id="connectInfo">
+		<a href="mailto:thomas@thomaspiggott.com">
+			<img class="connectImage" src="images/connect/emailLogo.png" alt="email" />
+		</a>
+		<a href="https://www.linkedin.com/in/tjpiggott">
+			<img class="connectImage" src="images/connect/linkedInLogo.png" alt="linkedIn" />
+		</a>
+		<a href="https://twitter.com/tjpiggott">
+			<img class="connectImage" src="images/connect/twitterLogo.png" alt="twitter" />
+		</a>
+		<a href="https://www.facebook.com/tjpiggott">
+			<img class="connectImage" src="images/connect/facebookLogo.png" alt="facebook" />
+		</a>
+		<a href="http://instagram.com/tjpiggott">
+			<img class="connectImage" src="images/connect/instagramLogo.png" alt="instagram" />
+		</a>
+	</div>
+</div>

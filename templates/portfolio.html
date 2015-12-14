@@ -1,0 +1,25 @@
+<div id="infoNavBar">
+	<div id="infoNavBarText" onclick="history.back()">
+		<div class="backButton">Back</div>
+		<img style="width: 30px;" src="images/assets/piggy.svg" alt="thomaspiggott.com" />
+	</div>
+</div>
+<div class="section fp-auto-height">
+	<div id="infoMainSection">
+		<h1 style="margin: 0 0 20px 0;">{{project.title}}</h1>
+		<div class="infoRestrictor">
+			<img class="infoBanner" src="{{project.banner}}" alt="{{project.title}}" />
+		</div>
+		<div class="infoRestrictor" style="text-align: left;">
+			<h1>overview</h1>
+			<div class="infoText" ng-bind-html="project.overview"></div>
+			<div ng-repeat="infoItem in project.info" class="section fp-auto-height">
+				<h1>{{infoItem.title}}</h1>
+				<div class="infoText" ng-bind-html="infoItem.text"></div>
+			</div>
+			<div class="portfolioLinkButtons">
+				<a ng-repeat="linkItem in project.links" class="portfolioLinkButton" href="{{linkItem.link}}">{{linkItem.text}}</a>
+			</div>
+		</div>
+	</div>
+</div>

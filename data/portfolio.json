@@ -1,0 +1,189 @@
+[
+    {
+        "id": "galeRedesign",
+        "title": "gale.com redesign",
+        "workType": "website",
+        "inProgress": true,
+        "roles": "research | design",
+        "thumbnail": "images/portfolio/thumbnails/galeThumbnail.png",
+        "banner": "images/portfolio/galedotcom.png",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "The Gale.com redesign is an attempt to reclaim the Gale brand name from what had been lost when the Gale product catalog was moved underneath the parent company (Cengage Learning) website and catalog. By liberating Gale.com and its products, Gale can better market its products and serve its customers.",
+        "info": [
+            {
+                "title":"research",
+                "text":"The goal of this research was to understand what drives a librarian, faculty member, and institutions to make a purchase and what information is necessary to facilitate that process. Actual visits to librarians to watch as they used publisher sites were performed to better understand the context of when this information would be retrieved. Often, librarians would do this sort of task in spare moments, making speed of navigation and information processing of critical concern. Personas were created representing a wide range of conceivable users of the site from librarian to student to job seeker. From there, a primary persona was selected and all design decisions referred back to the goals of the primary persona."
+            },
+            {
+                "title":"design",
+                "text":"Design went hand-in-hand with research, involving iterative rounds of design capped by design assessments with actual users. Initial designs were sketched and taken into Axure at a very low fidelity with multiple contrasting designs. From there, the fidelity increased across rounds while narrowing to a single design with the parts and pieces that worked best for users. While the site ultimately boils down to a product catalog, understanding and responding to librarian purchasing habits presents a unique challenge because of the process of purchasing a Gale product often involves approvals from multiple stakeholders and requires a lot of information sharing between librarians and faculty."
+            }
+        ]
+    }, {
+        "id": "galeResearcher",
+        "title": "gale researcher",
+        "workType": "web app",
+        "inProgress": false,
+        "roles": "research | design",
+        "thumbnail": "images/portfolio/thumbnails/galeResearcherThumbnail.png",
+        "banner": "images/portfolio/galeresearcher.png",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "Gale Researcher is a new product intended to help first and second year university students to succeed in 100 level courses. Instead of dropping them into a huge database of articles, this product organizes relevant primary and secondary sources to help students write better papers with stronger, quality sources.",
+        "info": [
+            {
+                "title":"research",
+                "text":"Research for this project involved interviews with students ranging from juniors in high school up to juniors in college with the goal of understanding their research and paper writing habits. From, there, I helped write 20 different personas capturing the many different types of student we had talked with. Then, we mapped and prioritized these personas with the business. I then helped perform design assessments once we had designs to better understand how well our prototype worked and where we could make improvements."
+            },
+            {
+                "title":"design",
+                "text":"Design involved helping prioritize features that would have the greatest impact and still allow the development team to make the launch window. I helped create Axure prototypes and then worked with the front-end designer / developer to implement the design and get the feel right."
+            }
+        ],
+        "links": [
+            {
+                "text": "view the product page",
+                "link": "http://galeresearcher.com"
+            }
+        ]
+    }, {
+        "id": "foreignLands",
+        "title": "foreign lands",
+        "workType": "android app",
+        "inProgress": false,
+        "roles": "design | development",
+        "thumbnail": "images/portfolio/thumbnails/foreignLandsThumbnail.png",
+        "banner": "images/portfolio/foreignLands1.png",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "Foreign Lands was born out of a need to help travelers adapt to their locations. Switching to a new measurement system, currency, and timezone can be difficult and this app aims to help with the most common conversions for speed, distance, etc. I designed and developed this app as a personal project allowing me to keep up with the latest Android design language.",
+        "info": [
+            {
+                "title":"design",
+                "text":"Design consisted of understanding Android's Material design language. This involved understanding it's use of layers and shadowing to convey depth and meaning. Designing Foreign Lands was an exercise in reducing the interface to only the absolute necessities. This project also served to further my understanding of the constraints on mobile design."
+            },
+            {
+                "title":"development",
+                "text":"Development for this project consisted of familiarizing myself with the Android SDK and development environment. It also provided an excellent experience in adapting a design to what was possible (based purely on my own abilities as a coder)."
+            }
+        ],
+        "links": [
+            {
+                "text": "view in google play store",
+                "link": "https://play.google.com/store/apps/details?id=com.thomaspiggott.foreignlands&hl=en"
+            }
+        ]
+    }, {
+        "id": "vidaTalk",
+        "title": "vidatalk",
+        "workType": "ios app",
+        "inProgress": false,
+        "roles": "research | design",
+        "thumbnail": "images/portfolio/thumbnails/vidaTalkThumbnail.png",
+        "banner": "images/portfolio/vidatalk1.png",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "VidaTalk is an iPad app that was developed to support those in the hospital that can't speak for themselves. By putting the most common statements and questions up front, the app successfully launched and helped those with speech difficulties communicate with their care takers. With research in hand, I helped design a simple interface that put the most common responses up front. For more, head over <a href='http://www.vidatak.com/vidatalk.html'>here</a>.",
+        "info": [
+            {
+                "title":"research",
+                "text":"As part of the research team, I interviewed and observed nurses, doctors, and patients in serious condition (such as the emergency room) with inhibited speech. We also visited assisted living spaces and spoke with a range of people include speech pathologists, victims of strokes in speech therapy, and care givers. This helped inform what the most important responses were and the easiest ways for nurses, doctors, and family to interact with patients."
+            },
+            {
+                "title":"design",
+                "text":"It became clear that not only would it be crucial to put the most common responses and questions upfront but that they had to be extremely easy to access. Many of the people we observed with speech issues also had reduced motor controls. This meant that we needed to be especially careful with button size and placement. Insights from the research also allowed us to recognize the need for one of the most popular features: the ability to draw. This feature allows users to extend the functionality to communicate whatever they need."
+            }
+        ],
+        "links": [
+            {
+                "text": "view the product page",
+                "link": "http://www.vidatak.com/vidatalk.html"
+            },
+            {
+                "text": "View in iTunes",
+                "link": "https://itunes.apple.com/us/app/vidatalk-eng-sp/id705286131?ls=1&mt=8"
+            }
+        ]
+    }, {
+        "id": "eTechnician",
+        "title": "eTechnician HD",
+        "workType": "Windows 10, 8, 7",
+        "inProgress": false,
+        "roles": "research | design",
+        "thumbnail": "images/portfolio/thumbnails/eTechnicianThumbnail.png",
+        "banner": "images/portfolio/etechnician1.jpg",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "eTechnician helps speed the process of diagnosing large, diesel engine trucks. While in the past, this process has been slow and opaque, this software helps connect technicians to the most relevant information in a form factor that lets them keep at the work that matters instead of constantly returning to their computer station. eTechnician is designed specifically to accommodate Windows 10 touchscreens and the larger-than-average hand size of technicians.",
+        "info": [
+            {
+                "title":"research",
+                "text":"Research for this project involved visiting multiple types of repair shops including truck dealers, large fleet shops like Penske, and small, independent shops. By actually visiting the shops, we were able to see how often current software just creates its own problems rather than help diagnose the truck's problem. We also helped the client understand how important the 'toughbook' nature of any device would be as technicians would literally toss their laptops around - not a place for fragile, glass, tablets."
+            },
+            {
+                "title":"design",
+                "text":"The design takes into account the fact that most technicians know what many of the fault codes they see are without needing a description. What's really important is the ability to see data from the truck components live and see how their adjustments make a change. It's this key insight that speeds up the mechanics process and lets them get to the work they're most comfortable with."
+            }
+        ],
+        "links": [
+            {
+                "text": "view the product page",
+                "link": "http://www.nexiq.com/eTechnician"
+            }
+        ]
+    }, {
+        "id": "cosmosMLP",
+        "title": "cosmos mlp",
+        "workType": "windows phone app suite",
+        "inProgress": false,
+        "roles": "research | design | development",
+        "thumbnail": "images/portfolio/thumbnails/myDeskThumbnail.png",
+        "banner": "images/portfolio/cosmos1.png",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "The Cosmos Mobile Learning Platform (now the Intergalactic Mobile Learning Center) is a set of Windows Phone apps used by 3rd graders in Singapore that originated from a class of mine at the University of Michigan. The myDesk app is a container around 6 separate apps (SketchIt, Recorder, MapIt, KWL, NotePad, Blurb), and messageBoard is a standalone app for communicating with classmates. These apps were deeply integrated into the curriculum so that their use supported, rather than directed, their learning. I designed SketchIt, Recorder, and messageBoard.",
+        "info": [
+            {
+                "title":"research",
+                "text":"As the project lead in Singapore, I observed the use of the apps in class as teachers and students used it to facilitate class curriculum. I also conducted interviews with the teachers and students about their experience with the apps. By actually being in the classroom I was able to observe all the ways the apps were used that we hadn't expected, including some less than appropriate messaging on the messageBoard app. Ultimately, students will use whatever tools they are given and make them work."
+            },
+            {
+                "title":"design",
+                "text":"Design of the apps involved facilitating activities that we knew the teachers were already having their students do and adapting them to the phone. This was also an opportunity to better understand the Windows Phone design language and understand the constraints that lower-end phones and limited data access would add to a project. As such, we designed an offline mode that would support a model of 'data sipping' instead of a heavy reliance on data."
+            },
+            {
+                "title":"development",
+                "text":"Development for this project involved both work with an existing codebase and the creation of new apps that work within the already created ecosystem. This meant interfacing with a custom API and understanding the use of phone data plans."
+            }
+        ],
+        "links": [
+            {
+                "text": "myDesk in the windows marketplace",
+                "link": "http://www.windowsphone.com/en-us/store/app/mydesk/5f57dc71-3905-49e1-8144-fa840cf78a4b"
+            },
+            {
+                "text": "messageBoard in the windows marketplace",
+                "link": "http://www.windowsphone.com/en-in/store/app/messageboard/7d2755b0-a26d-4293-ac2b-4b257c5a77ea"
+            }
+        ]
+    }
+]

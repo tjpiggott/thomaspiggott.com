@@ -1,28 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html ng-app="piggottApp" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
 <head> 
 	<title>Thomas Piggott</title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Thomas Piggott" /> 
-	<meta name="description" content="Portfolio of Thomas Piggott, User Experience Designer" /> 
+	<meta name="description" content="Hi, I'm Thomas Piggott. I'm a User Experience Designer and this is my online portfolio." /> 
 	<meta name="viewport" content="width=device-width" />
-	<meta name="keywords" content="Thomas, Piggott, Thomas Piggott, ThomasPiggott, Tom Piggott, Tom Piggot, Thomas Piggot, Piggot, Portfolio, Interaction Design, User Experience Design, UX, HCI, Human-Computer Interaction, Computer Science, Software Development, Development, Designer, Developer" /> 
+	<base href="/">
 	
 	<link rel="icon" type="image/png" href="favicon.ico" /> 
 
-	<link rel="stylesheet" media="screen and (min-width: 500px)" href="css/style.css">
-	<link rel="stylesheet" media="screen and (max-width: 500px)" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 500px)" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 500px)" href="css/mobile.css" />
 	<link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato:300,400' />
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
 	<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+	
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/actions.js"></script>
 
@@ -39,127 +43,18 @@
 	</script>
 	
 </head>
-<body onload="startup()"  ng-controller="PortfolioController as portfolio">
-	<div id="banner" class="section">
-		<div id="bannerTitle">thomas piggott</div>
-		<div id="bannerSubtitle">user experience design</div>
-		<img id="bannerLogo" src="images/piggy.svg" />
-		<div id="bannerNav">
-			<svg class="navItem" onclick="goToSection('#portfolio')">
-				<g class="navItemGroup">
-				  	<rect class="navButton" />
-				  	<text class="navText" x="12" y="55">portfolio</text>
-				</g>
-			</svg>
-			<svg class="navItem" onclick="goToSection('#process')">
-				<g class="navItemGroup">
-				  	<rect class="navButton" />
-				  	<text class="navText" x="20" y="55">process</text>
-				</g>
-			</svg>
-			<svg class="navItem" onclick="goToSection('#aboutMe')">
-				<g class="navItemGroup">
-				  	<rect class="navButton" />
-				  	<text class="navText" x="15" y="55">about me</text>
-				</g>
-			</svg>
-		</div>
+<body onload="startup()">
+	
+	<div id="navigation">
+		<img class="navItem" onclick="goToSection('#banner', 0)" src="images/assets/piggy.svg" alt="thomaspiggott.com" />
+		<a class="navButton" onclick="goToSection('#welcome', -50)">about</a>
+		<a class="navButton" onclick="goToSection('#portfolio', -50)">portfolio</a>
+		<a class="navButton" onclick="goToSection('#connect', 0)">connect</a>
 	</div>
 
-	<div id="infoOverlay">
-		<div id="infoSidebar">
-			<div class="infoOverlayTitleBar" ng-click="portfolio.toggleOverlay()">
-				<span style="float: left">Back</span>
-				<span id="infoTitle">{{portfolio.viewedProject.title}}</span>
-			</div>
-		</div>
-		<div id="infoMainSection">
-			<div class="infoRestrictor">
-				<div class="infoBanner" style="background-image: url('{{portfolio.viewedProject.bannerImage}}')"></div>
-				<div class="infoText" ng-bind-html="portfolio.viewedProject.description"></div>
-			</div>
-		</div>
+	<div id="fullpage">
+		<div ui-view></div>
 	</div>
 
-	<div id="portfolio" class="section">
-		<h1>design</h1>
-		<div class="sectionDescription">take a look at some of my current and past projects</div>
-
-		<div ng-repeat="project in portfolio.projects" class="portfolioItem" ng-click="portfolio.toggleOverlay('project', $index)">
-			<div class="portfolioItemImage" style="background-image: url('{{project.thumbnail}}')"></div>
-			<div class="portfolioItemTitle">{{project.title}}</div>
-			<div class="portfolioItemWork">{{project.workType}} <span ng-show="project.inProgress" style="color: #ffffcc">- in progress</span></div>
-			<div class="portfolioItemRoles">{{project.roles}}</div>
-		</div>
-
-		<div class="spacer" style="width:100%;" />
-		<h1 style="margin: 25px 0 0 0;">teaching</h1>
-		<div class="sectionDescription">view the topics i've spoken on at conferences and workshops taught for companies looking to understand agile and ux</div>
-
-		<div ng-repeat="presentation in portfolio.teaching" class="portfolioItem" ng-click="portfolio.toggleOverlay('presentation', $index)">
-			<div class="portfolioItemImage" style="background-image: url('{{presentation.thumbnail}}')">
-				<span ng-show="presentation.hasSource">source: <a class="sourceLink" href="{{presentation.sourceLink}}">{{presentation.source}}</a></span>
-			</div>
-			<div class="portfolioItemTitle">{{presentation.title}}</div>
-			<div class="portfolioItemWork">{{presentation.location}}</div>
-		</div>
-	</div>
-
-	<div id="process" class="section">
-		<div style="width: 100%;">
-			<h1 style="margin: 25px 0 0 0; color: #ffffff;">process</h1>
-			<div class="sectionDescription" style="color: #ffffff">My design process and philosophy</div>
-		</div>
-		<div class="centerer">
-			<div class="processItem">
-				<div class="interviews skillIcon"></div>
-				<div class="processItemTitle">Research</div>
-				<div class="processItemDescription">
-					Research is the key to ensuring you're building a solution for a problem that exists and matters.
-				</div>
-			</div>
-			<div class="processItem">
-				<div class="wireframes skillIcon"></div>
-				<div class="processItemTitle">Design</div>
-				<div class="processItemDescription">
-					Taking research and putting it to work, iteratively. No design will be perfect the first time, that's why design requires constant adjusting as more information is learned.
-				</div>
-			</div>
-			<div class="processItem">
-				<div class="htmlcssjs skillIcon"></div>
-				<div class="processItemTitle">Development</div>
-				<div class="processItemDescription">
-					Development should never mean a simple handoff of the design but rather an ongoing conversation with developers to balance design needs with the constraints of development.
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="aboutMe" class="section">
-		<div id="aboutMeText">
-				<div><span class="aboutMeTextLine">i love building experiences that matter</span></div>
-				<div><span class="aboutMeTextLine">and permeating design throughout the team</span></div>
-				<div><span class="aboutMeTextLine">let's create something together</span></div>
-				<div><span class="aboutMeTextLine">grab my <a href="downloads/Thomas_Piggott_UX_Resume.pdf">résumé</a> and</span></div>
-				<div><span class="aboutMeTextLine">get in touch!</span></div>
-			</div>
-			<div id="aboutMeConnectInfo">
-				<a href="mailto:thomas@thomaspiggott.com">
-					<img class="aboutMeConnectImage" src="images/connect/emailLogo.png" />
-				</a>
-				<a href="https://www.linkedin.com/in/tjpiggott">
-					<img class="aboutMeConnectImage" src="images/connect/linkedInLogo.png" />
-				</a>
-				<a href="https://twitter.com/tjpiggott">
-					<img class="aboutMeConnectImage" src="images/connect/twitterLogo.png" />
-				</a>
-				<a href="https://www.facebook.com/tjpiggott">
-					<img class="aboutMeConnectImage" src="images/connect/facebookLogo.png" />
-				</a>
-				<a href="http://instagram.com/tjpiggott">
-					<img class="aboutMeConnectImage" src="images/connect/instagramLogo.png" />
-				</a>
-			</div>
-	</div>
 </body>
 </html>

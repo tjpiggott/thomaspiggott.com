@@ -1,0 +1,64 @@
+[
+    {
+        "id": "pairing",
+        "title": "the power of promiscuous pairing",
+        "location": "agile & beyond 2014",
+        "thumbnail": "images/portfolio/thumbnails/powerThumbnail.png",
+        "banner": "images/photos/pairing.jpg",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "This workshop takes a short time to introduce pairing and then gets right into the activity: pairing promiscuously! The activity has people work as a pair and then re-pair and re-pair again as they build on previous work. This intent is to show people that working with others, quickly and creatively, can help make work more fun and more productive.",
+        "links": [
+            {
+                "text": "Download the PPT",
+                "link": "downloads/The_Power_of_Promiscuous_Pairing.pptx"
+            }
+        ]
+    }, {
+        "id": "scenarios",
+        "title": "strength in scenarios",
+        "location": "agile 2013",
+        "thumbnail": "images/portfolio/thumbnails/strengthThumbnail.png",
+        "banner": "images/portfolio/scenarios.png",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "This presentation helps demonstrate the importance of using a realistic scenario when assessing designs. Using scenarios (workflow-based stories that provide a framework for getting user feedback) allows the user to give more honest, relevant feedback more closely related to the work they do on an everyday basis.",
+        "links": [
+            {
+                "text": "Full Description",
+                "link": "http://sched.co/11SUAHC"
+            },
+            {
+                "text": "Download the PDF",
+                "link": "downloads/Strength_in_Scenarios.pdf"
+            }
+        ]
+    }, {
+        "id": "menloWay",
+        "title": "agile & design thinking",
+        "location": "menlo innovations",
+        "thumbnail": "images/portfolio/thumbnails/menloThumbnail.png",
+        "hasSource": true,
+        "source": "@menloinnovation",
+        "sourceLink": "https://twitter.com/menloinnovation/status/644935756025217024",
+        "banner": "images/portfolio/menloway.jpg",
+        "images": [
+            "images/gem-02.gif",
+            "images/gem-05.gif",
+            "images/gem-09.gif"
+        ],
+        "overview": "As part of Menlo Innovations, I have been able to connect with and teach many companies our best practices when it comes to design, agile, and corporate culture. This has allowed me to experience a whole new world when it comes to organizational change; from large corporations diving into agile to small companies getting their first taste of user centric practices.",
+        "links": [
+            {
+                "text": "View the Workshop",
+                "link": "http://menloinnovations.com/by-visiting/high-tech-anthropology"
+            }
+        ]
+    }
+]

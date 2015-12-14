@@ -1,14 +1,15 @@
 var windowHeight = $(window).height();
 var showingOverlay = false;
 
-function goToSection(section){
-	$.scrollTo(section, 500);
+function goToSection(section, offsetAmount){
+    $.scrollTo(section, {
+        offset: offsetAmount,
+        easing:'easeOutSine',
+        duration: 750
+    });
 }
 
 function startup(){
-	$("#banner").css('min-height', windowHeight);
-    $("#infoOverlay").css('min-height', windowHeight);
-	$("#aboutMe").css('min-height', windowHeight);
 	setupBannerAnimation();
 }
 
